@@ -33,6 +33,7 @@ export default function NavBar() {
     { href: '/experience', label: 'Experience' },
     { href: '/media', label: 'Media' },
     { href: '/books', label: 'Books' },
+    { href: '/music', label: '🎵 Music' },
     { href: '/events', label: 'Events' },
     { href: '/blog', label: 'Blog' },
   ];
