@@ -160,38 +160,66 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ FEATURED BOOK PREVIEW ============ */}
+      {/* ============ FEATURED BOOKS PREVIEW ============ */}
       <section className="py-28 bg-gray-50 border-y border-gray-100">
         <div className="container mx-auto px-6 max-w-6xl">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            {/* Book Visual */}
-            <div className="flex-1 flex justify-center">
-              <div className="relative w-56 md:w-72 aspect-[2/3]">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#0b1a30] to-accent rounded-2xl shadow-2xl transform -rotate-3 hover:rotate-0 transition-all duration-500"></div>
-                <div className="absolute inset-0 bg-white rounded-2xl shadow-xl transform rotate-2 hover:rotate-0 transition-all duration-500 flex flex-col items-center justify-center p-8 border-l-8 border-accent">
-                  <h4 className="font-heading text-4xl font-bold text-primary mb-3 text-center">Ayyaantummaa</h4>
-                  <div className="w-10 h-1 bg-accent mb-4"></div>
-                  <p className="text-xs text-gray-400 uppercase tracking-widest text-center">Kanenus Kasa Bayisa</p>
-                  <p className="text-xs text-gray-300 mt-2 uppercase tracking-widest">2026</p>
-                </div>
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center gap-4 text-accent font-bold tracking-widest uppercase text-sm mb-4">
+              <span className="w-12 h-px bg-accent"></span>
+              Literary Works
+              <span className="w-12 h-px bg-accent"></span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-4">Published & Upcoming Books</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              Explore the two major publications authored by Kanenus Kasa Bayisa (Hizbii Keenya).
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* Book 1: Ayyaantummaa */}
+            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl flex flex-col items-center text-center group hover:shadow-2xl transition-all duration-300">
+              <div className="relative w-full max-w-[260px] aspect-[4/5] mb-6 overflow-hidden rounded-2xl shadow-lg">
+                <img
+                  src="/books/ayyaantummaa.png"
+                  alt="Ayyaantummaa by Kanenus Kasa Bayisa"
+                  className="w-full h-full object-contain transform group-hover:scale-105 transition-all duration-500"
+                />
+              </div>
+              <span className="px-4 py-1 bg-accent/10 text-accent rounded-full text-xs font-bold uppercase tracking-widest mb-3">
+                Official Release 2026
+              </span>
+              <h3 className="text-3xl font-heading font-bold text-primary mb-2">Ayyaantummaa</h3>
+              <p className="text-sm font-semibold text-gray-500 mb-4">Kitaaba Afaan Oromoo Haaraa</p>
+              <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-1">
+                A landmark publication exploring cultural identity, ancestral values, and the spirit of modern African literature.
+              </p>
+              <div className="flex gap-3 w-full justify-center">
+                <Link href="/books" className="px-6 py-3 bg-primary hover:bg-accent text-white font-bold rounded-full text-sm transition shadow-md">
+                  View Book &amp; Excerpt
+                </Link>
               </div>
             </div>
 
-            <div className="flex-1">
-              <div className="flex items-center gap-4 text-accent font-bold tracking-widest uppercase text-sm mb-5">
-                <span className="w-12 h-px bg-accent"></span>
-                Featured Publication
+            {/* Book 2: Dhaloota Mul'ataa */}
+            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl flex flex-col items-center text-center group hover:shadow-2xl transition-all duration-300">
+              <div className="relative w-full max-w-[260px] aspect-[4/5] mb-6 overflow-hidden rounded-2xl shadow-lg">
+                <img
+                  src="/books/dhaloota-mulataa.jpg"
+                  alt="Dhaloota Mul'ataa by Kanenus Kasa Bayisa"
+                  className="w-full h-full object-contain transform group-hover:scale-105 transition-all duration-500"
+                />
               </div>
-              <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-6">Ayyaantummaa</h2>
-              <p className="text-lg text-gray-600 leading-loose mb-10">
-                A landmark publication exploring profound cultural themes, identity, and the spirit of modern African literature. "Ayyaantummaa" is Kanenus's masterful first publication — a profound, emotionally resonant work cementing him as one of the leading voices in contemporary Oromo literature.
+              <span className="px-4 py-1 bg-amber-500/10 text-amber-600 border border-amber-500/20 rounded-full text-xs font-bold uppercase tracking-widest mb-3">
+                Coming Soon • 2ffaa
+              </span>
+              <h3 className="text-3xl font-heading font-bold text-primary mb-2">Dhaloota Mul&apos;ataa</h3>
+              <p className="text-sm font-semibold text-gray-500 mb-4">Kitaaba 2ffaa — Second Publication</p>
+              <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-1">
+                A visionary guide for the emerging generation, weaving philosophy and cultural consciousness into future leadership.
               </p>
-              <div className="flex gap-5">
-                <Link href="/books" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-full hover:bg-accent transition-all duration-300 shadow-lg">
-                  Learn More
-                </Link>
-                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-300">
-                  Order a Copy
+              <div className="flex gap-3 w-full justify-center">
+                <Link href="/books" className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-full text-sm transition shadow-md">
+                  Pre-order / Waitlist
                 </Link>
               </div>
             </div>
