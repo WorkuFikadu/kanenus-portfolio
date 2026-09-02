@@ -1,4 +1,5 @@
 'use client';
+import AIAssistant from './AIAssistant';
 
 export default function FloatingButtons() {
   const whatsappMsg = encodeURIComponent("Hello Kanenus! I visited your website and would like to connect with you.");
@@ -6,6 +7,9 @@ export default function FloatingButtons() {
 
   return (
     <div className="fixed bottom-6 right-5 z-50 flex flex-col items-end gap-3">
+      {/* AI Assistant Floating Button */}
+      <AIAssistant />
+
       {/* WhatsApp */}
       <a
         href={`https://wa.me/251000000000?text=${whatsappMsg}`}
