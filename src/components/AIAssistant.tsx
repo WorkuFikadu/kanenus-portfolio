@@ -12,49 +12,52 @@ interface Message {
 
 const aiKnowledge = {
   en: {
-    welcome: "Hello! I am **Kanenus's Cultural AI Assistant**. How can I help you today? You can ask me about his books (*Ayyaantummaa* & *Dhaloota Mul'ataa*), the Shanan Gadaa Band, speaking engagements, or PR leadership!",
+    welcome: "Hello! I am **Kanenus's Cultural AI Assistant & Interactive Website Guide** 🌐✨.\n\nI can help you explore everything on this platform in detail:\n• 📖 **Books**: Order *Ayyaantummaa* or pre-order *Dhaloota Mul'ataa*\n• 🎵 **Music**: Explore Shanan Gadaa Band tracks & bookings\n• 👤 **About & Bio**: Leadership, PR, and achievements\n• 📱 **Social Media**: 125K+ community & channel links\n• ⚙️ **Dashboard**: Social command center & metrics\n• 🌍 **Languages**: How to toggle between EN, OM & AM\n\nHow can I guide you today?",
     quickQuestions: [
-      "Tell me about the book 'Ayyaantummaa'",
-      "How can I book Shanan Gadaa Band?",
-      "Who is Kanenus Kasa Bayisa?",
-      "How to order the 2nd book 'Dhaloota Mul'ataa'?"
+      "🌐 How do I navigate this website?",
+      "📖 How to read/order 'Ayyaantummaa'?",
+      "🎵 How to book Shanan Gadaa Band?",
+      "⚙️ How does the Dashboard work?",
+      "🌍 How do I change languages?"
     ],
-    placeholder: "Ask about Kanenus's books, music, or speaking...",
+    placeholder: "Ask how to use the site, order books, book music...",
     send: "Send",
     thinking: "Thinking...",
-    onlineStatus: "Online • Trilingual Knowledge Base",
+    onlineStatus: "Online • Interactive Website Guide",
     headerTitle: "Kanenus AI Assistant",
-    headerSub: "Culture • Literature • Music",
+    headerSub: "Trilingual Guide & Knowledge Base",
   },
   om: {
-    welcome: "Akkam jirtu! Ani **Gargaaraa AI Aadaa Kanenus Kasa Bayisaati**. Waa'ee kitaabota isaa (*Ayyaantummaa* fi *Dhaloota Mul'ataa*), Baandii Shanan Gadaa, walgahii aadaa, yookiin hoggansa PR na gaafachuu dandeessu!",
+    welcome: "Akkam jirtu! Ani **Gargaaraa AI Aadaa fi Qajeelchaa Marsariitii Kanenus Kasa Bayisaati** 🌐✨.\n\nMarsariitii kana guutummaatti akka fayyadamtaniif isin gargaaruu danda'a:\n• 📖 **Kitaabota**: *Ayyaantummaa* bitachuu fi *Dhaloota Mul'ataa* dursa qabachuu\n• 🎵 **Muuziqaa**: Sirboota Baandii Shanan Gadaa fi afeerraa\n• 👤 **Waa'ee Kanenus**: Seenaa jireenyaa, hoggansa PR fi aadaa\n• 📱 **Miidiyaa**: Hordoftoota 125K+ fi liinkiiwwan fuulotaa\n• ⚙️ **Daashboordii**: Giddu-gala ajaja miidiyaa hawaasaa\n• 🌍 **Afaanota**: Akkaataa EN, OM fi AM itti jijjiirtan\n\nHar'a maaliin isin gargaaru?",
     quickQuestions: [
-      "Waa'ee kitaaba 'Ayyaantummaa' natti himi",
-      "Baandii Shanan Gadaa akkamittiin afeera?",
-      "Kanenus Kasa Bayisa eenyu?",
-      "Kitaaba 2ffaa 'Dhaloota Mul'ataa' akkamittiin bitadha?"
+      "🌐 Marsariitii kana akkamittiin fayyadama?",
+      "📖 Kitaaba 'Ayyaantummaa' akkamittiin bita?",
+      "🎵 Baandii Shanan Gadaa akkamittiin afeera?",
+      "⚙️ Daashboordiin akkamitti hojjata?",
+      "🌍 Afaan akkamittiin jijjiirama?"
     ],
-    placeholder: "Waa'ee kitaabaa, muuziqaa, yookiin aadaa gaafadhaa...",
+    placeholder: "Akkaataa fayyadama weebsaayitii, kitaaba, muuziqaa gaafadhaa...",
     send: "Ergi",
     thinking: "Yaadaa jira...",
-    onlineStatus: "Toora Irra • Beekumsa Afaan Sadii",
+    onlineStatus: "Toora Irra • Qajeelchaa Afaan Sadii",
     headerTitle: "Gargaaraa AI Kanenus",
-    headerSub: "Aadaa • Ogbarruu • Muuziqaa",
+    headerSub: "Qajeelchaa Marsariitii & Aadaa",
   },
   am: {
-    welcome: "ጤና ይስጥልኝ! እኔ **የቀነኑስ ካሳ ባይሳ የባህል AI ረዳት** ነኝ። ስለ መጽሐፍቱ (*አያንቱማ* እና *ደሎታ ሙልአታ*)፣ ስለ ሸነን ገዳ ባንድ፣ ስለ ንግግር መድረኮች ወይም ስለ ህዝብ ግንኙነት ስራዎቹ ማንኛውንም ጥያቄ መጠየቅ ይችላሉ!",
+    welcome: "ጤና ይስጥልኝ! እኔ **የቀነኑስ ካሳ ባይሳ የባህል AI ረዳት እና የድረ-ገጹ መመሪያ** ነኝ 🌐✨።\n\nይህንን ድረ-ገጽ በጥልቀት እንዲጠቀሙ ላግዝዎ እችላለሁ፦\n• 📖 **መጽሐፍት**፦ *አያንቱማ* መጽሐፍን ማዘዝ ወይም *ደሎታ ሙልአታ*ን ቀድመው መያዝ\n• 🎵 **ሙዚቃ**፦ የሸነን ገዳ ባንድ ዜማዎችን ማዳመጥ እና ለዝግጅት መጋበዝ\n• 👤 **ስለ ቀነኑስ**፦ የህይወት ታሪክ፣ የህዝብ ግንኙነት እና የባህል ስራዎች\n• 📱 **ማህበራዊ ሚዲያ**፦ 125ሺ+ ተከታዮች እና የቀጥታ ገጾች\n• ⚙️ **ዳሽቦርድ**፦ የማህበራዊ ሚዲያ ማዕከል እና ትንታኔዎች\n• 🌍 **ቋንቋዎች**፦ እንግሊዝኛ፣ ኦሮምኛ እና አማርኛን እንዴት መቀያየር እንደሚቻል\n\nዛሬ በምን ላግዝዎ?",
     quickQuestions: [
-      "ስለ 'አያንቱማ' መጽሐፍ ንገረኝ",
-      "የሸነን ገዳ ባንድን እንዴት መጋበዝ እችላለሁ?",
-      "ቀነኑስ ካሳ ባይሳ ማን ነው?",
-      "ሁለተኛውን መጽሐፍ 'ደሎታ ሙልአታ' እንዴት ማዘዝ ይቻላል?"
+      "🌐 ይህንን ድረ-ገጽ እንዴት ልጠቀምበት እችላለሁ?",
+      "📖 'አያንቱማ' መጽሐፍን እንዴት ማንበብ/ማዘዝ እችላለሁ?",
+      "🎵 የሸነን ገዳ ባንድን እንዴት መጋበዝ እችላለሁ?",
+      "⚙️ ዳሽቦርዱ እንዴት ይሰራል?",
+      "🌍 ቋንቋውን እንዴት መቀየር እችላለሁ?"
     ],
-    placeholder: "ስለ መጽሐፍት፣ ሙዚቃ ወይም ባህል ይጠይቁ...",
+    placeholder: "ስለ ድረ-ገጹ አጠቃቀም፣ መጽሐፍት፣ ሙዚቃ ይጠይቁ...",
     send: "ላክ",
     thinking: "እያሰበ ነው...",
-    onlineStatus: "በመስመር ላይ • ባለ 3 ቋንቋ ረዳት",
+    onlineStatus: "በመስመር ላይ • የድረ-ገጹ መመሪያ ረዳት",
     headerTitle: "የቀነኑስ AI ረዳት",
-    headerSub: "ባህል • ስነ-ጽሑፍ • ሙዚቃ",
+    headerSub: "ባለ 3 ቋንቋ የድረ-ገጽ መመሪያ",
   }
 };
 
@@ -75,7 +78,6 @@ export default function AIAssistant() {
     }
   ]);
 
-  // Update welcome on lang change
   useEffect(() => {
     setMessages([
       {
@@ -96,11 +98,95 @@ export default function AIAssistant() {
   const generateAIResponse = (query: string, currentLang: 'en' | 'om' | 'am') => {
     const q = query.toLowerCase();
 
-    // 1. Ayyaantummaa
+    // 0. DETAILED HOW TO USE WEBSITE GUIDE
+    if (q.includes('how to use') || q.includes('guide') || q.includes('how do i navigate') || q.includes('website') || q.includes('site') || q.includes('akkamittiin fayyadama') || q.includes('fayyadama') || q.includes('እንዴት ልጠቀም') || q.includes('አጠቃቀም') || q.includes('መመሪያ')) {
+      if (currentLang === 'om') {
+        return {
+          text: `🌐 **Akkaataa Marsariitii Kana Guutummaatti Itti Fayyadaman:**\n\n1. 📖 **Kutaa Kitaabotaa (/books)**: \n   • Kitaaba *Ayyaantummaa* Boqonnaa 1 bilisaan dubbisuu fi WhatsApp/Telegram irratti kallattiin bitachuu.\n   • Kitaaba 2ffaa *Dhaloota Mul'ataa* dursa qabachuuf iimeelii galchuu.\n\n2. 🎵 **Giddu-gala Muuziqaa (/music)**: \n   • Sirboota Baandii Shanan Gadaa dhaggeeffachuu fi ayyaanota aadaatiif afeeru.\n\n3. 👤 **Waa'ee & Seenaa (/about, /cv)**: \n   • Seenaa jireenyaa, gahee Waldaa Barreessitootaa, fi ragaa ogummaa (PDF) buufachuu.\n\n4. ⚙️ **Daashboordii (/dashboard)**: \n   • Qindeessaa miidiyaa hawaasaa fi xiinxala hawaasa 158K+ ilaaluu.\n\n5. 🌍 **Afaan Jijjiiruu**: \n   • Bantii gubbaa mirgaarraa **🇬🇧 EN**, **🇪🇹 OM**, fi **🇪🇹 AM** tuquun afaan barbaaddan filadhaa.`,
+          actions: [
+            { label: "📖 Fuula Kitaabaa", url: "/books" },
+            { label: "🎵 Fuula Muuziqaa", url: "/music" },
+            { label: "⚙️ Daashboordii", url: "/dashboard" },
+            { label: "✉️ Qunnamii", url: "/contact" }
+          ]
+        };
+      }
+      if (currentLang === 'am') {
+        return {
+          text: `🌐 **ይህንን ድረ-ገጽ በጥልቀት የመጠቀሚያ ሙሉ መመሪያ፦**\n\n1. 📖 **የመጽሐፍት ገጽ (/books)**፦ \n   • የ*አያንቱማ* መጽሐፍ ምዕራፍ 1ን በነጻ ማንበብ እና በWhatsApp/Telegram በቀጥታ ማዘዝ።\n   • ሁለተኛውን መጽሐፍ *ደሎታ ሙልአታ* ቀድመው ለመያዝ ኢሜይል ማስመዝገብ።\n\n2. 🎵 **የሙዚቃ ማዕከል (/music)**፦ \n   • የሸነን ገዳ ባንድ ባህላዊ ዜማዎችን ማዳመጥ እና ለዝግጅት መጋበዝ።\n\n3. 👤 **ስለ ቀነኑስ እና የስራ ልምድ (/about, /cv)**፦ \n   • የህይወት ታሪክን ማንበብ እና የሙያ ዝርዝሩን (CV/PDF) ማውረድ።\n\n4. ⚙️ **የአመራር ዳሽቦርድ (/dashboard)**፦ \n   • የሁሉንም ማህበራዊ ገጾች አስተዳደር እና የተከታዮች ትንታኔ ማየት።\n\n5. 🌍 **ቋንቋ መቀየር**፦ \n   • ከላይ በቀኝ በኩል የሚገኙትን **🇬🇧 EN**፣ **🇪🇹 OM** ወይም **🇪🇹 AM** አዝራሮች በመጫን ቋንቋውን ማስተካከል።`,
+          actions: [
+            { label: "📖 የመጽሐፍት ገጽ", url: "/books" },
+            { label: "🎵 የሙዚቃ ገጽ", url: "/music" },
+            { label: "⚙️ ዳሽቦርድ", url: "/dashboard" },
+            { label: "✉️ ያነጋግሩን", url: "/contact" }
+          ]
+        };
+      }
+      return {
+        text: `🌐 **Comprehensive Guide on Using This Website:**\n\n1. 📖 **Books & Publications Hub (/books)**:\n   • Read **Chapter 1 Preview** of *Ayyaantummaa* for free.\n   • 1-Click order via **WhatsApp** or **Telegram**.\n   • Join the VIP Waitlist / Pre-order *Dhaloota Mul'ataa*.\n\n2. 🎵 **Shanan Gadaa Music Hub (/music)**:\n   • Listen to track breakdowns (*Oromiyaa Koo*, *Gadaa Mootummaa*).\n   • Direct booking form & WhatsApp for live event performances.\n\n3. 👤 **Biography & CV (/about, /cv)**:\n   • Read Kanenus's literary journey, PR leadership, and download the print-ready CV PDF.\n\n4. ⚙️ **Social Media Command Center (/dashboard)**:\n   • Explore real-time analytics for 158K+ audience and omnichannel post simulator.\n\n5. 🌍 **Trilingual Switcher**:\n   • Switch instantly between **English**, **Afaan Oromoo**, and **Amharic** using the top header pill.`,
+        actions: [
+          { label: "📖 Books Hub", url: "/books" },
+          { label: "🎵 Music Hub", url: "/music" },
+          { label: "⚙️ Dashboard", url: "/dashboard" },
+          { label: "✉️ Contact Us", url: "/contact" }
+        ]
+      };
+    }
+
+    // 1. How to change language
+    if (q.includes('language') || q.includes('afaan') || q.includes('ቋንቋ') || q.includes('amharic') || q.includes('oromoo') || q.includes('english')) {
+      if (currentLang === 'om') {
+        return {
+          text: "🌍 **Afaan Jijjiiruuf:**\nBantii gubbaa mirgaa irratti qabduu filannoo afaanii argattu:\n• **🇬🇧 EN**: English (Ingiliffa)\n• **🇪🇹 OM**: Afaan Oromoo\n• **🇪🇹 AM**: አማርኛ (Amaariffa)\n\nTokko yoo filattan marsariitiin guutuun yeruma sana jijjiirama!",
+          actions: [{ label: "🌐 Marsariitii Daawwadhu", url: "/" }]
+        };
+      }
+      if (currentLang === 'am') {
+        return {
+          text: "🌍 **ቋንቋ ለመቀየር፦**\nበድረ-ገጹ አናት በቀኝ በኩል የሚገኘውን የቋንቋ መምረጫ ይጠቀሙ፦\n• **🇬🇧 EN**፦ እንግሊዝኛ\n• **🇪🇹 OM**፦ አፋን ኦሮሞ\n• **🇪🇹 AM**፦ አማርኛ\n\nየፈለጉትን ቋንቋ ሲጫኑ ድረ-ገጹ ወዲያውኑ ሙሉ በሙሉ ወደተመረጠው ቋንቋ ይቀየራል!",
+          actions: [{ label: "🌐 ዋና ገጽ", url: "/" }]
+        };
+      }
+      return {
+        text: "🌍 **How to Switch Languages:**\nLocate the executive language pill in the top navigation bar:\n• **🇬🇧 EN**: English\n• **🇪🇹 OM**: Afaan Oromoo\n• **🇪🇹 AM**: አማርኛ (Amharic)\n\nClicking any option instantly translates the entire website and saves your preference across visits!",
+        actions: [{ label: "🌐 Explore Homepage", url: "/" }]
+      };
+    }
+
+    // 2. Dashboard Guide
+    if (q.includes('dashboard') || q.includes('daashboordii') || q.includes('ዳሽቦርድ') || q.includes('analytics') || q.includes('social command')) {
+      if (currentLang === 'om') {
+        return {
+          text: "⚙️ **Daashboordiin Akkamitti Hojjata?**\nDaashboordiin kun qindeessaa miidiyaa hawaasaa Kanenus Kasa Bayisaati:\n• **Ilaalcha Waliigalaa**: Hawaasa 158K+ fi dhaqqabamummaa guyyaa 30\n• **Istuudiyoo Maxxansaa**: Facebook, TikTok, YouTube, Telegram irratti yeroo tokkotti maxxansuu\n• **Kalaandarii**: Maxxansaalee qophaa'an yeroo qabsiisuu\n• **Yaada Hawaasaa**: Ergaawwan hunda bakka tokkotti deebisuu",
+          actions: [
+            { label: "⚙️ Gara Daashboordiitti Deemi", url: "/dashboard" },
+            { label: "🔑 Seeni (Login)", url: "/login" }
+          ]
+        };
+      }
+      if (currentLang === 'am') {
+        return {
+          text: "⚙️ **ዳሽቦርዱ እንዴት ይሰራል?**\nዳሽቦርዱ የቀነኑስ ካሳ ባይሳ የማህበራዊ ሚዲያ ማዕከል ነው፦\n• **አጠቃላይ እይታ**፦ 158ሺ+ ተከታዮችን እና የ30 ቀናት ተደራሽነትን ያሳያል\n• **የፖስት ስቱዲዮ**፦ በፌስቡክ፣ ቲክቶክ፣ ዩቲዩብ እና ቴሌግራም በአንድ ጊዜ ፖስት ማድረግ\n• **የቀን መቁጠሪያ**፦ ለወደፊት የሚለጠፉ ጽሑፎችን ማስተካከል\n• **የመልእክት ሳጥን**፦ ከሁሉም ገጾች የሚመጡ መልእክቶችን በአንድ ቦታ ማስተናገድ",
+          actions: [
+            { label: "⚙️ ወደ ዳሽቦርድ ሂድ", url: "/dashboard" },
+            { label: "🔑 ግባ (Login)", url: "/login" }
+          ]
+        };
+      }
+      return {
+        text: "⚙️ **How the Social Command Dashboard Works:**\nThe executive dashboard provides a centralized management suite for Kanenus's 158K+ audience:\n• **Executive Overview**: Cross-platform reach & engagement metrics\n• **Omnichannel Studio**: Real-time device simulator for multi-platform broadcasting\n• **Content Calendar**: Drag-and-drop post scheduling\n• **Community Inbox**: Unified inbox managing Facebook, TikTok & YouTube comments",
+        actions: [
+          { label: "⚙️ Open Dashboard", url: "/dashboard" },
+          { label: "🔑 Sign In", url: "/login" }
+        ]
+      };
+    }
+
+    // 3. Ayyaantummaa
     if (q.includes('ayyaantummaa') || q.includes('book 1') || q.includes('first book') || q.includes('አያንቱማ') || q.includes('kitaaba 1')) {
       if (currentLang === 'om') {
         return {
-          text: "**'Ayyaantummaan'** kitaaba beekamaa Kanenus Kasa Bayisaatiin bara 2026 maxxanfamedha. Kitaabni kun aadaa, eenyummaa Oromoo, fi seenaa dhalootaa bal'inaan xiinxala. Fuula 'Books' irratti Boqonnaa 1ffaa bilisaan dubbisuu yookiin WhatsApp irratti bitachuu dandeessu!",
+          text: "📖 **Kitaaba 'Ayyaantummaa':**\nKitaaba beekamaa Kanenus Kasa Bayisaatiin bara 2026 maxxanfamedha. Aadaa, eenyummaa Oromoo, fi seenaa dhalootaa bal'inaan xiinxala. Fuula 'Books' irratti Boqonnaa 1ffaa bilisaan dubbisuu yookiin WhatsApp irratti bitachuu dandeessu!",
           actions: [
             { label: "📖 Boqonnaa 1 Dubbisi", url: "/books" },
             { label: "📲 WhatsApp irratti Biti", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20order%20Ayyaantummaa." }
@@ -109,7 +195,7 @@ export default function AIAssistant() {
       }
       if (currentLang === 'am') {
         return {
-          text: "**'አያንቱማ' (Ayyaantummaa)** በ2026 የታተመው የቀነኑስ ካሳ ባይሳ ታላቅ መጽሐፍ ነው። የኦሮሞን ባህላዊ ማንነት፣ ፍልስፍና እና ማህበራዊ እሴቶችን በጥልቀት ይዳስሳል። በ'Books' ገጽ ላይ ምዕራፍ 1ን በነጻ ማንበብ ወይም በቀጥታ በWhatsApp ማዘዝ ይችላሉ!",
+          text: "📖 **የ'አያንቱማ' መጽሐፍ፦**\nበ2026 የታተመው የቀነኑስ ካሳ ባይሳ ድንቅ መጽሐፍ ነው። የኦሮሞን ባህላዊ ማንነት፣ ፍልስፍና እና ማህበራዊ እሴቶችን በጥልቀት ይዳስሳል። በ'Books' ገጽ ላይ ምዕራፍ 1ን በነጻ ማንበብ ወይም በቀጥታ በWhatsApp ማዘዝ ይችላሉ!",
           actions: [
             { label: "📖 ምዕራፍ 1ን አንብብ", url: "/books" },
             { label: "📲 በWhatsApp እዘዝ", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20order%20Ayyaantummaa." }
@@ -117,7 +203,7 @@ export default function AIAssistant() {
         };
       }
       return {
-        text: "**'Ayyaantummaa'** is Kanenus Kasa Bayisa's landmark 2026 publication exploring Oromo cultural identity, ancestral wisdom, and contemporary African literature. You can read a free preview of Chapter 1 or order your hardcover directly via WhatsApp!",
+        text: "📖 **About 'Ayyaantummaa':**\nKanenus's landmark 2026 publication exploring Oromo cultural identity, ancestral wisdom, and contemporary African literature. You can read a free preview of Chapter 1 or order your hardcover directly via WhatsApp!",
         actions: [
           { label: "📖 Read Chapter 1 Preview", url: "/books" },
           { label: "📲 Order via WhatsApp", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20order%20Ayyaantummaa." }
@@ -125,11 +211,11 @@ export default function AIAssistant() {
       };
     }
 
-    // 2. Dhaloota Mul'ataa / Book 2
+    // 4. Dhaloota Mul'ataa / Book 2
     if (q.includes('dhaloota') || q.includes('mul\'ataa') || q.includes('second book') || q.includes('book 2') || q.includes('ደሎታ') || q.includes('2ffaa')) {
       if (currentLang === 'om') {
         return {
-          text: "**'Dhaloota Mul'ataa'** kitaaba lammaffaa Kanenus qopheessaa jiruudha. Dhaloota haaraa mul'ata qabu ijaaruu fi aadaa gabbisuuf kan qophaa'edha. Yeroo ba'u dursitanii beekuuf liistiitti dabalamuu dandeessu!",
+          text: "📚 **Kitaaba 2ffaa: 'Dhaloota Mul'ataa':**\nKitaaba lammaffaa Kanenus qopheessaa jiruudha. Dhaloota haaraa mul'ata qabu ijaaruu fi aadaa gabbisuuf kan qophaa'edha. Yeroo ba'u dursitanii beekuuf liistiitti dabalamuu dandeessu!",
           actions: [
             { label: "📚 Fuula Kitaabaa Ilaali", url: "/books" },
             { label: "📲 Dursa Qabadhu", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20pre-order%20Dhaloota%20Mul'ataa." }
@@ -138,7 +224,7 @@ export default function AIAssistant() {
       }
       if (currentLang === 'am') {
         return {
-          text: "**'ደሎታ ሙልአታ' (Dhaloota Mul'ataa)** በቀነኑስ እየተዘጋጀ ያለ ሁለተኛው መጽሐፍ ነው። ለአዲሱ ትውልድ ራዕይ እና የባህል ጥበብን የሚያስተምር መጽሐፍ ሲሆን በቅርቡ ይመረቃል።",
+          text: "📚 **ሁለተኛው መጽሐፍ፡ 'ደሎታ ሙልአታ'፦**\nበቀነኑስ እየተዘጋጀ ያለ ሁለተኛው መጽሐፍ ነው። ለአዲሱ ትውልድ ራዕይ እና የባህል ጥበብን የሚያስተምር መጽሐፍ ሲሆን በቅርቡ ይመረቃል።",
           actions: [
             { label: "📚 የመጽሐፉን ገጽ ይመልከቱ", url: "/books" },
             { label: "📲 በWhatsApp ቀድመው ይዘዙ", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20pre-order%20Dhaloota%20Mul'ataa." }
@@ -146,7 +232,7 @@ export default function AIAssistant() {
         };
       }
       return {
-        text: "**'Dhaloota Mul'ataa'** (Coming Soon • 2ffaa) is Kanenus's upcoming visionary second book dedicated to empowering the emerging generation with cultural consciousness and leadership philosophy.",
+        text: "📚 **Book 2: 'Dhaloota Mul'ataa' (Coming Soon • 2ffaa):**\nKanenus's highly anticipated second book dedicated to empowering the emerging generation with cultural consciousness and leadership philosophy.",
         actions: [
           { label: "📚 View Books Page", url: "/books" },
           { label: "📲 Reserve Pre-order via WhatsApp", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20pre-order%20Dhaloota%20Mul'ataa." }
@@ -154,11 +240,11 @@ export default function AIAssistant() {
       };
     }
 
-    // 3. Shanan Gadaa Band / Music
+    // 5. Shanan Gadaa Band / Music
     if (q.includes('music') || q.includes('band') || q.includes('shanan') || q.includes('gadaa') || q.includes('song') || q.includes('muuziqaa') || q.includes('ሙዚቃ') || q.includes('ባንድ')) {
       if (currentLang === 'om') {
         return {
-          text: "**Baandiin Shanan Gadaa** baandii aadaa Oromoo beekamaa Kanenusiin hogganamuudha. Sirboota akka *'Oromiyaa Koo'*, *'Gadaa Mootummaa'*, fi *'Shanan Gadaa'* qaba. Ayyaana aadaa fi waltajjiiwwaniif afeeruun ni danda'ama!",
+          text: "🎵 **Baandii Shanan Gadaa:**\nBaandii aadaa Oromoo beekamaa Kanenusiin hogganamuudha. Sirboota akka *'Oromiyaa Koo'*, *'Gadaa Mootummaa'*, fi *'Shanan Gadaa'* qaba. Ayyaana aadaa fi waltajjiiwwaniif afeeruun ni danda'ama!",
           actions: [
             { label: "🎵 Giddu-gala Muuziqaa Ilaali", url: "/music" },
             { label: "📲 Baandicha Afeeraa", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20book%20Shanan%20Gadaa%20Band." }
@@ -167,7 +253,7 @@ export default function AIAssistant() {
       }
       if (currentLang === 'am') {
         return {
-          text: "**የሸነን ገዳ ባንድ** በቀነኑስ ካሳ ባይሳ የሚመራ ተወዳጅ የባህል ሙዚቃ ባንድ ነው። እንደ *'ኦሮሚያ ኮ'*, *'ገዳ ሞቱማ'* የመሳሰሉ ዜማዎች ያሉት ሲሆን ለባህል ዝግጅቶች እና ኮንሰርቶች መጋበዝ ይቻላል!",
+          text: "🎵 **የሸነን ገዳ ባንድ፦**\nበቀነኑስ ካሳ ባይሳ የሚመራ ተወዳጅ የባህል ሙዚቃ ባንድ ነው። እንደ *'ኦሮሚያ ኮ'*, *'ገዳ ሞቱማ'* የመሳሰሉ ዜማዎች ያሉት ሲሆን ለባህል ዝግጅቶች እና ኮንሰርቶች መጋበዝ ይቻላል!",
           actions: [
             { label: "🎵 የሙዚቃ ማዕከልን ይመልከቱ", url: "/music" },
             { label: "📲 ባንዱን ይጋብዙ", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20book%20Shanan%20Gadaa%20Band." }
@@ -175,7 +261,7 @@ export default function AIAssistant() {
         };
       }
       return {
-        text: "**The Shanan Gadaa Band** is directed by Kanenus Kasa Bayisa, bringing traditional Gadaa rhythms and cultural folk music to audiences worldwide with tracks like *'Oromiyaa Koo'* and *'Gadaa Mootummaa'*.",
+        text: "🎵 **About Shanan Gadaa Band:**\nDirected by Kanenus Kasa Bayisa, bringing traditional Gadaa rhythms and cultural folk music to audiences worldwide with tracks like *'Oromiyaa Koo'* and *'Gadaa Mootummaa'*.",
         actions: [
           { label: "🎵 Explore Music Hub", url: "/music" },
           { label: "📲 Book the Band via WhatsApp", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20book%20Shanan%20Gadaa%20Band." }
@@ -183,11 +269,11 @@ export default function AIAssistant() {
       };
     }
 
-    // 4. Who is Kanenus / Biography
+    // 6. Who is Kanenus / Biography
     if (q.includes('who is') || q.includes('about') || q.includes('bio') || q.includes('eenyu') || q.includes('ማን ነው') || q.includes('ስለ')) {
       if (currentLang === 'om') {
         return {
-          text: "**Kanenus Kasa Bayisa** barreessaa ogummaa, Hogganaa Quunnamtii Hawaasaa Waldaa Barreessitoota Oromiyaa, Daarektara Baandii Shanan Gadaa, fi uumaa marsariitii 'Hizbii Keenya'ti (hordoftoota 125K+).",
+          text: "👤 **Kanenus Kasa Bayisa Eenyu?**\nBarreessaa ogummaa, Hogganaa Quunnamtii Hawaasaa Waldaa Barreessitoota Oromiyaa, Daarektara Baandii Shanan Gadaa, fi uumaa marsariitii 'Hizbii Keenya'ti (hordoftoota 125K+).",
           actions: [
             { label: "👤 Seenaa Guutuu Ilaali", url: "/about" },
             { label: "📄 CV / Resume", url: "/cv" }
@@ -196,7 +282,7 @@ export default function AIAssistant() {
       }
       if (currentLang === 'am') {
         return {
-          text: "**ቀነኑስ ካሳ ባይሳ** ደራሲ፣ በኦሮሚያ ጸሐፊዎች ማህበር የህዝብ ግንኙነት ኃላፊ፣ የሸነን ገዳ ባንድ ዳይሬክተር እና ከ125,000 በላይ ተከታዮች ያሉት የ'ሕዝቢ ኬኛ' ዲጂታል መድረክ መስራች ነው።",
+          text: "👤 **ቀነኑስ ካሳ ባይሳ ማን ነው?**\nደራሲ፣ በኦሮሚያ ጸሐፊዎች ማህበር የህዝብ ግንኙነት ኃላፊ፣ የሸነን ገዳ ባንድ ዳይሬክተር እና ከ125,000 በላይ ተከታዮች ያሉት የ'ሕዝቢ ኬኛ' ዲጂታል መድረክ መስራች ነው።",
           actions: [
             { label: "👤 ሙሉ የህይወት ታሪክ", url: "/about" },
             { label: "📄 የሙያ ዝርዝር (CV)", url: "/cv" }
@@ -204,7 +290,7 @@ export default function AIAssistant() {
         };
       }
       return {
-        text: "**Kanenus Kasa Bayisa** is a professional author, Public Relations Manager at the Oromia Writers Association, Director of the Shanan Gadaa Band, and digital community leader with over 125,000 followers on social media.",
+        text: "👤 **About Kanenus Kasa Bayisa:**\nProfessional author, Public Relations Manager at the Oromia Writers Association, Director of the Shanan Gadaa Band, and digital community leader with over 125,000 followers on social media.",
         actions: [
           { label: "👤 Full Biography", url: "/about" },
           { label: "📄 View CV / Resume", url: "/cv" }
@@ -212,11 +298,11 @@ export default function AIAssistant() {
       };
     }
 
-    // 5. Contact / Booking / Social
+    // 7. Contact / Booking
     if (q.includes('contact') || q.includes('email') || q.includes('social') || q.includes('qunnam') || q.includes('አግኝ') || q.includes('ስልክ')) {
       if (currentLang === 'om') {
         return {
-          text: "Kanenus wajjin qunnamtii uumuuf foormii marsariitii keenyaa, WhatsApp, Telegram, yookiin miidiyaa hawaasaa (Facebook, TikTok, YouTube) fayyadamuu dandeessu.",
+          text: "✉️ **Quunnamtii Uumuuf:**\nKanenus wajjin qunnamtii uumuuf foormii marsariitii keenyaa, WhatsApp, Telegram, yookiin miidiyaa hawaasaa (Facebook, TikTok, YouTube) fayyadamuu dandeessu.",
           actions: [
             { label: "✉️ Fuula Qunnamtii", url: "/contact" },
             { label: "📲 WhatsApp", url: "https://wa.me/251000000000" }
@@ -225,7 +311,7 @@ export default function AIAssistant() {
       }
       if (currentLang === 'am') {
         return {
-          text: "ከቀነኑስ ጋር ለመገናኘት የድረ-ገጹን የመልእክት ቅጽ፣ WhatsApp፣ ቴሌግራም ወይም ይፋዊ ማህበራዊ ገጾቹን (ፌስቡክ፣ ቲክቶክ፣ ዩቲዩብ) መጠቀም ይችላሉ።",
+          text: "✉️ **አድራሻ እና ግንኙነት፦**\nከቀነኑስ ጋር ለመገናኘት የድረ-ገጹን የመልእክት ቅጽ፣ WhatsApp፣ ቴሌግራም ወይም ይፋዊ ማህበራዊ ገጾቹን (ፌስቡክ፣ ቲክቶክ፣ ዩቲዩብ) መጠቀም ይችላሉ።",
           actions: [
             { label: "✉️ የአድራሻ ገጽ", url: "/contact" },
             { label: "📲 WhatsApp", url: "https://wa.me/251000000000" }
@@ -233,7 +319,7 @@ export default function AIAssistant() {
         };
       }
       return {
-        text: "You can reach Kanenus and his management team via the official contact page, direct WhatsApp, Telegram, or through his social media channels (Facebook, TikTok, YouTube).",
+        text: "✉️ **How to Connect:**\nYou can reach Kanenus and his management team via the official contact page, direct WhatsApp, Telegram, or through his social media channels (Facebook, TikTok, YouTube).",
         actions: [
           { label: "✉️ Contact Form", url: "/contact" },
           { label: "📲 Direct WhatsApp", url: "https://wa.me/251000000000" }
@@ -244,30 +330,30 @@ export default function AIAssistant() {
     // Default Fallback
     if (currentLang === 'om') {
       return {
-        text: `Gaaffii keessaniif galatoomaa! Kanenus Kasa Bayisa barreessaa kitaaba **'Ayyaantummaa'**, hogganaa PR, fi qindeessaa Baandii Shanan Gadaati. Waa'ee kitaabotaa, muuziqaa, yookiin afeerraa sagantaalee ifatti na gaafachuu dandeessu!`,
+        text: `Gaaffii keessaniif galatoomaa! Kanenus Kasa Bayisa barreessaa kitaaba **'Ayyaantummaa'**, hogganaa PR, fi qindeessaa Baandii Shanan Gadaati. Marsariitii kana akkamitti akka fayyadamtaniif gaaffii qabdanii?`,
         actions: [
+          { label: "🌐 Qajeelfama Marsariitii", query: "Marsariitii kana akkamittiin fayyadama?" },
           { label: "📚 Kitaabota Ilaali", url: "/books" },
-          { label: "🎵 Muuziqaa Dhaggeeffadhu", url: "/music" },
-          { label: "✉️ Qunnamii", url: "/contact" }
+          { label: "🎵 Muuziqaa Dhaggeeffadhu", url: "/music" }
         ]
       };
     }
     if (currentLang === 'am') {
       return {
-        text: `ስለ ጥያቄዎ እናመሰግናለን! ቀነኑስ ካሳ ባይሳ የ**'አያንቱማ'** መጽሐፍ ደራሲ፣ የሸነን ገዳ ባንድ ዳይሬክተር እና የባህል አምባሳደር ነው። ስለ መጽሐፍት፣ ስለ ሙዚቃ ወይም ስለ ንግግር ግብዣዎች በዝርዝር ልመልስልዎ እችላለሁ!`,
+        text: `ስለ ጥያቄዎ እናመሰግናለን! ቀነኑስ ካሳ ባይሳ የ**'አያንቱማ'** መጽሐፍ ደራሲ፣ የሸነን ገዳ ባንድ ዳይሬክተር እና የባህል አምባሳደር ነው። ድረ-ገጹን እንዴት መጠቀም እንደሚቻል ተጨማሪ መረጃ ይፈልጋሉ?`,
         actions: [
+          { label: "🌐 የድረ-ገጹ መመሪያ", query: "ይህንን ድረ-ገጽ እንዴት ልጠቀምበት እችላለሁ?" },
           { label: "📚 መጽሐፍትን ይመልከቱ", url: "/books" },
-          { label: "🎵 ሙዚቃዎችን ያዳምጡ", url: "/music" },
-          { label: "✉️ ያነጋግሩን", url: "/contact" }
+          { label: "🎵 ሙዚቃዎችን ያዳምጡ", url: "/music" }
         ]
       };
     }
     return {
-      text: "Thank you for asking! Kanenus Kasa Bayisa is a cultural author (*'Ayyaantummaa'* & *'Dhaloota Mul'ataa'*), PR leader at the Oromia Writers Association, and Director of the Shanan Gadaa Band. Feel free to explore his works or get in touch!",
+      text: "Thank you for asking! Kanenus Kasa Bayisa is a cultural author (*'Ayyaantummaa'* & *'Dhaloota Mul'ataa'*), PR leader at the Oromia Writers Association, and Director of the Shanan Gadaa Band. Would you like a detailed guide on how to use any section of this site?",
       actions: [
+        { label: "🌐 Website Usage Guide", query: "How do I navigate this website?" },
         { label: "📚 Explore Books", url: "/books" },
-        { label: "🎵 Music Hub", url: "/music" },
-        { label: "✉️ Contact Team", url: "/contact" }
+        { label: "🎵 Music Hub", url: "/music" }
       ]
     };
   };
@@ -327,7 +413,7 @@ export default function AIAssistant() {
 
       {/* AI Chat Window Modal */}
       {isOpen && (
-        <div className="fixed bottom-24 right-5 sm:right-6 w-[92vw] sm:w-[400px] h-[560px] max-h-[82vh] bg-white dark:bg-gray-900 rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.35)] border border-purple-500/20 dark:border-purple-500/30 flex flex-col overflow-hidden z-50 animate-in fade-in slide-in-from-bottom-5 duration-300">
+        <div className="fixed bottom-24 right-5 sm:right-6 w-[92vw] sm:w-[420px] h-[580px] max-h-[84vh] bg-white dark:bg-gray-900 rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.35)] border border-purple-500/20 dark:border-purple-500/30 flex flex-col overflow-hidden z-50 animate-in fade-in slide-in-from-bottom-5 duration-300">
           
           {/* Header */}
           <div className="bg-gradient-to-r from-[#0b1a30] via-purple-950 to-[#071324] text-white p-4.5 px-5 flex items-center justify-between border-b border-white/10 shrink-0">
@@ -359,7 +445,7 @@ export default function AIAssistant() {
                 className={`flex flex-col ${msg.sender === 'user' ? 'items-end' : 'items-start'}`}
               >
                 <div
-                  className={`max-w-[85%] rounded-2xl p-3.5 text-xs sm:text-sm leading-relaxed ${
+                  className={`max-w-[88%] rounded-2xl p-3.5 text-xs sm:text-sm leading-relaxed ${
                     msg.sender === 'user'
                       ? 'bg-gradient-to-r from-accent to-blue-600 text-white rounded-br-none shadow-md'
                       : 'bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 rounded-bl-none shadow-sm border border-gray-100 dark:border-gray-700'
@@ -381,6 +467,14 @@ export default function AIAssistant() {
                           >
                             {act.label}
                           </a>
+                        ) : act.query ? (
+                          <button
+                            key={i}
+                            onClick={() => handleSend(act.query)}
+                            className="px-2.5 py-1 bg-blue-50 dark:bg-blue-950/50 hover:bg-blue-100 text-blue-700 dark:text-blue-300 text-[11px] font-bold rounded-lg transition border border-blue-200/60 flex items-center gap-1"
+                          >
+                            {act.label}
+                          </button>
                         ) : null
                       ))}
                     </div>
