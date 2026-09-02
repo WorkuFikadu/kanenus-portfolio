@@ -1,10 +1,11 @@
 'use client';
-
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useLang } from '@/components/LangContext';
 
 function CountdownTimer({ targetDate }: { targetDate: string }) {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const { lang } = useLang();
 
   useEffect(() => {
     const calc = () => {
@@ -22,226 +23,214 @@ function CountdownTimer({ targetDate }: { targetDate: string }) {
     return () => clearInterval(timer);
   }, [targetDate]);
 
+  const labels = {
+    days: lang === 'om' ? 'Guyyoota' : lang === 'am' ? 'ቀናት' : 'Days',
+    hours: lang === 'om' ? 'Sa\'aatii' : lang === 'am' ? 'ሰዓታት' : 'Hours',
+    minutes: lang === 'om' ? 'Daqiiqaa' : lang === 'am' ? 'ደቂቃዎች' : 'Minutes',
+    seconds: lang === 'om' ? 'Sekondii' : lang === 'am' ? 'ሰከንዶች' : 'Seconds',
+  };
+
   return (
     <div className="flex gap-4 justify-center">
       {Object.entries(timeLeft).map(([unit, value]) => (
         <div key={unit} className="flex flex-col items-center">
-          <div className="w-20 h-20 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl flex items-center justify-center text-3xl font-bold font-heading tabular-nums">
+          <div className="w-20 h-20 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl flex items-center justify-center text-3xl font-bold font-heading tabular-nums text-white">
             {String(value).padStart(2, '0')}
           </div>
-          <span className="text-xs text-gray-400 uppercase tracking-widest mt-2">{unit}</span>
+          <span className="text-xs text-gray-300 uppercase tracking-widest mt-2">{labels[unit as keyof typeof labels]}</span>
         </div>
       ))}
     </div>
   );
 }
 
-const upcomingEvents = [
-  {
-    title: "Oromia Cultural Literature Forum",
-    type: "Panel Discussion",
-    date: "October 18, 2026",
-    location: "Addis Ababa Cultural Center",
-    description: "Kanenus will moderate a panel of leading Oromo authors discussing the future of indigenous literature in the digital age.",
-    spots: 12,
-    badge: "Upcoming"
+const eventsContent = {
+  en: {
+    badge: 'Schedule',
+    heading: 'Events & Appearances',
+    desc: 'Join Kanenus at cultural symposiums, literary keynote speeches, and live musical performances worldwide.',
+    nextEventBadge: 'Next Major Appearance',
+    reserveSpot: 'Reserve a Seat via WhatsApp',
+    allEventsHeading: 'Upcoming Events Schedule',
+    ctaHeading: 'Want to host or invite Kanenus?',
+    ctaDesc: 'Available for university lectures, festival keynotes, and cultural ceremonies.',
+    ctaBtn: 'Send Event Invitation',
+    events: [
+      {
+        title: "Oromia Cultural Literature Forum",
+        type: "Panel Discussion",
+        date: "October 18, 2026",
+        location: "Addis Ababa Cultural Center",
+        description: "Kanenus will moderate a panel of leading Oromo authors discussing the future of indigenous literature in the digital age.",
+      },
+      {
+        title: "Shanan Gadaa Band — Grand Performance",
+        type: "Live Performance",
+        date: "November 5, 2026",
+        location: "Jimma National Theater",
+        description: "A landmark cultural evening featuring the Shanan Gadaa Band under Kanenus's artistic direction, celebrating Oromo musical heritage.",
+      },
+      {
+        title: "East Africa Writers Summit",
+        type: "Keynote Speech",
+        date: "December 12, 2026",
+        location: "Nairobi / Virtual",
+        description: "Delivering the opening keynote on 'Bridging Digital Media and Ancient Heritage in Modern African Authorship'.",
+      }
+    ]
   },
-  {
-    title: "Shanan Gadaa Band — Grand Performance",
-    type: "Live Performance",
-    date: "November 5, 2026",
-    location: "Jimma National Theater",
-    description: "A landmark cultural evening featuring the Shanan Gadaa Band under Kanenus's artistic direction, celebrating Oromo musical heritage.",
-    spots: 200,
-    badge: "Tickets Available"
+  om: {
+    badge: 'Sagantaalee',
+    heading: 'Sagantaalee & Walgahiiwwan',
+    desc: 'Walgahii aadaa, waltajjii ogbarruu, fi sirba baandii Shanan Gadaa irratti Kanenus wajjin hirmaadhaa.',
+    nextEventBadge: 'Sagantaa Itti Aanu',
+    reserveSpot: 'Iddoo Qabadhu (WhatsApp)',
+    allEventsHeading: 'Tarree Sagantaalee Dhufanii',
+    ctaHeading: 'Kanenus afeeruu yookiin qopheessuu barbaadduu?',
+    ctaDesc: 'Walgahii yuunivarsiitii, ayyaanota aadaa, fi sagantaalee ogbarruutiif qophiidha.',
+    ctaBtn: 'Afeerraa Sagantaa Ergi',
+    events: [
+      {
+        title: "Fooramii Ogbarruu Aadaa Oromiyaa",
+        type: "Maree Waltajjii",
+        date: "Onkoloolessa 18, 2026",
+        location: "Giddu-gala Aadaa Finfinnee",
+        description: "Kanenus barreessitoota Oromoo bebbeekamoo wajjin waa'ee ogbarruu ammayyaa irratti marii gaggeessa.",
+      },
+      {
+        title: "Sirba Guddaa Baandii Shanan Gadaa",
+        type: "Agarsiisa Sirbaa",
+        date: "Sadaasa 5, 2026",
+        location: "Tiyyaatira Biyyooleessaa Jimmaa",
+        description: "Hoggansa Kanenusiin qophii sirba aadaa guddaa dhalootaaf dhihaatu.",
+      },
+      {
+        title: "Walgahii Barreessitoota Baha Afrikaa",
+        type: "Haasawa Ijoo",
+        date: "Muddee 12, 2026",
+        location: "Naayiroobii / Toora Intarneetii",
+        description: "Haasawa ijoo waa'ee aadaa fi miidiyaa digitaalaa ogbarruu Afrikaa keessatti dhiheessa.",
+      }
+    ]
   },
-  {
-    title: "East Africa Writers Summit",
-    type: "Keynote Speech",
-    date: "December 2, 2026",
-    location: "Nairobi, Kenya",
-    description: "Kanenus delivers a keynote on 'The Role of Social Media in Preserving African Languages and Literature' at the regional writers summit.",
-    spots: 8,
-    badge: "Featured Speaker"
-  },
-];
-
-const speakingTopics = [
-  "Cultural Heritage Preservation Through Literature",
-  "Digital Storytelling for African Creators",
-  "Public Relations in the Literary Sector",
-  "Building Online Communities Around Culture",
-  "The Future of Oromo Language and Literature",
-  "Leadership in Creative Organizations",
-];
+  am: {
+    badge: 'መርሃ ግብሮች',
+    heading: 'ክስተቶች እና የባህል ዝግጅቶች',
+    desc: 'በስነ-ጽሁፍ መድረኮች፣ በባህል ሲምፖዚየሞች እና በሸነን ገዳ ባንድ ዝግጅቶች ላይ ከቀነኑስ ጋር ይሳተፉ።',
+    nextEventBadge: 'ቀጣዩ ትልቅ መርሃ ግብር',
+    reserveSpot: 'ቦታ ይያዙ (በWhatsApp)',
+    allEventsHeading: 'የሚመጡ ዝግጅቶች ዝርዝር',
+    ctaHeading: 'ቀነኑስን ወደ ዝግጅትዎ መጋበዝ ይፈልጋሉ?',
+    ctaDesc: 'ለዩኒቨርሲቲ ንግግሮች፣ ለባህል ፌስቲቫሎች እና ለስነ-ጽሁፍ ምረቃዎች ዝግጁ ነው።',
+    ctaBtn: 'የግብዣ ጥያቄ ላክ',
+    events: [
+      {
+        title: "የኦሮሚያ ባህላዊ ስነ-ጽሁፍ ፎረም",
+        type: "የፓናል ውይይት",
+        date: "ጥቅምት 18, 2026",
+        location: "አዲስ አበባ ባህል ማዕከል",
+        description: "ቀነኑስ ታዋቂ ደራሲያንን በማስተባበር በዲጂታል ዘመን ስላለው የስነ-ጽሁፍ ጉዞ ውይይት ይመራል።",
+      },
+      {
+        title: "የሸነን ገዳ ባንድ ታላቅ የሙዚቃ ዝግጅት",
+        type: "የቀጥታ ኮንሰርት",
+        date: "ህዳር 5, 2026",
+        location: "የጅማ ብሔራዊ ቴአትር",
+        description: "በቀነኑስ አዘጋጅነት የኦሮሞን ባህላዊ ሙዚቃዎች የሚያቀርብ ድንቅ ምሽት።",
+      },
+      {
+        title: "የምስራቅ አፍሪካ ጸሐፊዎች ጉባዔ",
+        type: "የክብር ንግግር",
+        date: "ታህሳስ 12, 2026",
+        location: "ናይሮቢ / በበይነ-መረብ",
+        description: "ዲጂታል ሚዲያን እና ጥንታዊ ቅርሶችን በዘመናዊ ስነ-ጽሁፍ ማስተሳሰር በሚል ርዕስ ንግግር ያቀርባል።",
+      }
+    ]
+  }
+};
 
 export default function EventsPage() {
-  const [form, setForm] = useState({ name: '', org: '', email: '', topic: '', date: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+  const { lang } = useLang();
+  const t = eventsContent[lang];
 
   return (
-    <div className="bg-[#fcfdfd] dark:bg-gray-900 min-h-screen">
-
-      {/* Hero */}
-      <section className="relative bg-gradient-to-br from-[#071324] via-[#0b1a30] to-[#122a4f] text-white py-32 overflow-hidden">
-        <div className="absolute inset-0 opacity-5" style={{backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px)', backgroundSize: '32px 32px'}}></div>
-        <div className="container mx-auto px-6 max-w-5xl text-center relative z-10">
+    <div className="bg-[#fcfdfd] dark:bg-gray-900 min-h-screen text-gray-800 dark:text-gray-100">
+      {/* Header */}
+      <section className="bg-gradient-to-br from-[#071324] via-[#0b1a30] to-[#122a4f] text-white py-28 relative overflow-hidden">
+        <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
           <div className="flex items-center justify-center gap-4 text-accent font-bold tracking-widest uppercase text-sm mb-6">
             <span className="w-12 h-px bg-accent"></span>
-            Events & Speaking
+            {t.badge}
             <span className="w-12 h-px bg-accent"></span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">Live Events & <br/>Speaking Engagements</h1>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-16">
-            Book Kanenus Kasa Bayisa for your conference, cultural event, or literary festival. Available for keynotes, panels, workshops, and live performances.
-          </p>
+          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">{t.heading}</h1>
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">{t.desc}</p>
+        </div>
+      </section>
 
-          {/* Next Event Countdown */}
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-10 max-w-2xl mx-auto">
-            <p className="text-accent font-bold uppercase tracking-widest text-sm mb-3">Next Event Starts In</p>
-            <h3 className="text-2xl font-heading font-bold mb-8">Oromia Cultural Literature Forum</h3>
-            <CountdownTimer targetDate="2026-10-18T09:00:00" />
+      {/* Featured Event Countdown */}
+      <section className="py-16 bg-[#071324] border-b border-white/10 text-white">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          <span className="px-4 py-1.5 bg-accent/20 text-accent border border-accent/30 rounded-full text-xs font-bold uppercase tracking-widest inline-block mb-6">
+            {t.nextEventBadge}
+          </span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8">
+            {t.events[0].title}
+          </h2>
+          <CountdownTimer targetDate="2026-10-18T09:00:00" />
+          <div className="mt-8">
+            <a
+              href="https://wa.me/251000000000?text=Hello!%20I%20would%20like%20to%20reserve%20a%20seat%20for%20the%20Oromia%20Cultural%20Literature%20Forum."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-accent hover:bg-blue-500 text-white font-bold rounded-full transition shadow-lg text-sm"
+            >
+              {t.reserveSpot}
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Upcoming Events */}
-      <section className="py-28">
+      {/* Events Grid */}
+      <section className="py-24">
         <div className="container mx-auto px-6 max-w-6xl">
-          <div className="text-center mb-16 space-y-4">
-            <div className="flex items-center justify-center gap-4 text-accent font-bold tracking-widest uppercase text-sm">
-              <span className="w-12 h-px bg-accent"></span>
-              Schedule
-              <span className="w-12 h-px bg-accent"></span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary dark:text-white">Upcoming Events</h2>
-          </div>
-
+          <h2 className="text-3xl font-heading font-bold text-primary dark:text-white mb-12 text-center">{t.allEventsHeading}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {upcomingEvents.map((event, idx) => (
-              <div key={idx} className="bg-white dark:bg-gray-800 rounded-2xl shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-gray-100 dark:border-gray-700 hover:shadow-[0_12px_48px_rgba(0,0,0,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden group">
-                <div className="h-1.5 bg-gradient-to-r from-accent to-blue-400"></div>
-                <div className="p-8 flex flex-col flex-1">
-                  <div className="flex items-start justify-between mb-4">
-                    <span className="px-3 py-1 bg-accent/10 text-accent text-xs font-bold uppercase tracking-widest rounded-full">{event.type}</span>
-                    <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">{event.badge}</span>
+            {t.events.map((evt, idx) => (
+              <div key={idx} className="bg-white dark:bg-gray-800 p-8 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-lg hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+                <div>
+                  <span className="px-3.5 py-1 bg-accent/10 text-accent rounded-full text-xs font-bold uppercase tracking-widest inline-block mb-4">
+                    {evt.type}
+                  </span>
+                  <h3 className="text-xl font-heading font-bold text-primary dark:text-white mb-2">{evt.title}</h3>
+                  <div className="space-y-1 text-xs text-gray-500 dark:text-gray-400 mb-4 font-medium">
+                    <p>📅 {evt.date}</p>
+                    <p>📍 {evt.location}</p>
                   </div>
-
-                  <h3 className="text-xl font-heading font-bold text-primary dark:text-white mb-3 group-hover:text-accent transition leading-snug">{event.title}</h3>
-
-                  <div className="space-y-2 mb-4 text-sm text-gray-500">
-                    <div className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                      {event.date}
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <svg className="w-4 h-4 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                      {event.location}
-                    </div>
-                  </div>
-
-                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed flex-1 mb-6">{event.description}</p>
-
-                  <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700">
-                    <span className="text-xs text-gray-400">{event.spots} spots remaining</span>
-                    <Link href="#book" className="text-accent font-bold text-sm hover:underline flex items-center gap-1">
-                      Request Seat
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                    </Link>
-                  </div>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-6">{evt.description}</p>
                 </div>
+                <a
+                  href={`https://wa.me/251000000000?text=${encodeURIComponent('Hello! I would like more information about: ' + evt.title)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center py-3 bg-gray-50 dark:bg-gray-700 text-primary dark:text-white font-bold text-xs rounded-xl hover:bg-accent hover:text-white transition"
+                >
+                  {t.reserveSpot}
+                </a>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Speaking Topics */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800 border-y border-gray-100 dark:border-gray-700">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <div className="text-center mb-12 space-y-4">
-            <div className="flex items-center justify-center gap-4 text-accent font-bold tracking-widest uppercase text-sm">
-              <span className="w-12 h-px bg-accent"></span>
-              Speaking Topics
-              <span className="w-12 h-px bg-accent"></span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary dark:text-white">Areas of Expertise</h2>
-          </div>
-          <div className="flex flex-wrap gap-4 justify-center">
-            {speakingTopics.map((topic, idx) => (
-              <span key={idx} className="px-5 py-3 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 hover:border-accent hover:text-accent transition-all duration-200 cursor-default shadow-sm">
-                {topic}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Booking Form */}
-      <section id="book" className="py-28 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-6 max-w-3xl">
-          <div className="text-center mb-14 space-y-4">
-            <div className="flex items-center justify-center gap-4 text-accent font-bold tracking-widest uppercase text-sm">
-              <span className="w-12 h-px bg-accent"></span>
-              Book a Session
-              <span className="w-12 h-px bg-accent"></span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary dark:text-white">Request a Speaking Engagement</h2>
-            <p className="text-gray-500 text-lg">Fill out the form below and Kanenus's team will respond within 48 hours.</p>
-          </div>
-
-          {submitted ? (
-            <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-3xl p-16 text-center">
-              <div className="w-20 h-20 bg-green-100 dark:bg-green-900/40 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/></svg>
-              </div>
-              <h3 className="text-2xl font-heading font-bold text-primary dark:text-white mb-3">Booking Request Received!</h3>
-              <p className="text-gray-600 dark:text-gray-300">Thank you for reaching out. Kanenus's team will review your request and respond within 48 hours.</p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-gray-100 dark:border-gray-700 p-8 md:p-12 space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">Your Name *</label>
-                  <input type="text" required value={form.name} onChange={e => setForm({...form, name: e.target.value})} placeholder="Full name" className="w-full p-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent transition text-gray-800 dark:text-white"/>
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">Organization *</label>
-                  <input type="text" required value={form.org} onChange={e => setForm({...form, org: e.target.value})} placeholder="Company / Event organizer" className="w-full p-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent transition text-gray-800 dark:text-white"/>
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">Email *</label>
-                  <input type="email" required value={form.email} onChange={e => setForm({...form, email: e.target.value})} placeholder="your@email.com" className="w-full p-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent transition text-gray-800 dark:text-white"/>
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">Preferred Date *</label>
-                  <input type="date" required value={form.date} onChange={e => setForm({...form, date: e.target.value})} className="w-full p-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent transition text-gray-800 dark:text-white"/>
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">Speaking Topic</label>
-                <select value={form.topic} onChange={e => setForm({...form, topic: e.target.value})} className="w-full p-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent transition text-gray-800 dark:text-white">
-                  <option value="">Select a topic...</option>
-                  {speakingTopics.map((t, i) => <option key={i} value={t}>{t}</option>)}
-                  <option value="other">Other / Custom Topic</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">Event Details *</label>
-                <textarea required rows={5} value={form.message} onChange={e => setForm({...form, message: e.target.value})} placeholder="Tell us about your event, expected audience, duration, and any special requirements..." className="w-full p-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent transition resize-none text-gray-800 dark:text-white"></textarea>
-              </div>
-              <button type="submit" className="w-full py-5 bg-primary text-white font-bold uppercase tracking-widest rounded-xl hover:bg-accent transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm">
-                Submit Booking Request
-              </button>
-            </form>
-          )}
+      {/* Invite Host Banner */}
+      <section className="py-20 bg-accent text-white">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">{t.ctaHeading}</h2>
+          <p className="text-blue-100 mb-8 max-w-xl mx-auto">{t.ctaDesc}</p>
+          <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-accent font-bold rounded-full hover:bg-gray-100 transition shadow-xl text-sm">
+            {t.ctaBtn}
+          </Link>
         </div>
       </section>
     </div>
