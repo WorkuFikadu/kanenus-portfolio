@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { useLang } from '@/components/LangContext';
+import { translations } from '@/lib/translations';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 type Platform = 'facebook' | 'tiktok' | 'youtube' | 'instagram' | 'telegram';
@@ -148,6 +151,8 @@ export default function DashboardPage() {
   const [activeTab, setActiveTab] = useState<Tab>('overview');
   const [theme, setTheme] = useState<DashboardTheme>('light');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { lang } = useLang();
+  const t = translations[lang].dashboard;
 
   // Auth gate
   useEffect(() => {
@@ -376,13 +381,13 @@ export default function DashboardPage() {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h1 className="text-sm sm:text-base font-bold leading-none">Social Command Center</h1>
+                <h1 className="text-sm sm:text-base font-bold leading-none">{t.centerTitle}</h1>
                 <span className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Live Sync
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> {t.liveSync}
                 </span>
               </div>
               <p className={`text-[11px] sm:text-xs mt-0.5 truncate max-w-[200px] sm:max-w-none ${theme === 'dark' || theme === 'royal' ? 'text-slate-300' : 'text-slate-500'}`}>
-                Kanenus Kasa Bayisa • Multi-Channel Management
+                {t.tagline}
               </p>
             </div>
           </div>
@@ -390,9 +395,11 @@ export default function DashboardPage() {
 
         {/* Global Quick Action & Theme Selector */}
         <div className="flex items-center gap-3">
+          {/* Executive Language Switcher */}
+          <LanguageSwitcher compact={true} />
           
           {/* Visual Theme Selector */}
-          <div className="flex items-center bg-slate-200/70 dark:bg-slate-800 p-1 rounded-xl border border-slate-300/60 dark:border-slate-700 text-xs">
+          <div className="hidden sm:flex items-center bg-slate-200/70 dark:bg-slate-800 p-1 rounded-xl border border-slate-300/60 dark:border-slate-700 text-xs">
             <button
               onClick={() => handleSetTheme('light')}
               className={`flex items-center gap-1 px-2.5 py-1 rounded-lg font-bold transition ${
@@ -400,7 +407,7 @@ export default function DashboardPage() {
               }`}
               title="Clean Light Executive Mode"
             >
-              ☀️ Light
+              {t.lightTheme}
             </button>
             <button
               onClick={() => handleSetTheme('royal')}
@@ -409,7 +416,7 @@ export default function DashboardPage() {
               }`}
               title="Royal Navy Brand Theme"
             >
-              👑 Royal
+              {t.royalTheme}
             </button>
             <button
               onClick={() => handleSetTheme('dark')}
@@ -418,7 +425,7 @@ export default function DashboardPage() {
               }`}
               title="Midnight Dark Mode"
             >
-              🌙 Dark
+              {t.darkTheme}
             </button>
           </div>
 
@@ -427,7 +434,7 @@ export default function DashboardPage() {
             className="flex items-center gap-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl shadow-md transition duration-200 transform hover:-translate-y-0.5"
           >
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 4v16m8-8H4"/></svg>
-            Create Post
+            {t.createPostBtn}
           </button>
 
           <div className="h-5 w-px bg-slate-300 dark:bg-slate-700"></div>
@@ -438,7 +445,7 @@ export default function DashboardPage() {
               theme === 'dark' || theme === 'royal' ? 'text-slate-300 hover:text-white hover:bg-white/10' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
             }`}
           >
-            ← Public Site
+            {t.backWebsite}
           </Link>
 
           <button
@@ -466,14 +473,14 @@ export default function DashboardPage() {
               {/* Mobile Drawer Navigation List */}
               <nav className="space-y-1 flex-1 overflow-y-auto">
                 {[
-                  { id: 'overview', label: 'Executive Overview' },
-                  { id: 'compose', label: 'Omnichannel Studio' },
-                  { id: 'calendar', label: 'Content Calendar' },
-                  { id: 'inbox', label: 'Community Inbox' },
-                  { id: 'analytics', label: 'Audience Intelligence' },
-                  { id: 'campaigns', label: 'Active Campaigns' },
-                  { id: 'listening', label: 'Brand Mentions' },
-                  { id: 'settings', label: 'Accounts & API Hub' },
+                  { id: 'overview', label: t.tabOverview },
+                  { id: 'compose', label: t.tabCompose },
+                  { id: 'calendar', label: t.tabCalendar },
+                  { id: 'inbox', label: t.tabInbox },
+                  { id: 'analytics', label: t.tabAnalytics },
+                  { id: 'campaigns', label: t.tabCampaigns },
+                  { id: 'listening', label: t.tabListening },
+                  { id: 'settings', label: t.tabSettings },
                 ].map(item => (
                   <button
                     key={item.id}
@@ -489,7 +496,7 @@ export default function DashboardPage() {
 
               <div className="pt-4 border-t border-slate-200 dark:border-slate-800">
                 <Link href="/" className="block text-center py-2 text-xs font-bold text-blue-600">
-                  ← Back to Public Website
+                  {t.backWebsite}
                 </Link>
               </div>
             </div>
@@ -509,22 +516,22 @@ export default function DashboardPage() {
             </div>
             <div className="min-w-0 flex-1">
               <p className={`text-xs font-bold truncate ${theme === 'light' ? 'text-slate-900' : 'text-white'}`}>Kanenus Kasa Bayisa</p>
-              <p className="text-[11px] text-blue-600 dark:text-blue-400 font-semibold">158K Total Audience</p>
+              <p className="text-[11px] text-blue-600 dark:text-blue-400 font-semibold">{t.totalAudience}</p>
             </div>
           </div>
 
           {/* Navigation Items */}
-          <div className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest px-3 mb-2">Main Navigation</div>
+          <div className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest px-3 mb-2">{t.mainNav}</div>
           <nav className="space-y-1">
             {[
-              { id: 'overview', label: 'Executive Overview', icon: 'M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z' },
-              { id: 'compose', label: 'Omnichannel Studio', icon: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z', badge: 'Simulator' },
-              { id: 'calendar', label: 'Content Calendar', icon: 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z', count: posts.filter(p=>p.status==='scheduled').length },
-              { id: 'inbox', label: 'Community Inbox', icon: 'M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z', count: messages.filter(m=>m.status==='unread').length },
-              { id: 'analytics', label: 'Audience Intelligence', icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z' },
-              { id: 'campaigns', label: 'Active Campaigns', icon: 'M13 10V3L4 14h7v7l9-11h-7z', badge: 'Ayyaantummaa' },
-              { id: 'listening', label: 'Brand Mentions', icon: 'M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.536a5 5 0 001.414 1.414m2.828-9.9a9 9 0 012.828-2.828', count: '94% Pos' },
-              { id: 'settings', label: 'Accounts & API Hub', icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z' },
+              { id: 'overview', label: t.tabOverview, icon: 'M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z' },
+              { id: 'compose', label: t.tabCompose, icon: 'M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z', badge: 'Simulator' },
+              { id: 'calendar', label: t.tabCalendar, icon: 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z', count: posts.filter(p=>p.status==='scheduled').length },
+              { id: 'inbox', label: t.tabInbox, icon: 'M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z', count: messages.filter(m=>m.status==='unread').length },
+              { id: 'analytics', label: t.tabAnalytics, icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z' },
+              { id: 'campaigns', label: t.tabCampaigns, icon: 'M13 10V3L4 14h7v7l9-11h-7z', badge: 'Ayyaantummaa' },
+              { id: 'listening', label: t.tabListening, icon: 'M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15.536a5 5 0 001.414 1.414m2.828-9.9a9 9 0 012.828-2.828', count: '94% Pos' },
+              { id: 'settings', label: t.tabSettings, icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z' },
             ].map(item => (
               <button
                 key={item.id}

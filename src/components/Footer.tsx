@@ -1,54 +1,88 @@
 'use client';
-
-import { usePathname } from 'next/navigation';
-import NewsletterForm from './NewsletterForm';
+import { useState } from 'react';
+import Link from 'next/link';
+import { useLang } from './LangContext';
+import { translations } from '@/lib/translations';
 
 export default function Footer() {
-  const pathname = usePathname();
+  const [email, setEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
+  const { lang } = useLang();
+  const t = translations[lang].footer;
+  const navT = translations[lang].nav;
 
-  // Hide the global website footer when on the administrative dashboard
-  if (pathname.startsWith('/dashboard')) {
-    return null;
-  }
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    setSubscribed(true);
+    setEmail('');
+  };
 
   return (
     <footer className="bg-[#071324] text-white border-t border-white/10">
-      {/* Newsletter Band */}
+      {/* Newsletter Strip */}
       <div className="border-b border-white/10 py-12">
         <div className="container mx-auto px-6 text-center max-w-2xl">
-          <h3 className="font-heading text-2xl font-bold mb-3">Stay in the Loop</h3>
+          <h3 className="font-heading text-2xl font-bold mb-3">{t.newsletterTitle}</h3>
           <p className="text-gray-400 mb-6 text-sm">
-            Subscribe to receive news on upcoming publications, events, and cultural insights from Kanenus.
+            {t.newsletterDesc}
           </p>
-          <NewsletterForm />
+
+          {subscribed ? (
+            <div className="py-3 px-6 bg-green-500/20 border border-green-500/30 rounded-full text-green-300 font-medium text-sm inline-block">
+              ✓ {lang === 'om' ? 'Galatoomaa! Galmooftaniittu.' : lang === 'am' ? 'እናመሰግናለን! ተመዝግበዋል።' : 'Thank you for subscribing!'}
+            </div>
+          ) : (
+            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 w-full max-w-md mx-auto">
+              <input
+                type="email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                placeholder={t.newsletterPlaceholder}
+                required
+                className="flex-1 px-5 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-accent text-sm backdrop-blur-sm"
+              />
+              <button
+                type="submit"
+                className="px-6 py-3 bg-accent text-white font-bold rounded-full hover:bg-blue-500 transition text-sm whitespace-nowrap shadow-lg"
+              >
+                {t.subscribeBtn}
+              </button>
+            </form>
+          )}
         </div>
       </div>
 
-      {/* Main Footer */}
+      {/* Main Footer Links */}
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          {/* Col 1 */}
           <div>
-            <h4 className="font-heading text-xl font-bold mb-4">Kanenus Kasa Bayisa</h4>
+            <h4 className="font-heading text-xl font-bold mb-4">{t.title}</h4>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Professional Author, Public Relations Manager, Cultural Promoter, and Digital Creator dedicated to preserving and promoting African heritage.
+              {t.tagline}
             </p>
           </div>
+
+          {/* Col 2 */}
           <div>
-            <h4 className="font-bold uppercase tracking-widest text-xs text-accent mb-4">Quick Links</h4>
+            <h4 className="font-bold uppercase tracking-widest text-xs text-accent mb-4">{t.quickLinks}</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="/" className="hover:text-accent transition">Home</a></li>
-              <li><a href="/about" className="hover:text-accent transition">About</a></li>
-              <li><a href="/books" className="hover:text-accent transition">Books</a></li>
-              <li><a href="/gallery" className="hover:text-accent transition">Gallery</a></li>
-              <li><a href="/media" className="hover:text-accent transition">Media</a></li>
-              <li><a href="/events" className="hover:text-accent transition">Events</a></li>
-              <li><a href="/blog" className="hover:text-accent transition">Blog</a></li>
-              <li><a href="/cv" className="hover:text-accent transition">CV / Resume</a></li>
-              <li><a href="/contact" className="hover:text-accent transition">Contact</a></li>
+              <li><Link href="/" className="hover:text-accent transition">{navT.home}</Link></li>
+              <li><Link href="/about" className="hover:text-accent transition">{navT.about}</Link></li>
+              <li><Link href="/books" className="hover:text-accent transition">{navT.books}</Link></li>
+              <li><Link href="/music" className="hover:text-accent transition">{navT.music}</Link></li>
+              <li><Link href="/gallery" className="hover:text-accent transition">{navT.gallery}</Link></li>
+              <li><Link href="/media" className="hover:text-accent transition">{navT.media}</Link></li>
+              <li><Link href="/events" className="hover:text-accent transition">{navT.events}</Link></li>
+              <li><Link href="/blog" className="hover:text-accent transition">{navT.blog}</Link></li>
+              <li><Link href="/contact" className="hover:text-accent transition">{navT.contact}</Link></li>
             </ul>
           </div>
+
+          {/* Col 3 */}
           <div>
-            <h4 className="font-bold uppercase tracking-widest text-xs text-accent mb-4">Social Media</h4>
+            <h4 className="font-bold uppercase tracking-widest text-xs text-accent mb-4">{t.socialMedia}</h4>
             <ul className="space-y-3 text-sm">
               <li>
                 <a href="https://web.facebook.com/kanenus.kasa.33" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-accent transition">
@@ -75,7 +109,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://t.me" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-accent transition">
+                <a href="https://t.me/kanenus" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-accent transition">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.197 1.006.128.832.942z"/></svg>
                   Telegram
                 </a>
@@ -83,8 +117,9 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+
         <div className="border-t border-white/10 pt-8 text-center text-gray-500 text-sm">
-          &copy; 2026 Kanenus Kasa Bayisa. All Rights Reserved.
+          {t.rights}
         </div>
       </div>
     </footer>

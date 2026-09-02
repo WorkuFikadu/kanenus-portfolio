@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useLang } from './LangContext';
+import { translations } from '@/lib/translations';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function NavBar() {
   const pathname = usePathname();
@@ -11,7 +13,8 @@ export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dark, setDark] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
-  const { lang, setLang } = useLang();
+  const { lang } = useLang();
+  const t = translations[lang].nav;
 
   useEffect(() => {
     setLoggedIn(localStorage.getItem('kkb_auth') === 'true');
@@ -29,15 +32,15 @@ export default function NavBar() {
   };
 
   const links = [
-    { href: '/', label: lang === 'om' ? 'Mana' : 'Home' },
-    { href: '/about', label: lang === 'om' ? 'Waa\'ee' : 'About' },
-    { href: '/gallery', label: lang === 'om' ? 'Suuraa' : 'Gallery' },
-    { href: '/experience', label: lang === 'om' ? 'Muuxannoo' : 'Experience' },
-    { href: '/media', label: lang === 'om' ? 'Miidiyaa' : 'Media' },
-    { href: '/books', label: lang === 'om' ? 'Kitaaba' : 'Books' },
-    { href: '/music', label: '🎵 ' + (lang === 'om' ? 'Muuziqaa' : 'Music') },
-    { href: '/events', label: lang === 'om' ? 'Sagantaa' : 'Events' },
-    { href: '/blog', label: 'Blog' },
+    { href: '/', label: t.home },
+    { href: '/about', label: t.about },
+    { href: '/gallery', label: t.gallery },
+    { href: '/experience', label: t.experience },
+    { href: '/media', label: t.media },
+    { href: '/books', label: t.books },
+    { href: '/music', label: t.music },
+    { href: '/events', label: t.events },
+    { href: '/blog', label: t.blog },
   ];
 
   const isActive = (href: string) =>
@@ -49,46 +52,10 @@ export default function NavBar() {
 
   return (
     <header className="bg-[#0b1a30]/95 dark:bg-gray-950/95 backdrop-blur-md text-white sticky top-0 z-50 border-b border-white/10 shadow-lg">
-
-      {/* Language & Utility Bar */}
-      <div className="border-b border-white/5 bg-[#071324]/80">
-        <div className="container mx-auto px-6 flex justify-between items-center py-1.5">
-          <p className="text-[11px] text-gray-500 hidden sm:block">
-            {lang === 'om' ? '🇪🇹 Afaan Oromoo filatameera' : '🌍 Official website of Kanenus Kasa Bayisa'}
-          </p>
-          {/* Language Switcher - always visible */}
-          <div className="flex items-center gap-1 bg-white/5 border border-white/10 rounded-full p-0.5 text-[11px] font-bold ml-auto">
-            <button
-              onClick={() => setLang('en')}
-              className={`px-3 py-1 rounded-full transition-all ${
-                lang === 'en'
-                  ? 'bg-white text-[#0b1a30] shadow-sm'
-                  : 'text-gray-400 hover:text-white'
-              }`}
-              aria-label="Switch to English"
-            >
-              🇬🇧 EN
-            </button>
-            <button
-              onClick={() => setLang('om')}
-              className={`px-3 py-1 rounded-full transition-all ${
-                lang === 'om'
-                  ? 'bg-accent text-white shadow-sm'
-                  : 'text-gray-400 hover:text-white'
-              }`}
-              aria-label="Afaan Oromoo filadhu"
-            >
-              🇪🇹 OM
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Nav Row */}
       <div className="container mx-auto px-6 flex justify-between items-center py-3.5">
         {/* Logo */}
-        <Link href="/" className="font-heading text-2xl font-bold tracking-wide hover:text-accent transition">
-          KKB
+        <Link href="/" className="font-heading text-2xl font-bold tracking-wide hover:text-accent transition flex items-center gap-2">
+          <span>KKB</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -107,7 +74,10 @@ export default function NavBar() {
             </Link>
           ))}
 
-          <div className="flex items-center gap-2 ml-3">
+          <div className="flex items-center gap-3 ml-3">
+            {/* Executive Language Switcher */}
+            <LanguageSwitcher />
+
             {loggedIn ? (
               <>
                 <Link
@@ -115,13 +85,13 @@ export default function NavBar() {
                   className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-accent hover:bg-white/10 transition-all"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-                  {lang === 'om' ? 'Daashboordii' : 'Dashboard'}
+                  {t.dashboard}
                 </Link>
                 <button
                   onClick={handleLogout}
                   className="px-4 py-2 text-sm text-red-400 hover:text-red-300 hover:bg-red-500/10 rounded-lg transition"
                 >
-                  {lang === 'om' ? 'Ba\'i' : 'Logout'}
+                  {t.logout}
                 </button>
               </>
             ) : (
@@ -130,39 +100,13 @@ export default function NavBar() {
                 className="flex items-center gap-2 px-5 py-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-sm font-medium rounded-full transition"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
-                {lang === 'om' ? 'Seeni' : 'Login'}
+                {t.login}
               </Link>
             )}
 
             <Link href="/contact" className="px-5 py-2 bg-accent text-white font-bold text-sm rounded-full hover:bg-blue-500 transition-all duration-300 shadow-[0_0_15px_rgba(74,144,226,0.4)]">
-              {lang === 'om' ? 'Qunnamii' : 'Contact'}
+              {t.contact}
             </Link>
-
-            {/* Desktop Language Switcher */}
-            <div className="flex items-center bg-white/10 border border-white/20 rounded-full p-0.5 text-xs font-bold">
-              <button
-                onClick={() => setLang('en')}
-                className={`px-3 py-1 rounded-full transition-all ${
-                  lang === 'en'
-                    ? 'bg-white text-[#0b1a30] shadow-sm'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-                aria-label="Switch to English"
-              >
-                🇬🇧 EN
-              </button>
-              <button
-                onClick={() => setLang('om')}
-                className={`px-3 py-1 rounded-full transition-all ${
-                  lang === 'om'
-                    ? 'bg-accent text-white shadow-sm'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-                aria-label="Afaan Oromoo filadhu"
-              >
-                🇪🇹 OM
-              </button>
-            </div>
 
             {/* Dark Mode Toggle */}
             <button
@@ -183,31 +127,11 @@ export default function NavBar() {
           </div>
         </nav>
 
-        {/* Mobile buttons */}
-        <div className="flex items-center gap-1.5 lg:hidden">
-          {/* Mobile Language Switcher */}
-          <div className="flex items-center bg-white/10 border border-white/20 rounded-full p-0.5 text-[11px] font-bold">
-            <button
-              onClick={() => setLang('en')}
-              className={`px-2 py-0.5 rounded-full transition-all ${
-                lang === 'en'
-                  ? 'bg-white text-[#0b1a30] shadow-sm'
-                  : 'text-gray-300 hover:text-white'
-              }`}
-            >
-              EN
-            </button>
-            <button
-              onClick={() => setLang('om')}
-              className={`px-2 py-0.5 rounded-full transition-all ${
-                lang === 'om'
-                  ? 'bg-accent text-white shadow-sm'
-                  : 'text-gray-300 hover:text-white'
-              }`}
-            >
-              OM
-            </button>
-          </div>
+        {/* Mobile Header elements */}
+        <div className="flex items-center gap-2 lg:hidden">
+          {/* Mobile compact language switcher */}
+          <LanguageSwitcher compact={true} />
+
           {loggedIn ? (
             <Link href="/dashboard" className="w-9 h-9 rounded-full bg-accent/20 flex items-center justify-center text-accent">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
@@ -249,19 +173,19 @@ export default function NavBar() {
           {loggedIn ? (
             <>
               <Link href="/dashboard" onClick={() => setMenuOpen(false)} className="px-4 py-3 rounded-xl text-sm font-medium text-accent bg-white/5">
-                {lang === 'om' ? 'Daashboordii' : 'Dashboard'}
+                {t.dashboard}
               </Link>
               <button onClick={handleLogout} className="px-4 py-3 rounded-xl text-sm font-medium text-red-400 text-left">
-                {lang === 'om' ? 'Ba\'i' : 'Logout'}
+                {t.logout}
               </button>
             </>
           ) : (
             <Link href="/login" onClick={() => setMenuOpen(false)} className="px-4 py-3 rounded-xl text-sm font-medium text-gray-300 hover:text-accent hover:bg-white/10">
-              {lang === 'om' ? 'Seeni' : 'Login'}
+              {t.login}
             </Link>
           )}
           <Link href="/contact" onClick={() => setMenuOpen(false)} className="mt-3 px-6 py-3 bg-accent text-white font-bold text-sm rounded-full text-center hover:bg-blue-500 transition">
-            {lang === 'om' ? 'Qunnamii' : 'Contact'}
+            {t.contact}
           </Link>
         </div>
       </div>
