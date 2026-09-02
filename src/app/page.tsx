@@ -48,8 +48,8 @@ export default function Home() {
               </div>
               <div className="w-px bg-white/10 hidden sm:block"></div>
               <div className="text-center lg:text-left">
-                <p className="text-3xl font-bold text-white">1</p>
-                <p className="text-xs text-gray-400 uppercase tracking-widest">Published Book</p>
+                <p className="text-3xl font-bold text-white">2</p>
+                <p className="text-xs text-gray-400 uppercase tracking-widest">Published Books</p>
               </div>
             </div>
           </div>
