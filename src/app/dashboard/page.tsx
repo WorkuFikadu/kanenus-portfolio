@@ -147,6 +147,7 @@ export default function DashboardPage() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<Tab>('overview');
   const [theme, setTheme] = useState<DashboardTheme>('light');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Auth gate
   useEffect(() => {
@@ -359,21 +360,29 @@ export default function DashboardPage() {
     <div className={`min-h-screen flex flex-col font-sans transition-colors duration-300 ${themeClasses.bg}`}>
 
       {/* ── Top Unified Command Bar ── */}
-      <header className={`px-6 py-3 flex items-center justify-between sticky top-0 z-40 border-b backdrop-blur-md transition-colors duration-300 ${themeClasses.header}`}>
-        <div className="flex items-center gap-4">
+      <header className={`px-4 sm:px-6 py-3 flex items-center justify-between sticky top-0 z-40 border-b backdrop-blur-md transition-colors duration-300 ${themeClasses.header}`}>
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => setMobileMenuOpen(true)}
+            className="md:hidden p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 transition"
+            aria-label="Open mobile navigation"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/25 tracking-wider">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/25 tracking-wider shrink-0">
               KKB
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h1 className="text-base font-bold leading-none">Social Command Center</h1>
-                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                <h1 className="text-sm sm:text-base font-bold leading-none">Social Command Center</h1>
+                <span className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Live Sync
                 </span>
               </div>
-              <p className={`text-xs mt-0.5 ${theme === 'dark' || theme === 'royal' ? 'text-slate-300' : 'text-slate-500'}`}>
-                Kanenus Kasa Bayisa • Multi-Channel Management Suite
+              <p className={`text-[11px] sm:text-xs mt-0.5 truncate max-w-[200px] sm:max-w-none ${theme === 'dark' || theme === 'royal' ? 'text-slate-300' : 'text-slate-500'}`}>
+                Kanenus Kasa Bayisa • Multi-Channel Management
               </p>
             </div>
           </div>
@@ -441,10 +450,54 @@ export default function DashboardPage() {
         </div>
       </header>
 
-      <div className="flex-1 flex overflow-hidden">
+      <div className="flex-1 flex overflow-hidden relative">
         
-        {/* ── Left Interactive Navigation Rail ── */}
-        <aside className={`w-64 border-r flex flex-col p-4 shrink-0 transition-colors duration-300 ${themeClasses.sidebar}`}>
+        {/* ── Mobile Sidebar Drawer & Backdrop ── */}
+        {mobileMenuOpen && (
+          <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs md:hidden flex" onClick={() => setMobileMenuOpen(false)}>
+            <div className={`w-72 max-w-[85vw] h-full p-4 flex flex-col shadow-2xl border-r ${themeClasses.sidebar}`} onClick={e => e.stopPropagation()}>
+              <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800 mb-4">
+                <span className="font-bold text-sm">Navigation Menu</span>
+                <button onClick={() => setMobileMenuOpen(false)} className="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+              </div>
+
+              {/* Mobile Drawer Navigation List */}
+              <nav className="space-y-1 flex-1 overflow-y-auto">
+                {[
+                  { id: 'overview', label: 'Executive Overview' },
+                  { id: 'compose', label: 'Omnichannel Studio' },
+                  { id: 'calendar', label: 'Content Calendar' },
+                  { id: 'inbox', label: 'Community Inbox' },
+                  { id: 'analytics', label: 'Audience Intelligence' },
+                  { id: 'campaigns', label: 'Active Campaigns' },
+                  { id: 'listening', label: 'Brand Mentions' },
+                  { id: 'settings', label: 'Accounts & API Hub' },
+                ].map(item => (
+                  <button
+                    key={item.id}
+                    onClick={() => { setActiveTab(item.id as Tab); setMobileMenuOpen(false); }}
+                    className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-medium transition-all ${
+                      activeTab === item.id ? themeClasses.navActive : themeClasses.navInactive
+                    }`}
+                  >
+                    <span>{item.label}</span>
+                  </button>
+                ))}
+              </nav>
+
+              <div className="pt-4 border-t border-slate-200 dark:border-slate-800">
+                <Link href="/" className="block text-center py-2 text-xs font-bold text-blue-600">
+                  ← Back to Public Website
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ── Desktop Left Navigation Rail ── */}
+        <aside className={`hidden md:flex w-64 border-r flex-col p-4 shrink-0 transition-colors duration-300 ${themeClasses.sidebar}`}>
           
           {/* Profile Card */}
           <div className={`p-3.5 rounded-2xl border flex items-center gap-3 mb-6 shadow-sm ${
@@ -527,7 +580,31 @@ export default function DashboardPage() {
         </aside>
 
         {/* ── Center / Main Work Area ── */}
-        <main className="flex-1 overflow-y-auto p-8">
+        <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
+
+          {/* Mobile Quick-Tab Scroll Strip */}
+          <div className="md:hidden flex overflow-x-auto gap-2 pb-3 mb-4 border-b border-slate-200 dark:border-slate-800 scrollbar-none">
+            {[
+              { id: 'overview', label: 'Overview' },
+              { id: 'compose', label: 'Studio' },
+              { id: 'calendar', label: 'Calendar' },
+              { id: 'inbox', label: 'Inbox' },
+              { id: 'analytics', label: 'Analytics' },
+              { id: 'campaigns', label: 'Campaigns' },
+              { id: 'listening', label: 'Mentions' },
+              { id: 'settings', label: 'Settings' },
+            ].map(t => (
+              <button
+                key={t.id}
+                onClick={() => setActiveTab(t.id as Tab)}
+                className={`px-3 py-1.5 rounded-xl text-xs font-bold shrink-0 transition ${
+                  activeTab === t.id ? 'bg-blue-600 text-white shadow-sm' : `${themeClasses.pill}`
+                }`}
+              >
+                {t.label}
+              </button>
+            ))}
+          </div>
           
           {/* Status Toast */}
           {publishStatus && (
