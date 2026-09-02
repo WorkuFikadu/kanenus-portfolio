@@ -93,26 +93,8 @@ export default function BooksPage() {
   return (
     <div className="bg-gray-50 min-h-screen">
 
-      {/* Language Toggle */}
-      <div className="flex justify-end px-6 pt-4 max-w-6xl mx-auto">
-        <div className="flex items-center gap-1 bg-white border border-gray-200 rounded-full p-1 shadow-sm text-xs font-bold">
-          <button
-            onClick={() => setLang('en')}
-            className={`px-3 py-1.5 rounded-full transition ${lang === 'en' ? 'bg-[#0b1a30] text-white' : 'text-gray-500 hover:text-gray-800'}`}
-          >
-            🇬🇧 English
-          </button>
-          <button
-            onClick={() => setLang('om')}
-            className={`px-3 py-1.5 rounded-full transition ${lang === 'om' ? 'bg-accent text-white' : 'text-gray-500 hover:text-gray-800'}`}
-          >
-            🇪🇹 Afaan Oromoo
-          </button>
-        </div>
-      </div>
-
-      {/* Header */}
-      <section className="bg-gradient-to-br from-[#071324] via-[#0b1a30] to-[#122a4f] text-white py-24 relative overflow-hidden mt-4">
+      {/* Header with built-in Language Toggle */}
+      <section className="bg-gradient-to-br from-[#071324] via-[#0b1a30] to-[#122a4f] text-white py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px)', backgroundSize: '32px 32px'}}></div>
         <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
           <div className="flex items-center justify-center gap-4 text-accent font-bold tracking-widest uppercase text-sm mb-6">
@@ -121,7 +103,33 @@ export default function BooksPage() {
             <span className="w-12 h-px bg-accent"></span>
           </div>
           <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">{t.heading}</h1>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">{t.subheading}</p>
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-10">{t.subheading}</p>
+
+          {/* Language Switcher — large, centered, prominent */}
+          <div className="flex items-center justify-center">
+            <div className="inline-flex items-center bg-white/10 border border-white/20 rounded-2xl p-1.5 gap-1 backdrop-blur-sm">
+              <button
+                onClick={() => setLang('en')}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 ${
+                  lang === 'en'
+                    ? 'bg-white text-[#0b1a30] shadow-lg'
+                    : 'text-white/70 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                <span className="text-base">🇬🇧</span> English
+              </button>
+              <button
+                onClick={() => setLang('om')}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 ${
+                  lang === 'om'
+                    ? 'bg-accent text-white shadow-lg'
+                    : 'text-white/70 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                <span className="text-base">🇪🇹</span> Afaan Oromoo
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
