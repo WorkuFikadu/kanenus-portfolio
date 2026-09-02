@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import { LangProvider } from "@/components/LangContext";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: '--font-playfair-display' });
@@ -152,10 +153,12 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${playfair.variable} font-body text-text-dark bg-bg-light dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300`}>
-        <NavBar />
-        <main>{children}</main>
-        <FloatingButtons />
-        <Footer />
+        <LangProvider>
+          <NavBar />
+          <main>{children}</main>
+          <FloatingButtons />
+          <Footer />
+        </LangProvider>
       </body>
     </html>
   );
