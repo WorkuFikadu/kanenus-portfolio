@@ -11,6 +11,7 @@ const expData = {
     edu2Title: 'Professional Certifications',
     edu2Desc: 'Accredited certifications in advanced public relations, digital media strategy, and institutional leadership.',
     items: [
+      { date: "January 2024 – Present", title: "Lead Event Organizer & Cultural Marketer", desc: "Spearheads major cultural festivals, literary book launches, and musical concerts across Ethiopia and the diaspora. Architect of multi-channel promotional campaigns driving 125K+ audience turnout, high-converting digital promotion, and regional media tours." },
       { date: "August 2025 – Present", title: "Professional Author", desc: "Authored impactful literature designed to promote cultural awareness, preserve linguistic heritage, and offer profound societal commentary. Kanenus's written works serve as educational tools and historical records." },
       { date: "September 2024 – Present", title: "Digital Creator & CEO, Hizbii Keenya", desc: "Pioneered a digital-first approach to cultural promotion by founding and leading Hizbii Keenya, successfully building an online community of over 125,000 active followers who engage daily with cultural education." },
       { date: "March 2023 – Present", title: "Director, Shanan Gadaa Band", desc: "Provides executive and artistic leadership, overseeing performance curation and event management, ensuring the band remains a premier ambassador for traditional music and performance art." },
@@ -26,6 +27,7 @@ const expData = {
     edu2Title: 'Waraqaa Ragaa Ogummaa',
     edu2Desc: 'Quunnamtii hawaasaa ammayyaa, tarsiimoo miidiyaa digitaalaa, fi hoggansa dhaabbilee irratti ragaa beekamtii qaba.',
     items: [
+      { date: "Amajjii 2024 – Amma", title: "Qindeessaa Sagantaa & Ogeessa Gabaa Aadaa", desc: "Ayyaanota aadaa gurguddoo, eebba kitaabaa, fi konsartiiwwan muuziqaa Oromiyaa fi biyya alaa keessatti hogganee qindeessa. Hordoftoota 125K+ kan qabu duula gabaa bu'aa qabeessa fi beeksisa miidiyaa bal'aa gaggeessa." },
       { date: "Hagayya 2025 – Amma", title: "Barreessaa Ogummaa", desc: "Kitaabota dhaloota barsiisan, eenyummaa fi aadaa Oromoo eegan barreessuun maxxansiiseera. Hojiiwwan isaa ragaa seenaa fi barnootaaf oolu." },
       { date: "Fulbaana 2024 – Amma", title: "Uumaa Digitaalaa & CEO, Hizbii Keenya", desc: "Marsariitii Hizbii Keenya hundeessuun hordoftoota 125,000+ horateera. Guyyaa guyyaan barnoota aadaa dhaloota haaraaf dhiheessa." },
       { date: "Bitootessa 2023 – Amma", title: "Daarektara, Baandii Shanan Gadaa", desc: "Baandii Shanan Gadaa olaantummaan hogganuun aadaa fi muuziqaa Oromoo waltajjiiwwan addunyaatiif qopheessa." },
@@ -41,6 +43,7 @@ const expData = {
     edu2Title: 'የሙያ ማረጋገጫ የምስክር ወረቀቶች',
     edu2Desc: 'በህዝብ ግንኙነት ስትራቴጂ፣ በዲጂታል ሚዲያ አመራር እና በተቋማዊ አስተዳደር የተሰጡ እውቅናዎች።',
     items: [
+      { date: "ጥር 2024 – አሁን", title: "ከፍተኛ የዝግጅት አዘጋጅ እና የባህል ማርኬተር", desc: "ታላላቅ የባህል ፌስቲቫሎችን፣ የመጽሐፍ ምረቃዎችን እና የሙዚቃ ኮንሰርቶችን በኢትዮጵያ እና በውጭ ሀገራት በበላይነት ያዘጋጃል። ከ125,000 በላይ ተከታዮችን ያሳተፈ የዲጂታል ማርኬቲንግ እና የሚዲያ ዘመቻዎችን ይመራል።" },
       { date: "ነሐሴ 2025 – አሁን", title: "ደራሲ", desc: "የባህል ማንነትን የሚጠብቁ፣ ታሪክን የሚያስተምሩ እና ማህበራዊ እሴቶችን የሚያጎሉ መጽሐፍትን ጽፎ አሳትሟል።" },
       { date: "መስከረም 2024 – አሁን", title: "የዲጂታል ይዘት ፈጣሪ እና CEO (ሕዝቢ ኬኛ)", desc: "የሕዝቢ ኬኛ ዲጂታል መድረክን በመመስረት ከ125,000 በላይ ተከታዮችን በየቀኑ በባህል ትምህርት ዙሪያ እያሳተፈ ይገኛል።" },
       { date: "መጋቢት 2023 – አሁን", title: "ዳይሬክተር (የሸነን ገዳ ባንድ)", desc: "የሸነን ገዳ ባንድን በበላይነት በመምራት የባህል ሙዚቃዎችን ለአገር ውስጥ እና ለአለም አቀፍ መድረኮች ያዘጋጃል።" },

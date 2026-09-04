@@ -54,41 +54,89 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Core Competencies */}
+      {/* Core Competencies & Specializations */}
       <section className="py-24 bg-[#0b1a30] text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-accent opacity-10 blur-[100px] rounded-full pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600 opacity-10 blur-[100px] rounded-full pointer-events-none"></div>
         <div className="container mx-auto px-6 max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12 text-center">{t.expertiseHeading}</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">{t.expertiseHeading}</h2>
+            <p className="text-gray-400 text-sm max-w-xl mx-auto uppercase tracking-widest font-semibold">
+              {lang === 'om' ? 'Ogummaa Ijoo & Gahee Hojii' : lang === 'am' ? 'ዋና የልህቀት ዘርፎች እና አገልግሎቶች' : 'Core Disciplines & Professional Practice'}
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/40 transition duration-300">
-              <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center text-accent mb-6">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* 1. Event Organization */}
+            <div className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-amber-400/40 hover:bg-white/[0.08] transition-all duration-300 flex flex-col justify-between group shadow-xl">
+              <div>
+                <div className="w-14 h-14 bg-amber-500/10 border border-amber-400/20 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                  🎪
+                </div>
+                <h3 className="text-xl font-heading font-bold mb-3 text-white">
+                  {lang === 'om' ? 'Qindeessaa Sagantaa' : lang === 'am' ? 'የዝግጅት አዘጋጅነት' : 'Event Organization'}
+                </h3>
+                <p className="text-gray-300 leading-relaxed text-sm">
+                  {lang === 'om' ? 'Ayyaanota aadaa gurguddoo, konsartii muuziqaa, eebba kitaabaa, fi sagantaalee waltajjii hoggansa qulqulluun qindeessuu.' : lang === 'am' ? 'ታላላቅ የባህል ፌስቲቫሎችን፣ ኮንሰርቶችን፣ የመጽሐፍ ምረቃዎችን እና የጉባዔ መድረኮችን በከፍተኛ ጥራት ማዘጋጀት።' : 'Directing mega cultural gatherings, literary book launches, concert tours, and VIP gala ceremonies with turnkey stage production.'}
+                </p>
               </div>
-              <h3 className="text-xl font-heading font-bold mb-4">{lang === 'om' ? 'Ogbarruu & Barreeffama' : lang === 'am' ? 'ሥነ ጽሑፍ እና ድርሰት' : 'Literature & Authorship'}</h3>
-              <p className="text-gray-300 leading-relaxed text-sm">
-                {lang === 'om' ? 'Afaan Oromootiin kitaabota aadaa fi seenaa barreessuu fi maxxansiisuu.' : lang === 'am' ? 'ባህላዊ እና ማህበራዊ ይዘት ያላቸውን ጥልቅ መጽሐፍት መጻፍ እና ማሳተም።' : 'Authoring and publishing culturally resonant literature that preserves Oromo identity and philosophy.'}
-              </p>
+              <div className="mt-6 pt-4 border-t border-white/10 text-xs font-semibold text-amber-300">
+                {lang === 'om' ? '• Sagantaalee 50+ Hoggane' : lang === 'am' ? '• 50+ ዝግጅቶችን የመራ' : '• 50+ Major Events Produced'}
+              </div>
             </div>
 
-            <div className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/40 transition duration-300">
-              <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center text-accent mb-6">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+            {/* 2. Cultural Promotion */}
+            <div className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-emerald-400/40 hover:bg-white/[0.08] transition-all duration-300 flex flex-col justify-between group shadow-xl">
+              <div>
+                <div className="w-14 h-14 bg-emerald-500/10 border border-emerald-400/20 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                  📢
+                </div>
+                <h3 className="text-xl font-heading font-bold mb-3 text-white">
+                  {lang === 'om' ? 'Beeksisla Aadaa' : lang === 'am' ? 'የባህል ማስተዋወቅ' : 'Cultural Promotion'}
+                </h3>
+                <p className="text-gray-300 leading-relaxed text-sm">
+                  {lang === 'om' ? 'Aadaa, muuziqaa Baandii Shanan Gadaa, fi barreessitoota Oromoo waltajjii addunyaatti beeksisuu fi tuurii hoogganuu.' : lang === 'am' ? 'የሸነን ገዳ ባንድ ባህላዊ ሙዚቃዎችን፣ ደራሲያንን እና የባህል እሴቶችን ለአለም አቀፍ መድረኮች ማስተዋወቅ።' : 'Championing African music, regional tour management for Shanan Gadaa Band, and high-profile artist media campaigns.'}
+                </p>
               </div>
-              <h3 className="text-xl font-heading font-bold mb-4">{lang === 'om' ? 'Quunnamtii Hawaasaa (PR)' : lang === 'am' ? 'የሕዝብ ግንኙነት (PR)' : 'Strategic PR & Communications'}</h3>
-              <p className="text-gray-300 leading-relaxed text-sm">
-                {lang === 'om' ? 'Waldaa Barreessitoota Oromiyaa keessatti quunnamtii dhaabbilee fi miidiyaa hogganuu.' : lang === 'am' ? 'በኦሮሚያ ጸሐፊዎች ማህበር ውስጥ ተቋማዊ ግንኙነቶችን እና የሚዲያ ስትራቴጂዎችን መምራት።' : 'Guiding institutional communications, media relations, and strategic messaging for literary institutions.'}
-              </p>
+              <div className="mt-6 pt-4 border-t border-white/10 text-xs font-semibold text-emerald-300">
+                {lang === 'om' ? '• Tuuriiwwan Naannoo & Addunyaa' : lang === 'am' ? '• ክልላዊ እና አለም አቀፍ ጉብኝቶች' : '• Regional & International Tours'}
+              </div>
             </div>
 
-            <div className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-accent/40 transition duration-300">
-              <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center text-accent mb-6">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19V6l12-3v13M9 19c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm12-3c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zM9 10l12-3"/></svg>
+            {/* 3. Strategic Marketing */}
+            <div className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-blue-400/40 hover:bg-white/[0.08] transition-all duration-300 flex flex-col justify-between group shadow-xl">
+              <div>
+                <div className="w-14 h-14 bg-blue-500/10 border border-blue-400/20 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                  📈
+                </div>
+                <h3 className="text-xl font-heading font-bold mb-3 text-white">
+                  {lang === 'om' ? 'Ogeessa Gabaa' : lang === 'am' ? 'የገበያ ስትራቴጂስት' : 'Strategic Marketing'}
+                </h3>
+                <p className="text-gray-300 leading-relaxed text-sm">
+                  {lang === 'om' ? 'Hordeftoota 125,000+ horachuun, beeksisa miidiyaa hawaasaa, vidiyoo hawwataa, fi gabaa bu\'aa qabeessa taasisanii dhiheessuu.' : lang === 'am' ? 'ከ125,000 በላይ ተከታዮችን በማፍራት በማህበራዊ ሚዲያ ማርኬቲንግ፣ በቫይራል ይዘቶች እና በብራንድ ግንባታ ከፍተኛ ውጤት ማምጣት።' : 'Digital audience growth architect via Hizbii Keenya, viral social media video production, and high-impact brand campaigns.'}
+                </p>
               </div>
-              <h3 className="text-xl font-heading font-bold mb-4">{lang === 'om' ? 'Qindeessaa Aadaa & Baandii' : lang === 'am' ? 'የባህል ሙዚቃ አመራር' : 'Cultural Direction'}</h3>
-              <p className="text-gray-300 leading-relaxed text-sm">
-                {lang === 'om' ? 'Baandii Shanan Gadaa qindeessuun aadaa Oromoo waltajjii addunyaatti dhiheessuu.' : lang === 'am' ? 'የሸነን ገዳ ባንድን በመምራት ባህላዊ ሙዚቃዎችን ለአለም አቀፍ መድረኮች ማዘጋጀት።' : 'Directing the Shanan Gadaa Band, curating musical heritage, and directing major cultural stage productions.'}
-              </p>
+              <div className="mt-6 pt-4 border-t border-white/10 text-xs font-semibold text-blue-300">
+                {lang === 'om' ? '• Hordoftoota 125K+ Miidiyaa' : lang === 'am' ? '• 125ሺ+ ማህበራዊ ተከታዮች' : '• 125K+ Audience Network'}
+              </div>
+            </div>
+
+            {/* 4. Authorship & Literary PR */}
+            <div className="p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-purple-400/40 hover:bg-white/[0.08] transition-all duration-300 flex flex-col justify-between group shadow-xl">
+              <div>
+                <div className="w-14 h-14 bg-purple-500/10 border border-purple-400/20 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                  📖
+                </div>
+                <h3 className="text-xl font-heading font-bold mb-3 text-white">
+                  {lang === 'om' ? 'Ogbarruu & PR' : lang === 'am' ? 'ሥነ ጽሑፍ እና PR' : 'Literature & PR'}
+                </h3>
+                <p className="text-gray-300 leading-relaxed text-sm">
+                  {lang === 'om' ? 'Kitaabota "Ayyaantummaa" fi "Dhaloota Mul\'ataa" maxxansiisuu fi Waldaa Barreessitoota Oromiyaa keessatti quunnamtii PR hogganuu.' : lang === 'am' ? '"አያንቱማ" እና "ደሎታ ሙልአታ" መጽሐፍትን ማሳተም እና የኦሮሚያ ጸሐፊዎች ማህበር የህዝብ ግንኙነትን በበላይነት መምራት።' : 'Author of 2 published works, and PR Director of the Oromia Writers Association, elevating African literary traditions.'}
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-white/10 text-xs font-semibold text-purple-300">
+                {lang === 'om' ? '• Kitaabota Maxxanfaman 2' : lang === 'am' ? '• 2 የታተሙ መጽሐፍት' : '• 2 Published Masterpieces'}
+              </div>
             </div>
           </div>
         </div>

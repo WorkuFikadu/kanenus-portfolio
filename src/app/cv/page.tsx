@@ -9,9 +9,9 @@ export default function CVPage() {
     en: {
       printBtn: 'Print / Download PDF',
       printHint: "Use your browser's Print dialog to save as PDF",
-      jobTitle: 'Professional Author | PR Manager | Cultural Leader | Digital Creator',
+      jobTitle: 'Event Organizer | Cultural Promoter | Strategic Marketer | Author | PR Director',
       summaryHeading: 'Professional Summary',
-      summary: 'A distinguished professional writer, cultural ambassador, and creative leader with extensive experience in literary authorship, public relations, and digital media. Kanenus Kasa Bayisa has dedicated his career to elevating African heritage through storytelling, strategic communications, and digital content creation, building an online community of over 125,000 engaged followers. Currently serving as PR Manager at the Oromia Writers Association and Director of the Shanan Gadaa Band.',
+      summary: 'A distinguished professional event organizer, cultural promoter, strategic marketer, and literary author with extensive experience producing high-impact cultural gatherings, nationwide promotional tours, and viral digital media campaigns. Kanenus Kasa Bayisa has dedicated his career to elevating African heritage through storytelling, stage productions, and digital content creation, building an engaged community of over 125,000 followers. Currently serving as PR Manager at the Oromia Writers Association and Director of the Shanan Gadaa Band.',
       expHeading: 'Professional Experience',
       skillsHeading: 'Skills & Competencies',
       eduHeading: 'Education & Cultural Credentials',
@@ -20,9 +20,9 @@ export default function CVPage() {
     om: {
       printBtn: 'Maxxansi / PDF Buufadhu',
       printHint: 'PDF taasisanii ol-kaawachuuf qajeelfama maxxansaa fayyadamaa',
-      jobTitle: 'Barreessaa Ogummaa | Hogganaa PR | Qindeessaa Aadaa | Uumaa Digitaalaa',
+      jobTitle: 'Qindeessaa Sagantaa | Beeksisla Aadaa | Ogeessa Gabaa | Barreessaa | Hogganaa PR',
       summaryHeading: 'Gabaasa Ogummaa',
-      summary: 'Barreessaa ogummaa, ergamaa aadaa, fi hogganaa uumamaa kan ogbarruu, quunnamtii hawaasaa, fi miidiyaa digitaalaa keessatti muuxannoo bal\'aa qabu. Aadaa Oromoo fi Afrikaa guddisuu irratti hordoftoota 125,000 ol ijaareera. Hogganaa Quunnamtii Hawaasaa Waldaa Barreessitoota Oromiyaa fi Daarektara Baandii Shanan Gadaati.',
+      summary: 'Qindeessaa sagantaa beekamaa, beeksisla aadaa, ogeessa gabaa, fi barreessaa ogummaa kan ayyaanota gurguddoo qindeessuu, tuurii aadaa, fi miidiyaa digitaalaa keessatti muuxannoo bal\'aa qabu. Aadaa Oromoo fi Afrikaa guddisuu irratti hordoftoota 125,000 ol ijaareera. Hogganaa Quunnamtii Hawaasaa Waldaa Barreessitoota Oromiyaa fi Daarektara Baandii Shanan Gadaati.',
       expHeading: 'Muuxannoo Hojii',
       skillsHeading: 'Dandeettiiwwan Hojii',
       eduHeading: 'Barnoota fi Ragaalee Aadaa',
@@ -31,9 +31,9 @@ export default function CVPage() {
     am: {
       printBtn: 'አትም / PDF አውርድ',
       printHint: 'ወደ PDF ለማስቀመጥ የብሮውዘርዎን የህትመት ገጽ ይጠቀሙ',
-      jobTitle: 'ደራሲ | የህዝብ ግንኙነት ሀላፊ | የባህል መሪ | የዲጂታል ይዘት ፈጣሪ',
+      jobTitle: 'የዝግጅት አዘጋጅ | የባህል አስተዋዋቂ | የገበያ ስትራቴጂስት | ደራሲ | የህዝብ ግንኙነት ሀላፊ',
       summaryHeading: 'የሙያ ማጠቃለያ',
-      summary: 'በስነ-ጽሁፍ፣ በህዝብ ግንኙነት እና በዲጂታል ሚዲያ የካበተ ልምድ ያለው ታዋቂ ደራሲ እና የባህል አምባሳደር። የአፍሪካን ባህል በታሪክ አተረካክ፣ በስትራቴጂክ ኮሙዩኒኬሽን እና በዲጂታል ይዘት ፈጠራ በማስተዋወቅ ከ125,000 በላይ ተከታዮችን አፍርቷል። በአሁኑ ጊዜ በኦሮሚያ ጸሐፊዎች ማህበር የህዝብ ግንኙነት ሀላፊ እና የሸነን ገዳ ባንድ ዳይሬክተር ሆኖ እያገለገለ ይገኛል።',
+      summary: 'በዝግጅት አዘጋጅነት፣ በባህል ማስተዋወቅ፣ በማርኬቲንግ እና በስነ-ጽሁፍ የካበተ ልምድ ያለው ታዋቂ ባለሙያ። ታላላቅ የባህል ፌስቲቫሎችን በማዘጋጀት፣ ሰፊ የሚዲያ ዘመቻዎችን በመምራት እና የአፍሪካን ባህል በዲጂታል ይዘት ፈጠራ በማስተዋወቅ ከ125,000 በላይ ተከታዮችን አፍርቷል። በአሁኑ ጊዜ በኦሮሚያ ጸሐፊዎች ማህበር የህዝብ ግንኙነት ሀላፊ እና የሸነን ገዳ ባንድ ዳይሬክተር ሆኖ እያገለገለ ይገኛል።',
       expHeading: 'የስራ ልምድ',
       skillsHeading: 'ክህሎቶች እና የሙያ ብቃቶች',
       eduHeading: 'ትምህርት እና የባህል ማረጋገጫዎች',
@@ -110,6 +110,16 @@ export default function CVPage() {
           <div className="space-y-8">
             {[
               {
+                title: lang === 'om' ? 'Qindeessaa Sagantaa & Ogeessa Gabaa' : lang === 'am' ? 'ከፍተኛ የዝግጅት አዘጋጅ እና የባህል ማርኬተር' : 'Lead Event Organizer & Cultural Marketer',
+                company: 'Hizbii Keenya Productions & Events',
+                date: 'January 2024 – Present',
+                bullets: [
+                  lang === 'om' ? 'Ayyaanota aadaa gurguddoo, konsartiiwwan muuziqaa, fi eebba kitaabotaa bal\'inaan qindeessuu' : lang === 'am' ? 'ታላላቅ የባህል ፌስቲቫሎችን፣ የሙዚቃ ኮንሰርቶችን እና የመጽሐፍ ምረቃዎችን በበላይነት ማዘጋጀት' : 'Orchestrates large-scale cultural festivals, concerts, and literary book release spectacles with turnkey stage production',
+                  lang === 'om' ? 'Duula gabaa miidiyaa hawaasaa 125K+ fi beeksisa bu\'aa qabeessa hogganuu' : lang === 'am' ? 'ከ125,000 በላይ ተከታዮችን ያሳተፈ የዲጂታል ማርኬቲንግ እና የህዝብ ተሳትፎ ዘመቻዎችን መምራት' : 'Spearheads omnichannel digital marketing campaigns driving viral attendance and high sponsor ROI',
+                  lang === 'om' ? 'Protokoolii keessummoota kabajaa, sagalee, fi ifa waltajjii to\'achuu' : lang === 'am' ? 'የክብር እንግዶች ፕሮቶኮልን፣ የድምጽ እና የብርሃን ቴክኖሎጂን በበላይነት ማስተዳደር' : 'Manages VIP guest protocols, artist schedules, audio/visual engineering, and crowd safety logistics',
+                ]
+              },
+              {
                 title: lang === 'om' ? 'Barreessaa Ogummaa' : lang === 'am' ? 'ደራሲ' : 'Professional Author',
                 company: 'Independent Publisher',
                 date: 'August 2025 – Present',
@@ -173,10 +183,10 @@ export default function CVPage() {
           </h2>
           <div className="flex flex-wrap gap-3">
             {[
-              "Literary Authorship", "Public Relations", "Digital Content Creation",
-              "Cultural Promotion", "Event Management", "Strategic Communications",
-              "Audience Building", "Social Media Strategy", "Media Relations",
-              "Leadership", "Community Management", "Brand Development"
+              "Event Organization & Production", "Cultural Promotion & Tours", "Strategic Marketing",
+              "125K+ Audience Network", "Literary Authorship", "Public Relations (PR)",
+              "Stage & AV Management", "Viral Video Production", "Media Relations",
+              "VIP Protocol & Hospitality", "Brand Storytelling", "Community Leadership"
             ].map((skill, idx) => (
               <span key={idx} className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium border border-gray-200 dark:border-gray-700">
                 {skill}

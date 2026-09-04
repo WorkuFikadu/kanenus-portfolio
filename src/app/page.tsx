@@ -131,6 +131,153 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ============ SIGNATURE ROLES & SERVICES SHOWCASE ============ */}
+      <section className="py-24 bg-gradient-to-b from-gray-900 via-[#071324] to-[#0b1a30] text-white relative overflow-hidden">
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-accent/10 rounded-full blur-[130px] pointer-events-none"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[130px] pointer-events-none"></div>
+
+        <div className="container mx-auto px-6 max-w-6xl relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/30 text-accent font-bold text-xs uppercase tracking-widest mb-4 backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+              {t.servicesBadge}
+            </div>
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-5 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-accent">
+              {t.servicesHeading}
+            </h2>
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
+              {t.servicesSubheading}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* 1. EVENT ORGANIZER & PRODUCER */}
+            <div className="group relative bg-white/5 hover:bg-white/[0.08] border border-white/10 hover:border-amber-400/40 rounded-3xl p-8 lg:p-10 transition-all duration-300 backdrop-blur-md shadow-2xl flex flex-col justify-between">
+              <div className="absolute -top-3 right-8">
+                <span className="px-3.5 py-1 bg-amber-500/20 text-amber-300 border border-amber-400/30 rounded-full text-xs font-bold uppercase tracking-wider">
+                  {t.s1Badge}
+                </span>
+              </div>
+              <div>
+                <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-400/20 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                  🎪
+                </div>
+                <h3 className="text-2xl lg:text-3xl font-heading font-bold text-white mb-4">
+                  {t.s1Title}
+                </h3>
+                <p className="text-gray-300 text-base leading-relaxed mb-6">
+                  {t.s1Desc}
+                </p>
+                <div className="p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-200 text-xs font-semibold mb-6 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-amber-400"></span>
+                  {t.s1Highlight}
+                </div>
+              </div>
+              <Link
+                href="/events"
+                className="inline-flex items-center justify-between w-full px-6 py-4 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-slate-950 font-bold text-sm transition shadow-lg"
+              >
+                <span>{t.s1Btn}</span>
+                <svg className="w-4 h-4 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </Link>
+            </div>
+
+            {/* 2. CULTURAL PROMOTER & TOUR MANAGER */}
+            <div className="group relative bg-white/5 hover:bg-white/[0.08] border border-white/10 hover:border-emerald-400/40 rounded-3xl p-8 lg:p-10 transition-all duration-300 backdrop-blur-md shadow-2xl flex flex-col justify-between">
+              <div className="absolute -top-3 right-8">
+                <span className="px-3.5 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 rounded-full text-xs font-bold uppercase tracking-wider">
+                  {t.s2Badge}
+                </span>
+              </div>
+              <div>
+                <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-400/20 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                  📢
+                </div>
+                <h3 className="text-2xl lg:text-3xl font-heading font-bold text-white mb-4">
+                  {t.s2Title}
+                </h3>
+                <p className="text-gray-300 text-base leading-relaxed mb-6">
+                  {t.s2Desc}
+                </p>
+                <div className="p-3.5 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-200 text-xs font-semibold mb-6 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  {t.s2Highlight}
+                </div>
+              </div>
+              <Link
+                href="/music"
+                className="inline-flex items-center justify-between w-full px-6 py-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-slate-950 font-bold text-sm transition shadow-lg"
+              >
+                <span>{t.s2Btn}</span>
+                <svg className="w-4 h-4 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </Link>
+            </div>
+
+            {/* 3. STRATEGIC MARKETER & GROWTH STRATEGIST */}
+            <div className="group relative bg-white/5 hover:bg-white/[0.08] border border-white/10 hover:border-blue-400/40 rounded-3xl p-8 lg:p-10 transition-all duration-300 backdrop-blur-md shadow-2xl flex flex-col justify-between">
+              <div className="absolute -top-3 right-8">
+                <span className="px-3.5 py-1 bg-blue-500/20 text-blue-300 border border-blue-400/30 rounded-full text-xs font-bold uppercase tracking-wider">
+                  {t.s3Badge}
+                </span>
+              </div>
+              <div>
+                <div className="w-16 h-16 rounded-2xl bg-blue-500/10 border border-blue-400/20 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                  📈
+                </div>
+                <h3 className="text-2xl lg:text-3xl font-heading font-bold text-white mb-4">
+                  {t.s3Title}
+                </h3>
+                <p className="text-gray-300 text-base leading-relaxed mb-6">
+                  {t.s3Desc}
+                </p>
+                <div className="p-3.5 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-blue-200 text-xs font-semibold mb-6 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-blue-400"></span>
+                  {t.s3Highlight}
+                </div>
+              </div>
+              <Link
+                href="/dashboard"
+                className="inline-flex items-center justify-between w-full px-6 py-4 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold text-sm transition shadow-lg"
+              >
+                <span>{t.s3Btn}</span>
+                <svg className="w-4 h-4 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </Link>
+            </div>
+
+            {/* 4. ACCLAIMED AUTHOR & LITERARY LEADER */}
+            <div className="group relative bg-white/5 hover:bg-white/[0.08] border border-white/10 hover:border-purple-400/40 rounded-3xl p-8 lg:p-10 transition-all duration-300 backdrop-blur-md shadow-2xl flex flex-col justify-between">
+              <div className="absolute -top-3 right-8">
+                <span className="px-3.5 py-1 bg-purple-500/20 text-purple-300 border border-purple-400/30 rounded-full text-xs font-bold uppercase tracking-wider">
+                  {t.s4Badge}
+                </span>
+              </div>
+              <div>
+                <div className="w-16 h-16 rounded-2xl bg-purple-500/10 border border-purple-400/20 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                  📖
+                </div>
+                <h3 className="text-2xl lg:text-3xl font-heading font-bold text-white mb-4">
+                  {t.s4Title}
+                </h3>
+                <p className="text-gray-300 text-base leading-relaxed mb-6">
+                  {t.s4Desc}
+                </p>
+                <div className="p-3.5 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-200 text-xs font-semibold mb-6 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-purple-400"></span>
+                  {t.s4Highlight}
+                </div>
+              </div>
+              <Link
+                href="/books"
+                className="inline-flex items-center justify-between w-full px-6 py-4 rounded-full bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white font-bold text-sm transition shadow-lg"
+              >
+                <span>{t.s4Btn}</span>
+                <svg className="w-4 h-4 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ============ ABOUT SNAPSHOT ============ */}
       <section className="py-28 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-6 max-w-6xl">

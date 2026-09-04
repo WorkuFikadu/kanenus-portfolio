@@ -12,48 +12,48 @@ interface Message {
 
 const aiKnowledge = {
   en: {
-    welcome: "Hello! I am **Kanenus's Cultural AI Assistant & Interactive Services Directory** 🌐✨.\n\nI can assist you with all services and features offered across this platform:\n\n1. 📖 **Literary & Book Orders**: Buy published books *Ayyaantummaa* & *Dhaloota Mul'ataa*\n2. 🎵 **Live Music & Band Bookings**: Hire Shanan Gadaa Band for cultural ceremonies & concerts\n3. 🎤 **Keynote Speaking & Panel Moderation**: Invite Kanenus to universities & conferences\n4. 📢 **Public Relations & Media Strategy**: Strategic literary & institutional communications\n5. 📱 **Digital Content Creation & Promotion**: Reach 125K+ cultural audience via Hizbii Keenya\n6. ⚙️ **Social Media Command Center**: Multi-channel publisher & live analytics suite\n7. 📄 **Official CV & Credentials**: Instant PDF resume download\n8. 🌍 **Trilingual Experience**: Switch between EN, OM & AM anytime\n\nWhich service would you like to explore or book?",
+    welcome: "Hello! I am **Kanenus's Cultural AI Assistant & Interactive Services Directory** 🌐✨.\n\nI can assist you with all professional services offered by Kanenus Kasa Bayisa:\n\n1. 🎪 **Event Organization & Production**: Major cultural festivals, concerts, and book launches\n2. 📢 **Cultural Promotion & Artist Tours**: Media promotion and Shanan Gadaa Band management\n3. 📈 **Strategic Marketing & Digital Growth**: High-impact campaigns reaching 125K+ cultural audience\n4. 📖 **Literary & Book Orders**: Buy published books *Ayyaantummaa* & *Dhaloota Mul'ataa*\n5. 🎵 **Live Music & Band Bookings**: Hire Shanan Gadaa Band for cultural ceremonies\n6. 🎤 **Keynote Speaking & Lectures**: Invite Kanenus to universities & conferences\n7. ⚙️ **Social Command Dashboard**: Omnichannel broadcast studio & live analytics\n8. 📄 **Official CV & Credentials**: Instant PDF resume download\n\nWhich service would you like to explore or book?",
     quickQuestions: [
       "✨ Explore all services",
-      "📖 Order Books (Ayyaantummaa & Dhaloota Mul'ataa)",
+      "🎪 Event Organization",
+      "📢 Promotion & Marketing",
+      "📖 Order Books (Both 2026)",
       "🎵 Book Shanan Gadaa Band",
-      "🎤 Invite for Keynote Speaking",
-      "📢 PR & Media Consulting",
-      "⚙️ Open Social Dashboard"
+      "🎤 Keynote Speaking"
     ],
-    placeholder: "Ask about book orders, music booking, speaking, PR services...",
+    placeholder: "Ask about event organizing, promotion, marketing, book orders...",
     send: "Send",
     thinking: "Thinking...",
     onlineStatus: "Online • Full Services & Knowledge Hub",
     headerTitle: "Kanenus AI Assistant",
-    headerSub: "All Platform Services & Guide",
+    headerSub: "Events, Marketing & Services Guide",
   },
   om: {
-    welcome: "Akkam jirtu! Ani **Gargaaraa AI Tajaajiloota Marsariitii Kanenus Kasa Bayisaati** 🌐✨.\n\nTajaajiloota fi qophiilee marsariitii kana keessatti dhihaatan hunda dhiheessuu danda'a:\n\n1. 📖 **Bittaafi Ajaja Kitaabotaa**: Kitaabota maxxanfaman *Ayyaantummaa* fi *Dhaloota Mul'ataa* bitachuu\n2. 🎵 **Afeerraa Baandii Shanan Gadaa**: Ayyaana aadaa fi waltajjiiwwan sirbaatiif afeeruu\n3. 🎤 **Haasawa Ijoo & Qindeessaa Waltajjii**: Yuunivarsiitii fi sagantaalee gurguddoof afeeruu\n4. 📢 **Quunnamtii Hawaasaa (PR) & Miidiyaa**: Tarsiimoo ogbarruu fi dhaabbilee\n5. 📱 **Uumama Qabeenya Digitaalaa**: Marsariitii Hizbii Keenya (hordoftoota 125K+) beeksisuu\n6. ⚙️ **Giddu-gala Ajaja Miidiyaa (Daashboordii)**: Xiinxala hawaasa 158K+ fi maxxansaalee\n7. 📄 **CV & Ragaa Ogummaa**: PDF battalumatti buufachuu\n8. 🌍 **Tajaajila Afaan Sadii**: EN, OM, fi AM gidduutti jijjiiruu\n\nTajaajila isa kam ilaaluu yookiin ajajuu barbaaddu?",
+    welcome: "Akkam jirtu! Ani **Gargaaraa AI Tajaajiloota Marsariitii Kanenus Kasa Bayisaati** 🌐✨.\n\nTajaajiloota fi qophiilee marsariitii kana keessatti dhihaatan hunda dhiheessuu danda'a:\n\n1. 🎪 **Qindeessaa Sagantaa & Waltajjii**: Ayyaanota aadaa gurguddoo, konsartii, fi eebba kitaabaa\n2. 📢 **Beeksisla Aadaa & Tuurii**: Aadaa Oromoo fi Baandii Shanan Gadaa beeksisuu\n3. 📈 **Ogeessa Gabaa & Tarsiimoo Digitaalaa**: Duula gabaa hordoftoota 125K+ wajjin gaggeessuu\n4. 📖 **Bittaafi Ajaja Kitaabotaa**: Kitaabota maxxanfaman *Ayyaantummaa* fi *Dhaloota Mul'ataa*\n5. 🎵 **Afeerraa Baandii Shanan Gadaa**: Ayyaana aadaa fi waltajjiiwwan sirbaatiif afeeruu\n6. 🎤 **Haasawa Ijoo & Qindeessaa**: Yuunivarsiitii fi sagantaalee gurguddoof afeeruu\n7. ⚙️ **Giddu-gala Ajaja Miidiyaa**: Daashboordii qindeessaa miidiyaa 158K+\n8. 📄 **CV & Ragaa Ogummaa**: PDF battalumatti buufachuu\n\nTajaajila isa kam ilaaluu yookiin ajajuu barbaaddu?",
     quickQuestions: [
       "✨ Tajaajiloota Hunda Ilaali",
-      "📖 Kitaabota Biti (Ayyaantummaa & Dhaloota Mul'ataa)",
+      "🎪 Qindeessaa Sagantaa",
+      "📢 Beeksisa & Gabaa",
+      "📖 Kitaabota Biti (2026)",
       "🎵 Baandii Shanan Gadaa Afeeri",
-      "🎤 Haasawa Ijootiif Afeeri",
-      "📢 Gorsa PR & Miidiyaa",
-      "⚙️ Daashboordii Bani"
+      "🎤 Haasawa Ijootiif Afeeri"
     ],
-    placeholder: "Waa'ee bittaa kitaabaa, baandii, haasawa, tajaajila PR gaafadhaa...",
+    placeholder: "Waa'ee qindeessuu sagantaa, beeksisa, gabaa, kitaabota gaafadhaa...",
     send: "Ergi",
     thinking: "Yaadaa jira...",
     onlineStatus: "Toora Irra • Tarree Tajaajilootaa Guutuu",
     headerTitle: "Gargaaraa AI Kanenus",
-    headerSub: "Qajeelchaa Tajaajiloota Hunda",
+    headerSub: "Qindeessaa Sagantaa, Gabaa & Aadaa",
   },
   am: {
-    welcome: "ጤና ይስጥልኝ! እኔ **የቀነኑስ ካሳ ባይሳ የድረ-ገጹ አገልግሎቶች AI ረዳት** ነኝ 🌐✨።\n\nበዚህ ድረ-ገጽ ላይ የሚገኙትን ሁሉንም አገልግሎቶች በተሟላ ሁኔታ ማግኘት ይችላሉ፦\n\n1. 📖 **የመጽሐፍት ሽያጭ እና ትዕዛዝ**፦ የታተሙትን *አያንቱማ* እና *ደሎታ ሙልአታ* መጽሐፍትን በቀጥታ ማዘዝ\n2. 🎵 **የሸነን ገዳ ባንድ የሙዚቃ ግብዣ**፦ ለባህል ፌስቲቫሎች እና ዝግጅቶች ባንዱን መጋበዝ\n3. 🎤 **የክብር እንግዳ ንግግር እና ፓናል መሪነት**፦ ለዩኒቨርሲቲ ጉባዔዎች እና የባህል መድረኮች\n4. 📢 **የህዝብ ግንኙነት (PR) እና የሚዲያ ስትራቴጂ**፦ ለስነ-ጽሁፍ እና ባህል ተቋማት የሚዲያ አመራር\n5. 📱 **የዲጂታል ይዘት ፈጠራ እና ማስተዋወቅ**፦ ከ125ሺ+ በላይ ተከታዮች ወዳለው የሕዝቢ ኬኛ መድረክ\n6. ⚙️ **የማህበራዊ ሚዲያ ማዕከል (ዳሽቦርድ)**፦ የ158ሺ+ ተከታዮች ትንታኔ እና የይዘት ማዘጋጃ\n7. 📄 **ይፋዊ የሙያ ዝርዝር (CV/PDF)**፦ በቀጥታ ማውረድ\n8. 🌍 **የ3 ቋንቋ አገልግሎት**፦ በእንግሊዝኛ፣ ኦሮምኛ እና አማርኛ መጠቀም\n\nየትኛውን አገልግሎት ማሰስ ወይም ማዘዝ ይፈልጋሉ?",
+    welcome: "ጤና ይስጥልኝ! እኔ **የቀነኑስ ካሳ ባይሳ የድረ-ገጹ አገልግሎቶች AI ረዳት** ነኝ 🌐✨።\n\nበዚህ ድረ-ገጽ ላይ የሚገኙትን ሁሉንም ሙያዊ አገልግሎቶች በተሟላ ሁኔታ ማግኘት ይችላሉ፦\n\n1. 🎪 **የዝግጅት አዘጋጅነት እና ፕሮዳክሽን**፦ ታላላቅ የባህል ፌስቲቫሎችን፣ ኮንሰርቶችን እና የመጽሐፍ ምረቃዎችን ማዘጋጀት\n2. 📢 **የባህል ማስተዋወቅ እና የጉብኝት መሪነት**፦ የባህል ቡድኖችን እና ደራሲያንን በሰፊው ማስተዋወቅ\n3. 📈 **የገበያ ስትራቴጂስት እና ዲጂታል ማርኬቲንግ**፦ ከ125ሺ+ በላይ ተከታዮችን ያሳተፈ ውጤታማ የማርኬቲንግ ዘመቻ\n4. 📖 **የመጽሐፍት ሽያጭ እና ትዕዛዝ**፦ የታተሙትን *አያንቱማ* እና *ደሎታ ሙልአታ* መጽሐፍትን በቀጥታ ማዘዝ\n5. 🎵 **የሸነን ገዳ ባንድ የሙዚቃ ግብዣ**፦ ለባህል ፌስቲቫሎች እና ዝግጅቶች ባንዱን መጋበዝ\n6. 🎤 **የክብር እንግዳ ንግግር እና ፓናል መሪነት**፦ ለዩኒቨርሲቲ ጉባዔዎች እና የባህል መድረኮች\n7. ⚙️ **የማህበራዊ ሚዲያ ማዕከል (ዳሽቦርድ)**፦ የ158ሺ+ ተከታዮች ትንታኔ እና የይዘት ማዘጋጃ\n8. 📄 **ይፋዊ የሙያ ዝርዝር (CV/PDF)**፦ በቀጥታ ማውረድ\n\nየትኛውን አገልግሎት ማሰስ ወይም ማዘዝ ይፈልጋሉ?",
     quickQuestions: [
       "✨ ሁሉንም አገልግሎቶች አሳይ",
-      "📖 መጽሐፍ እዘዝ (አያንቱማ እና ደሎታ ሙልአታ)",
+      "🎪 የዝግጅት አዘጋጅነት",
+      "📢 ማስተዋወቅ እና ማርኬቲንግ",
+      "📖 መጽሐፍ እዘዝ (2026)",
       "🎵 የሸነን ገዳ ባንድን ጋብዝ",
-      "🎤 ለክብር ንግግር ጋብዝ",
-      "📢 የህዝብ ግንኙነት (PR) ምክክር",
-      "⚙️ ዳሽቦርዱን ክፈት"
+      "🎤 ለክብር ንግግር ጋብዝ"
     ],
     placeholder: "ስለ መጽሐፍት ትዕዛዝ፣ የባንድ ግብዣ፣ የንግግር መድረክ ወይም PR ይጠይቁ...",
     send: "ላክ",
@@ -105,33 +105,97 @@ export default function AIAssistant() {
     if (q.includes('all services') || q.includes('service') || q.includes('services') || q.includes('tajaajiloota') || q.includes('tajaajila') || q.includes('አገልግሎት') || q.includes('አገልግሎቶች')) {
       if (currentLang === 'om') {
         return {
-          text: `🌟 **Tarree Tajaajiloota Marsariitii Kanenus Kasa Bayisaa:**\n\n1. 📖 **Bittaa Kitaabaa**: Kitaabota maxxanfaman *'Ayyaantummaa'* (2026) fi *'Dhaloota Mul'ataa'* (Kitaaba 2ffaa) bitachuu.\n2. 🎵 **Afeerraa Baandii**: Baandii Shanan Gadaa ayyaanota aadaa fi sirbaatiif afeeru.\n3. 🎤 **Haasawa Ijoo**: Sagantaalee yuunivarsiitii, simpooziyeemii, fi waltajjii aadaatiif Kanenus afeeruu.\n4. 📢 **Gorsa PR & Miidiyaa**: Waldaa Barreessitoota Oromiyaa fi dhaabbilee ogbarruuf gorsa tarsiimoo laachuu.\n5. 📱 **Beeksisa Digitaalaa**: Marsariitii Hizbii Keenya (hordoftoota 125K+) irratti ergaa aadaa beeksisuu.\n6. ⚙️ **Giddu-gala Ajaja Miidiyaa**: Daashboordii qindeessaa miidiyaa fi xiinxala 158K+.\n7. 📄 **CV / Resume**: Ragaa muuxannoo fi barnootaa PDFn buufachuu.\n8. ✉️ **Qunnamtii Kallattii**: WhatsApp, Telegram, fi Iimeeliidhaan walitti dhufeenya uumuu.`,
+          text: `🌟 **Tarree Tajaajiloota Marsariitii Kanenus Kasa Bayisaa:**\n\n1. 🎪 **Qindeessaa Sagantaa & Oomisha Waltajjii**: Sagantaalee aadaa, gurgurtaa kitaabaa, fi waltajjiiwwan muuziqaa qindeessuu fi hoogganuu.\n2. 📢 **Promootara Aadaa & Tarsiimoo Gabaa**: Tarsiimoo beeksisa aadaa, fiixaan ba'iinsa gabaa, fi dhiibbaa miidiyaa uumuu.\n3. 📖 **Bittaa Kitaabaa**: Kitaabota maxxanfaman *'Ayyaantummaa'* (2026) fi *'Dhaloota Mul'ataa'* (Kitaaba 2ffaa) bitachuu.\n4. 🎵 **Afeerraa Baandii**: Baandii Shanan Gadaa ayyaanota aadaa fi sirbaatiif afeeru.\n5. 🎤 **Haasawa Ijoo**: Sagantaalee yuunivarsiitii, simpooziyeemii, fi waltajjii aadaatiif Kanenus afeeruu.\n6. 📢 **Gorsa PR & Miidiyaa**: Waldaa Barreessitoota Oromiyaa fi dhaabbilee ogbarruuf gorsa tarsiimoo laachuu.\n7. 📱 **Beeksisa Digitaalaa**: Marsariitii Hizbii Keenya (hordoftoota 125K+) irratti ergaa aadaa beeksisuu.\n8. ⚙️ **Giddu-gala Ajaja Miidiyaa**: Daashboordii qindeessaa miidiyaa fi xiinxala 158K+.\n9. 📄 **CV / Resume**: Ragaa muuxannoo fi barnootaa PDFn buufachuu.\n10. ✉️ **Qunnamtii Kallattii**: WhatsApp, Telegram, fi Iimeeliidhaan walitti dhufeenya uumuu.`,
           actions: [
+            { label: "🎪 Sagantaalee", url: "/events" },
             { label: "📖 Kitaabota Biti", url: "/books" },
             { label: "🎵 Baandii Afeeri", url: "/music" },
-            { label: "🎤 Haasawa Afeeri", url: "/contact" },
             { label: "⚙️ Daashboordii", url: "/dashboard" }
           ]
         };
       }
       if (currentLang === 'am') {
         return {
-          text: `🌟 **የቀነኑስ ካሳ ባይሳ ድረ-ገጽ ሙሉ አገልግሎቶች ዝርዝር፦**\n\n1. 📖 **የመጽሐፍት ሽያጭ እና ትዕዛዝ**፦ የታተሙትን *'አያንቱማ'* (2026) እና *'ደሎታ ሙልአታ'* (ሁለተኛ መጽሐፍ) በቀጥታ ማዘዝ።\n2. 🎵 **የሸነን ገዳ ባንድ ግብዣ**፦ ለባህል ኮንሰርቶች፣ ለሰርግ እና ለበዓላት ዝግጅቶች ባንዱን መጋበዝ።\n3. 🎤 **የክብር እንግዳ ንግግር**፦ ለዩኒቨርሲቲ ጉባዔዎች፣ ለስነ-ጽሁፍ መድረኮች እና ለሲምፖዚየሞች ንግግር ማቅረብ።\n4. 📢 **የህዝብ ግንኙነት (PR) እና የሚዲያ ስትራቴጂ**፦ ለስነ-ጽሁፍ ተቋማት እና ደራሲያን የሚዲያ ማማከር።\n5. 📱 **የዲጂታል ይዘት ማስተዋወቅ**፦ ከ125,000 በላይ ተከታዮች ባሉት የሕዝቢ ኬኛ ገጽ ላይ የባህል ይዘቶችን ማሰራጨት።\n6. ⚙️ **የአመራር ዳሽቦርድ**፦ የማህበራዊ ገጾች አስተዳደር እና የ158ሺ+ ተከታዮች የቀጥታ ትንታኔ።\n7. 📄 **የስራ ልምድ (CV/PDF)**፦ ዝርዝር የሙያ ማስረጃን በPDF ማውረድ።\n8. ✉️ **የቀጥታ ግንኙነት**፦ በWhatsApp፣ በቴሌግራም ወይም በድረ-ገጽ ቅጽ ማነጋገር።`,
+          text: `🌟 **የቀነኑስ ካሳ ባይሳ ድረ-ገጽ ሙሉ አገልግሎቶች ዝርዝር፦**\n\n1. 🎪 **የዝግጅት አዘጋጅ እና የመድረክ ፕሮዳክሽን**፦ የባህል ፌስቲቫሎችን፣ የመጽሐፍ ምረቃዎችን እና የሙዚቃ ኮንሰርቶችን በተሟላ ሁኔታ ማዘጋጀት።\n2. 📢 **የባህል ፕሮሞተር እና ስትራቴጂክ ማርኬቲንግ**፦ ለባህል ክስተቶች፣ ለኪነ-ጥበብ ስራዎች እና ለተቋማት ውጤታማ የማስተዋወቅ ዘመቻዎችን መምራት።\n3. 📖 **የመጽሐፍት ሽያጭ እና ትዕዛዝ**፦ የታተሙትን *'አያንቱማ'* (2026) እና *'ደሎታ ሙልአታ'* (ሁለተኛ መጽሐፍ) በቀጥታ ማዘዝ።\n4. 🎵 **የሸነን ገዳ ባንድ ግብዣ**፦ ለባህል ኮንሰርቶች፣ ለሰርግ እና ለበዓላት ዝግጅቶች ባንዱን መጋበዝ።\n5. 🎤 **የክብር እንግዳ ንግግር**፦ ለዩኒቨርሲቲ ጉባዔዎች፣ ለስነ-ጽሁፍ መድረኮች እና ለሲምፖዚየሞች ንግግር ማቅረብ።\n6. 📢 **የህዝብ ግንኙነት (PR) እና የሚዲያ ስትራቴጂ**፦ ለስነ-ጽሁፍ ተቋማት እና ደራሲያን የሚዲያ ማማከር።\n7. 📱 **የዲጂታል ይዘት ማስተዋወቅ**፦ ከ125,000 በላይ ተከታዮች ባሉት የሕዝቢ ኬኛ ገጽ ላይ የባህል ይዘቶችን ማሰራጨት።\n8. ⚙️ **የአመራር ዳሽቦርድ**፦ የማህበራዊ ገጾች አስተዳደር እና የ158ሺ+ ተከታዮች የቀጥታ ትንታኔ።\n9. 📄 **የስራ ልምድ (CV/PDF)**፦ ዝርዝር የሙያ ማስረጃን በPDF ማውረድ።\n10. ✉️ **የቀጥታ ግንኙነት**፦ በWhatsApp፣ በቴሌግራም ወይም በድረ-ገጽ ቅጽ ማነጋገር።`,
           actions: [
+            { label: "🎪 ዝግጅቶች", url: "/events" },
             { label: "📖 መጽሐፍት እዘዝ", url: "/books" },
             { label: "🎵 ባንዱን ጋብዝ", url: "/music" },
-            { label: "🎤 ንግግር ጋብዝ", url: "/contact" },
             { label: "⚙️ ዳሽቦርድ", url: "/dashboard" }
           ]
         };
       }
       return {
-        text: `🌟 **Full Directory of Services on This Website:**\n\n1. 📖 **Book Authoring & Direct Orders**: Purchase published books *'Ayyaantummaa'* and *'Dhaloota Mul'ataa'* (Book 2).\n2. 🎵 **Live Music & Band Bookings**: Hire the Shanan Gadaa Band for cultural ceremonies, tours, and festivals.\n3. 🎤 **Keynote Speaking & Lectures**: Invite Kanenus for university talks, literary conferences, and cultural symposiums.\n4. 📢 **PR & Literary Communications Consulting**: Strategic media management drawing on Oromia Writers Association leadership.\n5. 📱 **Digital Media Promotion**: Reach an engaged 125,000+ cultural audience via Hizbii Keenya.\n6. ⚙️ **Executive Social Dashboard**: Omnichannel broadcast studio and 158K+ audience intelligence hub.\n7. 📄 **Credentials & CV Export**: Print and download a comprehensive PDF resume.\n8. ✉️ **Direct Management Support**: 24/7 direct inquiry channels via WhatsApp, Telegram, and Contact form.`,
+        text: `🌟 **Full Directory of Services on This Website:**\n\n1. 🎪 **Event Organization & Live Stage Production**: Full-scale cultural festivals, book launches, galas, and live concerts.\n2. 📢 **Cultural Promotion & Strategic Marketing**: Omnichannel promotion campaigns, arts marketing, and cultural audience growth.\n3. 📖 **Book Authoring & Direct Orders**: Purchase published books *'Ayyaantummaa'* and *'Dhaloota Mul'ataa'* (Book 2).\n4. 🎵 **Live Music & Band Bookings**: Hire the Shanan Gadaa Band for cultural ceremonies, tours, and festivals.\n5. 🎤 **Keynote Speaking & Lectures**: Invite Kanenus for university talks, literary conferences, and cultural symposiums.\n6. 📢 **PR & Literary Communications Consulting**: Strategic media management drawing on Oromia Writers Association leadership.\n7. 📱 **Digital Media Promotion**: Reach an engaged 125,000+ cultural audience via Hizbii Keenya.\n8. ⚙️ **Executive Social Dashboard**: Omnichannel broadcast studio and 158K+ audience intelligence hub.\n9. 📄 **Credentials & CV Export**: Print and download a comprehensive PDF resume.\n10. ✉️ **Direct Management Support**: 24/7 direct inquiry channels via WhatsApp, Telegram, and Contact form.`,
         actions: [
+          { label: "🎪 Events Hub", url: "/events" },
           { label: "📖 Order Books", url: "/books" },
           { label: "🎵 Book Band", url: "/music" },
-          { label: "🎤 Book Speaking", url: "/contact" },
           { label: "⚙️ Dashboard", url: "/dashboard" }
+        ]
+      };
+    }
+
+    // 2. EVENT ORGANIZATION & STAGE PRODUCTION SERVICE
+    if (q.includes('event') || q.includes('organizer') || q.includes('festival') || q.includes('production') || q.includes('qindeessaa') || q.includes('sagantaa') || q.includes('ዝግጅት') || q.includes('አዘጋጅ') || q.includes('ፌስቲቫል')) {
+      if (currentLang === 'om') {
+        return {
+          text: `🎪 **Tajaajila Qindeessaa Sagantaa & Oomisha Waltajjii (Event Organization):**\nKanenus Kasa Bayisa qindeessaa fi hooggana sagantaalee aadaa, gurgurtaa kitaabaa, fi waltajjiiwwan muuziqaa gurguddoo irratti muuxannoo olaanaa qaba.\n\n• **Tajaajiloota**: Sagantaalee dhiheessuu, oomisha waltajjii (sound/lighting/stage), sagantaa sirbaa, fi qophii simpooziyeemii.\n• **Haala Qunnamtii**: Fuula 'Events' daawwadhaa yookiin WhatsApp irratti kallattiin sagantaa keessan karoorsaa.`,
+          actions: [
+            { label: "🎪 Sagantaalee Ilaali", url: "/events" },
+            { label: "📲 WhatsApp irratti Karoorsi", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20plan%20an%20event%20with%20Kanenus." },
+            { label: "✉️ Gaaffii Ergi", url: "/contact" }
+          ]
+        };
+      }
+      if (currentLang === 'am') {
+        return {
+          text: `🎪 **የዝግጅት አዘጋጅ እና የመድረክ ፕሮዳክሽን አገልግሎት (Event Organization):**\nቀነኑስ ካሳ ባይሳ ትልልቅ የባህል ፌስቲቫሎችን፣ የመጽሐፍ ምረቃዎችን፣ የሙዚቃ ኮንሰርቶችን እና ሲምፖዚየሞችን በማዘጋጀት እና በመምራት የካበተ ልምድ አለው።\n\n• **አገልግሎቶች**፦ የዝግጅት ዕቅድ እና አስተዳደር፣ የመድረክ እና የድምጽ/መብራት አደረጃጀት፣ እና የእንግዶች መስተንግዶ።\n• **የመመዝገቢያ መንገድ**፦ የ'Events' ገጽን ይጎብኙ ወይም በWhatsApp በቀጥታ ዝግጅትዎን ያቅዱ።`,
+          actions: [
+            { label: "🎪 ዝግጅቶችን ይመልከቱ", url: "/events" },
+            { label: "📲 በWhatsApp ዝግጅት ያቅዱ", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20plan%20an%20event%20with%20Kanenus." },
+            { label: "✉️ ጥያቄ ላክ", url: "/contact" }
+          ]
+        };
+      }
+      return {
+        text: `🎪 **Event Organization & Live Stage Production Service:**\nKanenus Kasa Bayisa is a seasoned event organizer and producer specializing in cultural festivals, book launches, corporate galas, and live music tours.\n\n• **Services**: Full event management, stage/lighting/sound production, artist lineup coordination, and VIP protocol.\n• **Book an Event**: Visit the Events section or connect directly via WhatsApp to start planning.`,
+        actions: [
+          { label: "🎪 View Events Hub", url: "/events" },
+          { label: "📲 Plan via WhatsApp", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20plan%20an%20event%20with%20Kanenus." },
+          { label: "✉️ Contact Directly", url: "/contact" }
+        ]
+      };
+    }
+
+    // 3. CULTURAL PROMOTER & STRATEGIC MARKETING SERVICE
+    if (q.includes('promot') || q.includes('market') || q.includes('campaign') || q.includes('gabaa') || q.includes('beeksis') || q.includes('ማስተዋወቅ') || q.includes('ማርኬቲንግ') || q.includes('ፕሮሞተር')) {
+      if (currentLang === 'om') {
+        return {
+          text: `📢 **Tajaajila Promootara Aadaa & Tarsiimoo Gabaa (Promotion & Marketing):**\nKanenus beeksisa aadaa, hojii gabaa fi beekamtii uumuu irratti muuxannoo qaba. Marsariitii Hizbii Keenya (hordoftoota 125K+) fi daashboordii miidiyaa 158K+ fayyadamuun dhiibbaa guddaa uuma.\n\n• **Tajaajiloota**: Duula gabaa digitaalaa, beeksisa hojii aadaa fi muuziqaa, fi gabaa kitaabaa.\n• **Waliin Hojjechuuf**: Fuula 'Contact' irratti 'Promotion & Marketing' filadhaatii qunnamaa!`,
+          actions: [
+            { label: "📢 Duula Gabaa Qopheessi", url: "/contact" },
+            { label: "⚙️ Daashboordii Ilaali", url: "/dashboard" },
+            { label: "📄 Muuxannoo Ilaali", url: "/cv" }
+          ]
+        };
+      }
+      if (currentLang === 'am') {
+        return {
+          text: `📢 **የባህል ፕሮሞተር እና ስትራቴጂክ ማርኬቲንግ አገልግሎት (Promotion & Marketing):**\nቀነኑስ ለባህል ስራዎች፣ ለሙዚቃ እና ለመጽሐፍት ከፍተኛ የተደራሽነት የማስተዋወቅ ዘመቻዎችን ይመራል። በሕዝቢ ኬኛ (125ሺ+ ተከታዮች) እና በማህበራዊ ሚዲያ ዳሽቦርድ (158ሺ+ ተከታዮች) ሰፊ ተደራሽነት አለው።\n\n• **አገልግሎቶች**፦ የዲጂታል ማርኬቲንግ ዘመቻዎች፣ የባህል ክስተቶች ማስተዋወቅ እና የተመልካች እድገት ስትራቴጂ።\n• **አብሮ ለመስራት**፦ በ'Contact' ገጽ ላይ 'Promotion & Marketing' መርጠው ያነጋግሩን!`,
+          actions: [
+            { label: "📢 የማርኬቲንግ ጥያቄ ላክ", url: "/contact" },
+            { label: "⚙️ ዳሽቦርድ ይመልከቱ", url: "/dashboard" },
+            { label: "📄 የስራ ልምድ", url: "/cv" }
+          ]
+        };
+      }
+      return {
+        text: `📢 **Cultural Promoter & Strategic Marketing Service:**\nKanenus directs high-impact promotional campaigns for cultural tours, literary publications, and artistic brands, leveraging an ecosystem of 158K+ engaged followers including Hizbii Keenya (125K+).\n\n• **Services**: Digital promotion campaigns, cultural brand positioning, tour marketing, and cross-platform growth.\n• **Collaborate**: Select 'Promotion & Marketing' in the Contact form or message directly on WhatsApp.`,
+        actions: [
+          { label: "📢 Inquire Marketing Campaign", url: "/contact" },
+          { label: "⚙️ View Social Reach", url: "/dashboard" },
+          { label: "📄 View CV & Experience", url: "/cv" }
         ]
       };
     }
@@ -287,30 +351,30 @@ export default function AIAssistant() {
     // Default Fallback
     if (currentLang === 'om') {
       return {
-        text: `Gaaffii keessaniif galatoomaa! Tajaajiloota Kanenus Kasa Bayisaa hunda (Bittaa Kitaabaa, Afeerraa Baandii Shanan Gadaa, Haasawa Ijoo, Gorsa PR, fi Daashboordii) qindeessuuf qophiidha. Isa kam dursa baruu barbaaddu?`,
+        text: `Gaaffii keessaniif galatoomaa! Tajaajiloota Kanenus Kasa Bayisaa hunda (Qindeessaa Sagantaa, Promootara Aadaa fi Gabaa, Bittaa Kitaabaa, Afeerraa Baandii Shanan Gadaa, Haasawa Ijoo, Gorsa PR, fi Daashboordii) qindeessuuf qophiidha. Isa kam dursa baruu barbaaddu?`,
         actions: [
           { label: "✨ Tajaajiloota Hunda", query: "Tajaajiloota hunda natti agarsiisi" },
-          { label: "📖 Kitaabota Biti", url: "/books" },
-          { label: "🎵 Baandii Afeeri", url: "/music" }
+          { label: "🎪 Sagantaa Karoorsi", url: "/events" },
+          { label: "📖 Kitaabota Biti", url: "/books" }
         ]
       };
     }
     if (currentLang === 'am') {
       return {
-        text: `ስለ ጥያቄዎ እናመሰግናለን! የቀነኑስ ካሳ ባይሳን ሁሉንም አገልግሎቶች (የመጽሐፍት ትዕዛዝ፣ የሸነን ገዳ ባንድ ግብዣ፣ የክብር ንግግር፣ የህዝብ ግንኙነት ማማከር እና ዳሽቦርድ) ማግኘት ይችላሉ። የትኛውን መመልከት ይፈልጋሉ?`,
+        text: `ስለ ጥያቄዎ እናመሰግናለን! የቀነኑስ ካሳ ባይሳን ሁሉንም አገልግሎቶች (የዝግጅት አዘጋጅ፣ የባህል ፕሮሞተር እና ማርኬቲንግ፣ የመጽሐፍት ትዕዛዝ፣ የሸነን ገዳ ባንድ ግብዣ፣ የክብር ንግግር፣ የህዝብ ግንኙነት ማማከር እና ዳሽቦርድ) ማግኘት ይችላሉ። የትኛውን መመልከት ይፈልጋሉ?`,
         actions: [
           { label: "✨ ሁሉንም አገልግሎቶች አሳይ", query: "ሁሉንም አገልግሎቶች አሳይ" },
-          { label: "📖 መጽሐፍ እዘዝ", url: "/books" },
-          { label: "🎵 ባንዱን ጋብዝ", url: "/music" }
+          { label: "🎪 ዝግጅት ያቅዱ", url: "/events" },
+          { label: "📖 መጽሐፍ እዘዝ", url: "/books" }
         ]
       };
     }
     return {
-      text: "Thank you for asking! I can assist you with all of Kanenus Kasa Bayisa's professional services: Book Orders (*'Ayyaantummaa'* & *'Dhaloota Mul'ataa'*), Shanan Gadaa Band Bookings, Keynote Speaking, PR & Media Strategy, and the Social Command Dashboard.",
+      text: "Thank you for asking! I can assist you with all of Kanenus Kasa Bayisa's professional services: Event Organization & Stage Production, Cultural Promotion & Marketing, Book Orders (*'Ayyaantummaa'* & *'Dhaloota Mul'ataa'*), Shanan Gadaa Band Bookings, Keynote Speaking, PR & Media Strategy, and the Social Command Dashboard.",
       actions: [
         { label: "✨ Explore All Services", query: "Explore all services of this website" },
-        { label: "📖 Order Books", url: "/books" },
-        { label: "🎵 Book Band", url: "/music" }
+        { label: "🎪 Plan an Event", url: "/events" },
+        { label: "📖 Order Books", url: "/books" }
       ]
     };
   };

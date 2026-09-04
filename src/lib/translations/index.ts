@@ -66,6 +66,29 @@ export interface Translations {
     stat4Label: string;
     booksHeading: string;
     booksSubheading: string;
+    servicesBadge: string;
+    servicesHeading: string;
+    servicesSubheading: string;
+    s1Badge: string;
+    s1Title: string;
+    s1Desc: string;
+    s1Highlight: string;
+    s1Btn: string;
+    s2Badge: string;
+    s2Title: string;
+    s2Desc: string;
+    s2Highlight: string;
+    s2Btn: string;
+    s3Badge: string;
+    s3Title: string;
+    s3Desc: string;
+    s3Highlight: string;
+    s3Btn: string;
+    s4Badge: string;
+    s4Title: string;
+    s4Desc: string;
+    s4Highlight: string;
+    s4Btn: string;
     b1Title: string;
     b1Sub: string;
     b1Badge: string;
@@ -163,6 +186,8 @@ export interface Translations {
     type2: string;
     type3: string;
     type4: string;
+    type5: string;
+    type6: string;
     msgLabel: string;
     msgPlaceholder: string;
     submitBtn: string;
@@ -231,10 +256,10 @@ export const translations: Record<Lang, Translations> = {
       rights: '© 2026 Kanenus Kasa Bayisa. All Rights Reserved.',
     },
     home: {
-      badge: 'Author • Creator • Cultural Leader',
+      badge: 'Author • Event Organizer • Cultural Promoter • Strategic Marketer',
       heroTitle1: 'Kanenus',
       heroTitle2: 'Kasa Bayisa',
-      heroDesc: 'Preserving cultural heritage, shaping modern African literature, and engaging global audiences through storytelling.',
+      heroDesc: 'Leading Event Organizer, Cultural Promoter & Strategic Marketer — orchestrating mega cultural festivals, viral promotional campaigns, and bestselling literature that bridges African heritage with the world.',
       discoverBtn: 'Discover My Story',
       publicationsBtn: 'Explore Publications',
       followersCount: '125K+',
@@ -255,6 +280,29 @@ export const translations: Record<Lang, Translations> = {
       card3Title: 'Media & Press',
       card3Desc: 'Watch recent interviews, television appearances, and discussions on cultural leadership.',
       card3Btn: 'Watch Now',
+      servicesBadge: 'Signature Roles & Services',
+      servicesHeading: 'What Kanenus Brings to the Stage',
+      servicesSubheading: 'From sold-out cultural concerts and mega festivals to viral media promotions and high-ROI digital marketing.',
+      s1Badge: 'Live Production & Stage',
+      s1Title: '🎪 Event Organizer & Producer',
+      s1Desc: 'Full-cycle planning and execution for major cultural festivals, concert tours, literary symposiums, and book launch galas. End-to-end venue management, sound, lighting, and VIP protocols.',
+      s1Highlight: '50+ Major Events Managed • Seamless Stage & Crowd Logistics',
+      s1Btn: 'Plan an Event',
+      s2Badge: 'Regional & Cultural Reach',
+      s2Title: '📢 Cultural Promoter & Tour Manager',
+      s2Desc: 'Championing African musical groups, authors, and indigenous heritage. Spearheading regional promotional tours, artist management, and press conferences that draw massive public turnout.',
+      s2Highlight: 'Shanan Gadaa Band Director • High-Impact Media Tours',
+      s2Btn: 'Hire Promoter',
+      s3Badge: '125,000+ Engaged Audience',
+      s3Title: '📈 Strategic Marketer & Growth Strategist',
+      s3Desc: 'Architect of the Hizbii Keenya digital ecosystem. Expert in omnichannel audience acquisition, brand marketing campaigns, viral video positioning, and cultural influencer marketing.',
+      s3Highlight: '125K+ Organic Following • Multi-Platform ROI Campaigns',
+      s3Btn: 'Explore Marketing',
+      s4Badge: 'Published Masterpieces',
+      s4Title: '📖 Acclaimed Author & Literary Leader',
+      s4Desc: 'Author of "Ayyaantummaa" and "Dhaloota Mul\'ataa". Public Relations Manager at the Oromia Writers Association, championing contemporary literature and publishing excellence.',
+      s4Highlight: '2 Published Books • OWA Executive PR Leadership',
+      s4Btn: 'Order Books',
       bioBadge: 'Who Is Kanenus?',
       bioHeading: 'Cultural Visionary, Literary Pioneer',
       bioText1: 'Kanenus Kasa Bayisa is a distinguished professional writer, PR strategist, and cultural ambassador. As PR Manager of the Oromia Writers Association and Director of the Shanan Gadaa Band, he tirelessly bridges the gap between age-old traditions and modern digital platforms — making culture accessible to the world.',
@@ -366,6 +414,8 @@ export const translations: Record<Lang, Translations> = {
       type2: 'Speaking Engagement / Keynote',
       type3: 'Shanan Gadaa Band Booking',
       type4: 'Media Interview & Press',
+      type5: 'Event Organization & Stage Production',
+      type6: 'Cultural Promotion & Marketing Campaign',
       msgLabel: 'Your Message',
       msgPlaceholder: 'Please describe your request in detail...',
       submitBtn: 'Send Message',
@@ -433,10 +483,10 @@ export const translations: Record<Lang, Translations> = {
       rights: '© 2026 Kanenus Kasa Bayisa. Mirgi Qopheessaa Seeraan Kan Eegameedha.',
     },
     home: {
-      badge: 'Barreessaa • Uumaa • Hogganaa Aadaa',
+      badge: 'Barreessaa • Qindeessaa Sagantaa • Beeksisla Aadaa • Ogeessa Gabaa',
       heroTitle1: 'Kanenus',
       heroTitle2: 'Kasa Bayisa',
-      heroDesc: "Aadaa dhalootaa eeguu, ogbarruu Afrikaa ammayyaa bocuu, fi seenaa hawaasaa addunyaatti beeksisuu.",
+      heroDesc: 'Qindeessaa Sagantaa beekamaa, Beeksisla Aadaa fi Ogeessa Gabaa — ayyaanota aadaa gurguddoo, beeksisa miidiyaa bal\'aa, fi hojiiwwan ogbarruu Oromoo addunyaatti beeksisuu.',
       discoverBtn: 'Seenaa Koo Baradhu',
       publicationsBtn: 'Kitaabota Ilaalaa',
       followersCount: '125K+',
@@ -457,6 +507,29 @@ export const translations: Record<Lang, Translations> = {
       card3Title: 'Miidiyaa & Gaaf-deebii',
       card3Desc: 'Gaaf-deebiiwwan televijiinii fi qophiilee aadaa hordofaa.',
       card3Btn: 'Amma Daawwadhaa',
+      servicesBadge: 'Gahee Hojii & Tajaajiloota Ijoo',
+      servicesHeading: 'Kanenus Maal Dhiheessa?',
+      servicesSubheading: 'Ayyaanota aadaa fi konsartiiwwan gurguddoo qindeessuu irraa hanga beeksisa miidiyaa fi gabaa digitaalaa olaanaatti.',
+      s1Badge: 'Qophii Waltajjii & Sagantaa',
+      s1Title: '🎪 Qindeessaa Sagantaa & Waltajjii',
+      s1Desc: 'Ayyaanota aadaa gurguddoo, konsartii muuziqaa, eebba kitaabaa, fi simpooziyeemii ogbarruu qindeessuu. Sagantaa guutuu, sagalee, ifa, fi hoggansa waltajjii qulqullinaan dhiheessuu.',
+      s1Highlight: 'Sagantaalee 50+ Hoggane • Hoggansa Waltajjii fi Hawaasaa',
+      s1Btn: 'Sagantaa Qopheessi',
+      s2Badge: 'Dhiibbaa Aadaa fi Naannoo',
+      s2Title: '📢 Beeksisla Aadaa & Hoggansa Tuurii',
+      s2Desc: 'Aadaa, muuziqaa, fi barreessitoota Oromoo beeksisuu. Tuuriiwwan aadaa naannoolee, hoggansa baandii, fi beeksisa miidiyaa hawaasa bal\'aa hirmaachisu hoogganuu.',
+      s2Highlight: 'Daarektara Baandii Shanan Gadaa • Beeksisa Miidiyaa Olaanaa',
+      s2Btn: 'Beeksisla Afeeruu',
+      s3Badge: 'Hordoftoota 125,000+',
+      s3Title: '📈 Ogeessa Gabaa & Tarsiimoo Digitaalaa',
+      s3Desc: 'Hundeessaa fi hogganaa marsariitii Hizbii Keenya. Hordoftoota 125K+ ijaaruun beeksisa daldalaa, tarsiimoo vidiyoo hawwataa, fi gabaa qabeenya aadaa irratti dandeettii olaanaa qaba.',
+      s3Highlight: 'Hordoftoota 125,000+ • Duula Gabaa Bu\'aa Qabeessa',
+      s3Btn: 'Gabaa Ilaalaa',
+      s4Badge: 'Hojiiwwan Maxxanfaman',
+      s4Title: '📖 Barreessaa Ogummaa & Hoggansa Ogbarruu',
+      s4Desc: 'Kitaabota "Ayyaantummaa" fi "Dhaloota Mul\'ataa" barreessuun maxxansiise. Hogganaa Quunnamtii Hawaasaa Waldaa Barreessitoota Oromiyaa ta\'uun ogbarruu Oromoo guddisa.',
+      s4Highlight: 'Kitaabota Maxxanfaman 2 • Hogganaa PR Waldaa Barreessitootaa',
+      s4Btn: 'Kitaabota Biti',
       bioBadge: 'Kanenus Eenyu?',
       bioHeading: 'Hogganaa Aadaa, Qajeelchaa Ogbarruu',
       bioText1: 'Kanenus Kasa Bayisa barreessaa ogummaa, ogeessa quunnamtii hawaasaa, fi ergamaa aadaati. Hogganaa Quunnamtii Hawaasaa Waldaa Barreessitoota Oromiyaa fi Daarektara Baandii Shanan Gadaati.',
@@ -568,6 +641,8 @@ export const translations: Record<Lang, Translations> = {
       type2: 'Haasawa / Sagantaa irratti Afeeruu',
       type3: 'Baandii Shanan Gadaa Afeeruu',
       type4: 'Gaaf-deebii Miidiyaa',
+      type5: 'Qindeessuu Sagantaa & Waltajjii',
+      type6: 'Beeksisa Aadaa & Duula Gabaa',
       msgLabel: 'Ergaa Keessan',
       msgPlaceholder: 'Ergaa keessan bal\'inaan barreessaa...',
       submitBtn: 'Ergaa Ergi',
@@ -635,10 +710,10 @@ export const translations: Record<Lang, Translations> = {
       rights: '© 2026 ቀነኑስ ካሳ ባይሳ። መብቱ በሕግ የተጠበቀ ነው።',
     },
     home: {
-      badge: 'ደራሲ • ፈጣሪ • የባህል መሪ',
+      badge: 'ደራሲ • የዝግጅት አዘጋጅ • የባህል አስተዋዋቂ • የገበያ ስትራቴጂስት',
       heroTitle1: 'ቀነኑስ',
       heroTitle2: 'ካሳ ባይሳ',
-      heroDesc: 'የባህል ቅርሶችን መጠበቅ፣ ዘመናዊ የአፍሪካ ሥነ ጽሑፍን መቅረጽ እና ታሪኮችን ለአለም ማካፈል።',
+      heroDesc: 'ከፍተኛ የዝግጅት አዘጋጅ፣ የባህል አስተዋዋቂ እና የገበያ ስትራቴጂስት — ታላላቅ የባህል ፌስቲቫሎችን በማዘጋጀት፣ ሰፊ የሚዲያ ዘመቻዎችን በመምራት እና ሥነ-ጽሑፍን ለአለም በማስተዋወቅ ላይ ያለ መሪ።',
       discoverBtn: 'ታሪኬን ይወቁ',
       publicationsBtn: 'መጽሐፍትን ያስሱ',
       followersCount: '125ሺ+',
@@ -659,6 +734,29 @@ export const translations: Record<Lang, Translations> = {
       card3Title: 'ሚዲያ እና ቃለ መጠይቅ',
       card3Desc: 'የቴሌቪዥን ዝግጅቶችን እና የባህል ውይይቶችን ይከታተሉ።',
       card3Btn: 'አሁን ይመልከቱ',
+      servicesBadge: 'ዋና ዋና ሚናዎች እና አገልግሎቶች',
+      servicesHeading: 'ቀነኑስ ምን ያቀርባል?',
+      servicesSubheading: 'ከተሳካላቸው የባህል ፌስቲቫሎች እና የመድረክ ዝግጅቶች እስከ ተደራሽ የማስተዋወቅ እና ዲጂታል ማርኬቲንግ አገልግሎቶች።',
+      s1Badge: 'የመድረክ እና የዝግጅት አመራር',
+      s1Title: '🎪 የዝግጅት አዘጋጅ እና የመድረክ ፕሮዲውሰር',
+      s1Desc: 'ታላላቅ የባህል ፌስቲቫሎችን፣ የሙዚቃ ኮንሰርቶችን፣ የመጽሐፍ ምረቃዎችን እና የዩኒቨርሲቲ ጉባዔዎችን ከጅምር እስከ ፍጻሜ ማዘጋጀት። የመድረክ፣ የድምፅ፣ የብርሃን እና የክብር እንግዶች አያያዝ ሙሉ አመራር።',
+      s1Highlight: '50+ ታላላቅ ዝግጅቶች የተዘጋጁ • እንከን-የለሽ የመድረክ እና የህዝብ አስተዳደር',
+      s1Btn: 'ዝግጅት ያዘጋጁ',
+      s2Badge: 'ክልላዊ እና ባህላዊ ተደራሽነት',
+      s2Title: '📢 የባህል አስተዋዋቂ እና የጉብኝት መሪ',
+      s2Desc: 'የአፍሪካ ባህላዊ ቡድኖችን፣ ደራሲያንን እና ሙዚቀኞችን ማስተዋወቅ። የክልል የማስተዋወቅ ጉብኝቶችን፣ የባንድ አመራርን እና ከፍተኛ የህዝብ ተሳትፎ ያላቸውን የሚዲያ ዘመቻዎችን መምራት።',
+      s2Highlight: 'የሸነን ገዳ ባንድ ዳይሬክተር • ተጽእኖ ፈጣሪ የሚዲያ ዘመቻዎች',
+      s2Btn: 'አስተዋዋቂ ይቅጠሩ',
+      s3Badge: '125,000+ ተከታዮች',
+      s3Title: '📈 የገበያ ስትራቴጂስት እና የዲጂታል ማርኬተር',
+      s3Desc: 'የሕዝቢ ኬኛ ዲጂታል መድረክ መስራች። ከ125,000 በላይ ተከታዮችን በማፍራት በማህበራዊ ሚዲያ ማርኬቲንግ፣ በቫይራል ቪዲዮ ይዘት እና በባህል ተጽእኖ ፈጣሪዎች ዘመቻ ከፍተኛ ውጤት ያስመዘገበ።',
+      s3Highlight: '125ሺ+ ኦርጋኒክ ተከታዮች • ከፍተኛ ውጤት ያለው የማርኬቲንግ ዘመቻ',
+      s3Btn: 'የገበያ ስራዎችን ይመልከቱ',
+      s4Badge: 'የታተሙ ድንቅ ስራዎች',
+      s4Title: '📖 ደራሲ እና የስነ-ጽሁፍ መሪ',
+      s4Desc: 'የ"አያንቱማ" እና "ደሎታ ሙልአታ" መጽሐፍት ደራሲ። በኦሮሚያ ጸሐፊዎች ማህበር የህዝብ ግንኙነት ሀላፊ በመሆን ስነ-ጽሁፍን በከፍተኛ ደረጃ የሚያስተዋውቅ።',
+      s4Highlight: '2 የታተሙ መጽሐፍት • የኦሮሚያ ጸሐፊዎች ማህበር PR አመራር',
+      s4Btn: 'መጽሐፍትን ይዘዙ',
       bioBadge: 'ቀነኑስ ማን ነው?',
       bioHeading: 'የባህል መሪ፣ የስነ-ጽሑፍ ፈር ቀዳጅ',
       bioText1: 'ቀነኑስ ካሳ ባይሳ ታዋቂ ደራሲ፣ የሕዝብ ግንኙነት ስትራቴጂስት እና የባህል አምባሳደር ነው። በኦሮሚያ ጸሐፊዎች ማህበር የሕዝብ ግንኙነት ኃላፊ እና የሸነን ገዳ ባንድ ዳይሬክተር ሆኖ ያገለግላል።',
@@ -770,6 +868,8 @@ export const translations: Record<Lang, Translations> = {
       type2: 'የንግግር መድረክ ግብዣ',
       type3: 'የሸነን ገዳ ባንድ ግብዣ',
       type4: 'የሚዲያ ቃለ-መጠይቅ',
+      type5: 'የዝግጅት አዘጋጅነት እና የመድረክ ፕሮዳክሽን',
+      type6: 'የባህል ማስተዋወቅ እና የማርኬቲንግ ዘመቻ',
       msgLabel: 'መልእክትዎ',
       msgPlaceholder: 'መልእክትዎን በዝርዝር ይፃፉ...',
       submitBtn: 'መልእክት ላክ',

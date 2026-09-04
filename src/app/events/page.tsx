@@ -223,6 +223,59 @@ export default function EventsPage() {
         </div>
       </section>
 
+      {/* ============ HIRE AS EVENT ORGANIZER & PROMOTER ============ */}
+      <section className="py-20 bg-gradient-to-br from-[#071324] via-[#0b1a30] to-[#122a4f] text-white relative overflow-hidden">
+        <div className="absolute -top-10 -right-10 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="container mx-auto px-6 max-w-6xl relative z-10">
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-12 backdrop-blur-md shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-10">
+            <div className="flex-1 text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/30 text-xs font-bold uppercase tracking-wider mb-4">
+                <span>🎪</span>
+                {lang === 'om' ? 'Tajaajila Qindeessaa Sagantaa & Gabaa' : lang === 'am' ? 'የዝግጅት አዘጋጅነት እና የማስተዋወቅ አገልግሎት' : 'Event Organization & Marketing Services'}
+              </div>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 text-white">
+                {lang === 'om' ? 'Sagantaa Keessan Kanenus Wajjin Qopheessaa' : lang === 'am' ? 'ዝግጅትዎን በቀነኑስ አዘጋጅነት ያካሂዱ' : 'Plan Your Next Event with Kanenus'}
+              </h2>
+              <p className="text-gray-300 text-base leading-relaxed mb-6 max-w-2xl">
+                {lang === 'om'
+                  ? 'Ayyaanota aadaa, konsartii muuziqaa, eebba kitaabaa, fi sagantaalee gurguddoo hoggansa waltajjii, sagalee, ifa, fi beeksisa miidiyaa 125K+ wajjin qulqullinaan qindeessa.'
+                  : lang === 'am'
+                  ? 'የባህል ፌስቲቫሎችን፣ ኮንሰርቶችን፣ የመጽሐፍ ምረቃዎችን እና ጉባዔዎችን ከመድረክ ዝግጅት፣ ከድምጽ እና ብርሃን እስከ 125ሺ+ ተደራሽ ማርኬቲንግ ድረስ በሙሉ ኃላፊነት ያዘጋጃል።'
+                  : 'From turnkey stage and AV production to viral 125,000+ attendee marketing and VIP protocol management for cultural festivals, concerts, book launches, and galas.'}
+              </p>
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-gray-300">
+                <span className="flex items-center gap-1.5 bg-white/10 px-3.5 py-1.5 rounded-full">
+                  <span className="text-amber-400">✓</span> {lang === 'om' ? 'Hoggansa Waltajjii Guutuu' : lang === 'am' ? 'ሙሉ የመድረክ አመራር' : 'Full Stage Production'}
+                </span>
+                <span className="flex items-center gap-1.5 bg-white/10 px-3.5 py-1.5 rounded-full">
+                  <span className="text-emerald-400">✓</span> {lang === 'om' ? 'Beeksisa Miidiyaa Bal\'aa' : lang === 'am' ? 'ሰፊ የሚዲያ ዘመቻ' : 'Viral Audience Turnout'}
+                </span>
+                <span className="flex items-center gap-1.5 bg-white/10 px-3.5 py-1.5 rounded-full">
+                  <span className="text-blue-400">✓</span> {lang === 'om' ? 'Protokoolii Keessummoota Kabajaa' : lang === 'am' ? 'የክብር እንግዶች ፕሮቶኮል' : 'VIP Protocol & Logistics'}
+                </span>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row lg:flex-col gap-3 w-full lg:w-auto shrink-0">
+              <a
+                href={`https://wa.me/251000000000?text=${encodeURIComponent('Hello Kanenus! I am looking to hire you for Event Organization & Marketing for an upcoming event.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-slate-950 font-bold rounded-full transition shadow-xl text-center text-sm"
+              >
+                {lang === 'om' ? '📲 WhatsApp irratti Qopheessi' : lang === 'am' ? '📲 በWhatsApp ዝግጅት አዘጋጅ' : '📲 Book via WhatsApp'}
+              </a>
+              <Link
+                href="/contact"
+                className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold rounded-full transition text-center text-sm"
+              >
+                {lang === 'om' ? 'Ergaa Qunnamtii Ergi' : lang === 'am' ? 'የጥያቄ ቅጽ ይሙሉ' : 'Submit Event Request'}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Invite Host Banner */}
       <section className="py-20 bg-accent text-white">
         <div className="container mx-auto px-6 max-w-4xl text-center">

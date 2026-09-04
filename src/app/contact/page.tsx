@@ -82,6 +82,8 @@ export default function ContactPage() {
                     onChange={e => setForm({ ...form, subject: e.target.value })}
                     className="w-full px-5 py-3.5 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 dark:text-white focus:outline-none focus:border-accent"
                   >
+                    <option value="Events">{t.type5}</option>
+                    <option value="Promotion">{t.type6}</option>
                     <option value="Books">{t.type1}</option>
                     <option value="Speaking">{t.type2}</option>
                     <option value="Music">{t.type3}</option>
