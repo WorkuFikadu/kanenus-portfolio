@@ -118,26 +118,30 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
-          <div>{t.rights}</div>
-          <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-3 gap-y-2 text-xs sm:text-sm bg-white/5 px-4 py-2 rounded-full border border-white/10 backdrop-blur-sm">
-            <span className="text-gray-300 font-medium">
-              Developed by <span className="text-accent font-semibold">Worku Fikadu</span>
+        <div className="border-t border-white/10 pt-8 flex flex-col items-center justify-center gap-4 text-center text-sm text-gray-400">
+          <div className="font-medium text-gray-400">{t.rights}</div>
+          <div className="w-full max-w-5xl flex flex-wrap items-center justify-center gap-x-4 gap-y-2.5 text-xs sm:text-sm font-bold bg-white/5 px-6 py-3.5 rounded-2xl border border-white/15 backdrop-blur-md shadow-xl text-center">
+            <span className="text-white">
+              💻 Developed by <span className="text-accent font-extrabold underline decoration-accent/50 underline-offset-4">Worku Fikadu</span>
             </span>
-            <span className="text-white/20 hidden sm:inline">•</span>
-            <span className="text-gray-400">
-              Contacts: <a href="tel:0934953593" className="hover:text-accent transition font-mono">0934953593</a> / <a href="tel:0919639519" className="hover:text-accent transition font-mono">0919639519</a>
+            <span className="text-white/30 hidden md:inline">•</span>
+            <span className="text-gray-200">
+              📞 Contacts: <a href="tel:0934953593" className="text-accent hover:text-white transition font-mono font-bold">0934953593</a> / <a href="tel:0919639519" className="text-accent hover:text-white transition font-mono font-bold">0919639519</a>
             </span>
-            <span className="text-white/20 hidden sm:inline">•</span>
+            <span className="text-white/30 hidden md:inline">•</span>
+            <span className="text-gray-200">
+              ✉️ Email: <a href="mailto:workufikadu643@gmail.com" className="text-accent hover:text-white transition font-bold underline underline-offset-2">workufikadu643@gmail.com</a>
+            </span>
+            <span className="text-white/30 hidden md:inline">•</span>
             <a
               href="https://workufikadu.github.io/my-portfolio/index.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-accent hover:underline font-medium"
+              className="inline-flex items-center gap-1.5 text-accent hover:text-white transition font-extrabold bg-accent/10 px-3 py-1 rounded-lg border border-accent/30"
             >
-              Portfolio
-              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              🌐 Portfolio
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
           </div>
