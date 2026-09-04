@@ -223,7 +223,7 @@ export default function Home() {
                   className="w-full h-full object-contain transform group-hover:scale-105 transition-all duration-500"
                 />
               </div>
-              <span className="px-4 py-1 bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 rounded-full text-xs font-bold uppercase tracking-widest mb-3">
+              <span className="px-4 py-1 bg-green-500/10 text-green-600 dark:text-green-400 border border-green-500/20 rounded-full text-xs font-bold uppercase tracking-widest mb-3">
                 {t.b2Badge}
               </span>
               <h3 className="text-3xl font-heading font-bold text-primary dark:text-white mb-2">{t.b2Title}</h3>
@@ -232,7 +232,7 @@ export default function Home() {
                 {t.b2Desc}
               </p>
               <div className="flex gap-3 w-full justify-center">
-                <Link href="/books" className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-full text-sm transition shadow-md">
+                <Link href="/books" className="px-6 py-3 bg-primary dark:bg-accent hover:bg-accent text-white font-bold rounded-full text-sm transition shadow-md">
                   {t.b2Btn}
                 </Link>
               </div>

@@ -4,22 +4,13 @@ import { useLang } from '@/components/LangContext';
 import { translations } from '@/lib/translations';
 
 export default function BooksPage() {
-  const [email, setEmail] = useState('');
-  const [joined, setJoined] = useState(false);
   const { lang } = useLang();
   const [showChapter, setShowChapter] = useState(false);
 
   const t = translations[lang].books;
 
-  const handleWaitlist = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    setJoined(true);
-    setEmail('');
-  };
-
   const ayyaantummaaMsg = encodeURIComponent("Hello! I would like to order a copy of 'Ayyaantummaa' by Kanenus Kasa Bayisa.");
-  const dhalootaMsg = encodeURIComponent("Hello! I want to pre-order/reserve a copy of 'Dhaloota Mul'ataa' (Book 2) by Kanenus Kasa Bayisa.");
+  const dhalootaMsg = encodeURIComponent("Hello! I would like to order a copy of 'Dhaloota Mul'ataa' (Book 2) by Kanenus Kasa Bayisa.");
 
   return (
     <div className="bg-[#fcfdfd] dark:bg-gray-900 min-h-screen text-gray-800 dark:text-gray-100">
@@ -147,7 +138,7 @@ export default function BooksPage() {
       </section>
 
       {/* ======================================================== */}
-      {/* BOOK 2: DHALOOTA MUL'ATAA (Coming Soon Feature)         */}
+      {/* BOOK 2: DHALOOTA MUL'ATAA (Published)                    */}
       {/* ======================================================== */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-[#071324] to-[#0b1a30] text-white">
         <div className="container mx-auto px-6 max-w-6xl">
@@ -167,7 +158,7 @@ export default function BooksPage() {
             {/* Book Details */}
             <div className="p-8 lg:p-14 flex-1 flex flex-col justify-center">
               <div className="flex items-center gap-3 mb-4 flex-wrap">
-                <span className="px-4 py-1 bg-amber-400/20 text-amber-300 border border-amber-400/30 rounded-full text-xs font-bold uppercase tracking-widest">
+                <span className="px-4 py-1 bg-green-500/20 text-green-300 border border-green-400/30 rounded-full text-xs font-bold uppercase tracking-widest">
                   {t.b2Badge}
                 </span>
                 <span className="text-xs text-blue-200 font-bold uppercase tracking-wider">
@@ -181,42 +172,27 @@ export default function BooksPage() {
                 {t.b2Desc}
               </p>
 
-              {/* Pre-order buttons & Waitlist */}
-              <div className="flex flex-col sm:flex-row gap-3 mb-8">
+              {/* Order Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
                 <a
                   href={`https://wa.me/251000000000?text=${dhalootaMsg}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3.5 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-slate-950 font-bold rounded-full shadow-lg transition duration-300 text-sm text-center flex items-center justify-center gap-2"
+                  className="px-6 py-3.5 bg-green-600 hover:bg-green-700 text-white font-bold rounded-full shadow-lg transition duration-300 text-sm text-center flex items-center justify-center gap-2"
                 >
-                  {t.preorderBtn}
+                  {t.whatsappOrder}
                 </a>
               </div>
 
-              {/* Email Waitlist Form */}
-              <div className="pt-6 border-t border-white/10">
-                <p className="text-xs uppercase tracking-widest text-gray-400 font-bold mb-3">
-                  {t.waitlistLabel}
-                </p>
-                {joined ? (
-                  <div className="py-3 px-5 bg-green-500/20 border border-green-400/30 rounded-2xl text-green-300 font-medium text-sm">
-                    {t.waitlistSuccess}
-                  </div>
-                ) : (
-                  <form onSubmit={handleWaitlist} className="flex flex-col sm:flex-row gap-2">
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={e => setEmail(e.target.value)}
-                      placeholder={t.waitlistPlaceholder}
-                      required
-                      className="flex-1 px-5 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-accent text-sm"
-                    />
-                    <button type="submit" className="px-6 py-3 bg-accent hover:bg-blue-500 text-white font-bold rounded-full transition text-sm whitespace-nowrap shadow-md">
-                      {t.joinWaitlistBtn}
-                    </button>
-                  </form>
-                )}
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href={`https://t.me/kanenus?text=${dhalootaMsg}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2 bg-[#0088cc] hover:bg-sky-600 text-white text-xs font-bold rounded-full transition shadow-sm"
+                >
+                  {t.telegramOrder}
+                </a>
               </div>
             </div>
           </div>

@@ -114,7 +114,7 @@ export default function CVPage() {
                 company: 'Independent Publisher',
                 date: 'August 2025 – Present',
                 bullets: [
-                  lang === 'om' ? "Kitaaba 'Ayyaantummaa' (2026) fi 'Dhaloota Mul'ataa' (2ffaa) qopheessee maxxansiise" : lang === 'am' ? "'አያንቱማ' (2026) እና 'ደሎታ ሙልአታ' የተሰኙ ተወዳጅ መጽሐፍትን ጽፎ አሳትሟል" : "Authored 'Ayyaantummaa' (2026) and upcoming 'Dhaloota Mul'ataa' (Book 2)",
+                  lang === 'om' ? "Kitaaba 'Ayyaantummaa' (2026) fi 'Dhaloota Mul'ataa' (2ffaa) qopheessee maxxansiise" : lang === 'am' ? "'አያንቱማ' (2026) እና 'ደሎታ ሙልአታ' የተሰኙ ተወዳጅ መጽሐፍትን ጽፎ አሳትሟል" : "Authored 'Ayyaantummaa' (2026) and 'Dhaloota Mul'ataa' (Book 2)",
                   lang === 'om' ? 'Barreeffamoota aadaa fi seenaa dhalootaa qorachuun dhiheessa' : lang === 'am' ? 'የባህል ማንነትን የሚገልጹ ጥናታዊ ጽሑፎችን ያዘጋጃል' : 'Writes essays and cultural commentary promoting African literature',
                 ]
               },

@@ -12,10 +12,10 @@ interface Message {
 
 const aiKnowledge = {
   en: {
-    welcome: "Hello! I am **Kanenus's Cultural AI Assistant & Interactive Services Directory** 🌐✨.\n\nI can assist you with all services and features offered across this platform:\n\n1. 📖 **Literary & Book Orders**: Buy *Ayyaantummaa* or pre-order *Dhaloota Mul'ataa*\n2. 🎵 **Live Music & Band Bookings**: Hire Shanan Gadaa Band for cultural ceremonies & concerts\n3. 🎤 **Keynote Speaking & Panel Moderation**: Invite Kanenus to universities & conferences\n4. 📢 **Public Relations & Media Strategy**: Strategic literary & institutional communications\n5. 📱 **Digital Content Creation & Promotion**: Reach 125K+ cultural audience via Hizbii Keenya\n6. ⚙️ **Social Media Command Center**: Multi-channel publisher & live analytics suite\n7. 📄 **Official CV & Credentials**: Instant PDF resume download\n8. 🌍 **Trilingual Experience**: Switch between EN, OM & AM anytime\n\nWhich service would you like to explore or book?",
+    welcome: "Hello! I am **Kanenus's Cultural AI Assistant & Interactive Services Directory** 🌐✨.\n\nI can assist you with all services and features offered across this platform:\n\n1. 📖 **Literary & Book Orders**: Buy published books *Ayyaantummaa* & *Dhaloota Mul'ataa*\n2. 🎵 **Live Music & Band Bookings**: Hire Shanan Gadaa Band for cultural ceremonies & concerts\n3. 🎤 **Keynote Speaking & Panel Moderation**: Invite Kanenus to universities & conferences\n4. 📢 **Public Relations & Media Strategy**: Strategic literary & institutional communications\n5. 📱 **Digital Content Creation & Promotion**: Reach 125K+ cultural audience via Hizbii Keenya\n6. ⚙️ **Social Media Command Center**: Multi-channel publisher & live analytics suite\n7. 📄 **Official CV & Credentials**: Instant PDF resume download\n8. 🌍 **Trilingual Experience**: Switch between EN, OM & AM anytime\n\nWhich service would you like to explore or book?",
     quickQuestions: [
       "✨ Explore all services",
-      "📖 Order Books (Ayyaantummaa)",
+      "📖 Order Books (Ayyaantummaa & Dhaloota Mul'ataa)",
       "🎵 Book Shanan Gadaa Band",
       "🎤 Invite for Keynote Speaking",
       "📢 PR & Media Consulting",
@@ -29,10 +29,10 @@ const aiKnowledge = {
     headerSub: "All Platform Services & Guide",
   },
   om: {
-    welcome: "Akkam jirtu! Ani **Gargaaraa AI Tajaajiloota Marsariitii Kanenus Kasa Bayisaati** 🌐✨.\n\nTajaajiloota fi qophiilee marsariitii kana keessatti dhihaatan hunda dhiheessuu danda'a:\n\n1. 📖 **Bittaafi Ajaja Kitaabotaa**: *Ayyaantummaa* bitachuu fi *Dhaloota Mul'ataa* dursa qabachuu\n2. 🎵 **Afeerraa Baandii Shanan Gadaa**: Ayyaana aadaa fi waltajjiiwwan sirbaatiif afeeruu\n3. 🎤 **Haasawa Ijoo & Qindeessaa Waltajjii**: Yuunivarsiitii fi sagantaalee gurguddoof afeeruu\n4. 📢 **Quunnamtii Hawaasaa (PR) & Miidiyaa**: Tarsiimoo ogbarruu fi dhaabbilee\n5. 📱 **Uumama Qabeenya Digitaalaa**: Marsariitii Hizbii Keenya (hordoftoota 125K+) beeksisuu\n6. ⚙️ **Giddu-gala Ajaja Miidiyaa (Daashboordii)**: Xiinxala hawaasa 158K+ fi maxxansaalee\n7. 📄 **CV & Ragaa Ogummaa**: PDF battalumatti buufachuu\n8. 🌍 **Tajaajila Afaan Sadii**: EN, OM, fi AM gidduutti jijjiiruu\n\nTajaajila isa kam ilaaluu yookiin ajajuu barbaaddu?",
+    welcome: "Akkam jirtu! Ani **Gargaaraa AI Tajaajiloota Marsariitii Kanenus Kasa Bayisaati** 🌐✨.\n\nTajaajiloota fi qophiilee marsariitii kana keessatti dhihaatan hunda dhiheessuu danda'a:\n\n1. 📖 **Bittaafi Ajaja Kitaabotaa**: Kitaabota maxxanfaman *Ayyaantummaa* fi *Dhaloota Mul'ataa* bitachuu\n2. 🎵 **Afeerraa Baandii Shanan Gadaa**: Ayyaana aadaa fi waltajjiiwwan sirbaatiif afeeruu\n3. 🎤 **Haasawa Ijoo & Qindeessaa Waltajjii**: Yuunivarsiitii fi sagantaalee gurguddoof afeeruu\n4. 📢 **Quunnamtii Hawaasaa (PR) & Miidiyaa**: Tarsiimoo ogbarruu fi dhaabbilee\n5. 📱 **Uumama Qabeenya Digitaalaa**: Marsariitii Hizbii Keenya (hordoftoota 125K+) beeksisuu\n6. ⚙️ **Giddu-gala Ajaja Miidiyaa (Daashboordii)**: Xiinxala hawaasa 158K+ fi maxxansaalee\n7. 📄 **CV & Ragaa Ogummaa**: PDF battalumatti buufachuu\n8. 🌍 **Tajaajila Afaan Sadii**: EN, OM, fi AM gidduutti jijjiiruu\n\nTajaajila isa kam ilaaluu yookiin ajajuu barbaaddu?",
     quickQuestions: [
       "✨ Tajaajiloota Hunda Ilaali",
-      "📖 Kitaaba Biti (Ayyaantummaa)",
+      "📖 Kitaabota Biti (Ayyaantummaa & Dhaloota Mul'ataa)",
       "🎵 Baandii Shanan Gadaa Afeeri",
       "🎤 Haasawa Ijootiif Afeeri",
       "📢 Gorsa PR & Miidiyaa",
@@ -46,10 +46,10 @@ const aiKnowledge = {
     headerSub: "Qajeelchaa Tajaajiloota Hunda",
   },
   am: {
-    welcome: "ጤና ይስጥልኝ! እኔ **የቀነኑስ ካሳ ባይሳ የድረ-ገጹ አገልግሎቶች AI ረዳት** ነኝ 🌐✨።\n\nበዚህ ድረ-ገጽ ላይ የሚገኙትን ሁሉንም አገልግሎቶች በተሟላ ሁኔታ ማግኘት ይችላሉ፦\n\n1. 📖 **የመጽሐፍት ሽያጭ እና ትዕዛዝ**፦ *አያንቱማ* መጽሐፍን ማዘዝ እና *ደሎታ ሙልአታ*ን ቀድመው መያዝ\n2. 🎵 **የሸነን ገዳ ባንድ የሙዚቃ ግብዣ**፦ ለባህል ፌስቲቫሎች እና ዝግጅቶች ባንዱን መጋበዝ\n3. 🎤 **የክብር እንግዳ ንግግር እና ፓናል መሪነት**፦ ለዩኒቨርሲቲ ጉባዔዎች እና የባህል መድረኮች\n4. 📢 **የህዝብ ግንኙነት (PR) እና የሚዲያ ስትራቴጂ**፦ ለስነ-ጽሁፍ እና ባህል ተቋማት የሚዲያ አመራር\n5. 📱 **የዲጂታል ይዘት ፈጠራ እና ማስተዋወቅ**፦ ከ125ሺ+ በላይ ተከታዮች ወዳለው የሕዝቢ ኬኛ መድረክ\n6. ⚙️ **የማህበራዊ ሚዲያ ማዕከል (ዳሽቦርድ)**፦ የ158ሺ+ ተከታዮች ትንታኔ እና የይዘት ማዘጋጃ\n7. 📄 **ይፋዊ የሙያ ዝርዝር (CV/PDF)**፦ በቀጥታ ማውረድ\n8. 🌍 **የ3 ቋንቋ አገልግሎት**፦ በእንግሊዝኛ፣ ኦሮምኛ እና አማርኛ መጠቀም\n\nየትኛውን አገልግሎት ማሰስ ወይም ማዘዝ ይፈልጋሉ?",
+    welcome: "ጤና ይስጥልኝ! እኔ **የቀነኑስ ካሳ ባይሳ የድረ-ገጹ አገልግሎቶች AI ረዳት** ነኝ 🌐✨።\n\nበዚህ ድረ-ገጽ ላይ የሚገኙትን ሁሉንም አገልግሎቶች በተሟላ ሁኔታ ማግኘት ይችላሉ፦\n\n1. 📖 **የመጽሐፍት ሽያጭ እና ትዕዛዝ**፦ የታተሙትን *አያንቱማ* እና *ደሎታ ሙልአታ* መጽሐፍትን በቀጥታ ማዘዝ\n2. 🎵 **የሸነን ገዳ ባንድ የሙዚቃ ግብዣ**፦ ለባህል ፌስቲቫሎች እና ዝግጅቶች ባንዱን መጋበዝ\n3. 🎤 **የክብር እንግዳ ንግግር እና ፓናል መሪነት**፦ ለዩኒቨርሲቲ ጉባዔዎች እና የባህል መድረኮች\n4. 📢 **የህዝብ ግንኙነት (PR) እና የሚዲያ ስትራቴጂ**፦ ለስነ-ጽሁፍ እና ባህል ተቋማት የሚዲያ አመራር\n5. 📱 **የዲጂታል ይዘት ፈጠራ እና ማስተዋወቅ**፦ ከ125ሺ+ በላይ ተከታዮች ወዳለው የሕዝቢ ኬኛ መድረክ\n6. ⚙️ **የማህበራዊ ሚዲያ ማዕከል (ዳሽቦርድ)**፦ የ158ሺ+ ተከታዮች ትንታኔ እና የይዘት ማዘጋጃ\n7. 📄 **ይፋዊ የሙያ ዝርዝር (CV/PDF)**፦ በቀጥታ ማውረድ\n8. 🌍 **የ3 ቋንቋ አገልግሎት**፦ በእንግሊዝኛ፣ ኦሮምኛ እና አማርኛ መጠቀም\n\nየትኛውን አገልግሎት ማሰስ ወይም ማዘዝ ይፈልጋሉ?",
     quickQuestions: [
       "✨ ሁሉንም አገልግሎቶች አሳይ",
-      "📖 መጽሐፍ እዘዝ (አያንቱማ)",
+      "📖 መጽሐፍ እዘዝ (አያንቱማ እና ደሎታ ሙልአታ)",
       "🎵 የሸነን ገዳ ባንድን ጋብዝ",
       "🎤 ለክብር ንግግር ጋብዝ",
       "📢 የህዝብ ግንኙነት (PR) ምክክር",
@@ -105,7 +105,7 @@ export default function AIAssistant() {
     if (q.includes('all services') || q.includes('service') || q.includes('services') || q.includes('tajaajiloota') || q.includes('tajaajila') || q.includes('አገልግሎት') || q.includes('አገልግሎቶች')) {
       if (currentLang === 'om') {
         return {
-          text: `🌟 **Tarree Tajaajiloota Marsariitii Kanenus Kasa Bayisaa:**\n\n1. 📖 **Bittaa Kitaabaa**: Kitaaba *'Ayyaantummaa'* (2026) bitachuu fi *'Dhaloota Mul'ataa'* dursa qabachuu.\n2. 🎵 **Afeerraa Baandii**: Baandii Shanan Gadaa ayyaanota aadaa fi sirbaatiif afeeru.\n3. 🎤 **Haasawa Ijoo**: Sagantaalee yuunivarsiitii, simpooziyeemii, fi waltajjii aadaatiif Kanenus afeeruu.\n4. 📢 **Gorsa PR & Miidiyaa**: Waldaa Barreessitoota Oromiyaa fi dhaabbilee ogbarruuf gorsa tarsiimoo laachuu.\n5. 📱 **Beeksisa Digitaalaa**: Marsariitii Hizbii Keenya (hordoftoota 125K+) irratti ergaa aadaa beeksisuu.\n6. ⚙️ **Giddu-gala Ajaja Miidiyaa**: Daashboordii qindeessaa miidiyaa fi xiinxala 158K+.\n7. 📄 **CV / Resume**: Ragaa muuxannoo fi barnootaa PDFn buufachuu.\n8. ✉️ **Qunnamtii Kallattii**: WhatsApp, Telegram, fi Iimeeliidhaan walitti dhufeenya uumuu.`,
+          text: `🌟 **Tarree Tajaajiloota Marsariitii Kanenus Kasa Bayisaa:**\n\n1. 📖 **Bittaa Kitaabaa**: Kitaabota maxxanfaman *'Ayyaantummaa'* (2026) fi *'Dhaloota Mul'ataa'* (Kitaaba 2ffaa) bitachuu.\n2. 🎵 **Afeerraa Baandii**: Baandii Shanan Gadaa ayyaanota aadaa fi sirbaatiif afeeru.\n3. 🎤 **Haasawa Ijoo**: Sagantaalee yuunivarsiitii, simpooziyeemii, fi waltajjii aadaatiif Kanenus afeeruu.\n4. 📢 **Gorsa PR & Miidiyaa**: Waldaa Barreessitoota Oromiyaa fi dhaabbilee ogbarruuf gorsa tarsiimoo laachuu.\n5. 📱 **Beeksisa Digitaalaa**: Marsariitii Hizbii Keenya (hordoftoota 125K+) irratti ergaa aadaa beeksisuu.\n6. ⚙️ **Giddu-gala Ajaja Miidiyaa**: Daashboordii qindeessaa miidiyaa fi xiinxala 158K+.\n7. 📄 **CV / Resume**: Ragaa muuxannoo fi barnootaa PDFn buufachuu.\n8. ✉️ **Qunnamtii Kallattii**: WhatsApp, Telegram, fi Iimeeliidhaan walitti dhufeenya uumuu.`,
           actions: [
             { label: "📖 Kitaabota Biti", url: "/books" },
             { label: "🎵 Baandii Afeeri", url: "/music" },
@@ -116,9 +116,9 @@ export default function AIAssistant() {
       }
       if (currentLang === 'am') {
         return {
-          text: `🌟 **የቀነኑስ ካሳ ባይሳ ድረ-ገጽ ሙሉ አገልግሎቶች ዝርዝር፦**\n\n1. 📖 **የመጽሐፍት ሽያጭ እና ትዕዛዝ**፦ *'አያንቱማ'* (2026) መጽሐፍን በቀጥታ ማዘዝ እና ሁለተኛውን መጽሐፍ *'ደሎታ ሙልአታ'* ቀድመው መያዝ።\n2. 🎵 **የሸነን ገዳ ባንድ ግብዣ**፦ ለባህል ኮንሰርቶች፣ ለሰርግ እና ለበዓላት ዝግጅቶች ባንዱን መጋበዝ።\n3. 🎤 **የክብር እንግዳ ንግግር**፦ ለዩኒቨርሲቲ ጉባዔዎች፣ ለስነ-ጽሁፍ መድረኮች እና ለሲምፖዚየሞች ንግግር ማቅረብ።\n4. 📢 **የህዝብ ግንኙነት (PR) እና የሚዲያ ስትራቴጂ**፦ ለስነ-ጽሁፍ ተቋማት እና ደራሲያን የሚዲያ ማማከር።\n5. 📱 **የዲጂታል ይዘት ማስተዋወቅ**፦ ከ125,000 በላይ ተከታዮች ባሉት የሕዝቢ ኬኛ ገጽ ላይ የባህል ይዘቶችን ማሰራጨት።\n6. ⚙️ **የአመራር ዳሽቦርድ**፦ የማህበራዊ ገጾች አስተዳደር እና የ158ሺ+ ተከታዮች የቀጥታ ትንታኔ።\n7. 📄 **የስራ ልምድ (CV/PDF)**፦ ዝርዝር የሙያ ማስረጃን በPDF ማውረድ።\n8. ✉️ **የቀጥታ ግንኙነት**፦ በWhatsApp፣ በቴሌግራም ወይም በድረ-ገጽ ቅጽ ማነጋገር።`,
+          text: `🌟 **የቀነኑስ ካሳ ባይሳ ድረ-ገጽ ሙሉ አገልግሎቶች ዝርዝር፦**\n\n1. 📖 **የመጽሐፍት ሽያጭ እና ትዕዛዝ**፦ የታተሙትን *'አያንቱማ'* (2026) እና *'ደሎታ ሙልአታ'* (ሁለተኛ መጽሐፍ) በቀጥታ ማዘዝ።\n2. 🎵 **የሸነን ገዳ ባንድ ግብዣ**፦ ለባህል ኮንሰርቶች፣ ለሰርግ እና ለበዓላት ዝግጅቶች ባንዱን መጋበዝ።\n3. 🎤 **የክብር እንግዳ ንግግር**፦ ለዩኒቨርሲቲ ጉባዔዎች፣ ለስነ-ጽሁፍ መድረኮች እና ለሲምፖዚየሞች ንግግር ማቅረብ።\n4. 📢 **የህዝብ ግንኙነት (PR) እና የሚዲያ ስትራቴጂ**፦ ለስነ-ጽሁፍ ተቋማት እና ደራሲያን የሚዲያ ማማከር።\n5. 📱 **የዲጂታል ይዘት ማስተዋወቅ**፦ ከ125,000 በላይ ተከታዮች ባሉት የሕዝቢ ኬኛ ገጽ ላይ የባህል ይዘቶችን ማሰራጨት።\n6. ⚙️ **የአመራር ዳሽቦርድ**፦ የማህበራዊ ገጾች አስተዳደር እና የ158ሺ+ ተከታዮች የቀጥታ ትንታኔ።\n7. 📄 **የስራ ልምድ (CV/PDF)**፦ ዝርዝር የሙያ ማስረጃን በPDF ማውረድ።\n8. ✉️ **የቀጥታ ግንኙነት**፦ በWhatsApp፣ በቴሌግራም ወይም በድረ-ገጽ ቅጽ ማነጋገር።`,
           actions: [
-            { label: "📖 መጽሐፍ እዘዝ", url: "/books" },
+            { label: "📖 መጽሐፍት እዘዝ", url: "/books" },
             { label: "🎵 ባንዱን ጋብዝ", url: "/music" },
             { label: "🎤 ንግግር ጋብዝ", url: "/contact" },
             { label: "⚙️ ዳሽቦርድ", url: "/dashboard" }
@@ -126,7 +126,7 @@ export default function AIAssistant() {
         };
       }
       return {
-        text: `🌟 **Full Directory of Services on This Website:**\n\n1. 📖 **Book Authoring & Direct Orders**: Purchase *'Ayyaantummaa'* or pre-order *'Dhaloota Mul'ataa'*.\n2. 🎵 **Live Music & Band Bookings**: Hire the Shanan Gadaa Band for cultural ceremonies, tours, and festivals.\n3. 🎤 **Keynote Speaking & Lectures**: Invite Kanenus for university talks, literary conferences, and cultural symposiums.\n4. 📢 **PR & Literary Communications Consulting**: Strategic media management drawing on Oromia Writers Association leadership.\n5. 📱 **Digital Media Promotion**: Reach an engaged 125,000+ cultural audience via Hizbii Keenya.\n6. ⚙️ **Executive Social Dashboard**: Omnichannel broadcast studio and 158K+ audience intelligence hub.\n7. 📄 **Credentials & CV Export**: Print and download a comprehensive PDF resume.\n8. ✉️ **Direct Management Support**: 24/7 direct inquiry channels via WhatsApp, Telegram, and Contact form.`,
+        text: `🌟 **Full Directory of Services on This Website:**\n\n1. 📖 **Book Authoring & Direct Orders**: Purchase published books *'Ayyaantummaa'* and *'Dhaloota Mul'ataa'* (Book 2).\n2. 🎵 **Live Music & Band Bookings**: Hire the Shanan Gadaa Band for cultural ceremonies, tours, and festivals.\n3. 🎤 **Keynote Speaking & Lectures**: Invite Kanenus for university talks, literary conferences, and cultural symposiums.\n4. 📢 **PR & Literary Communications Consulting**: Strategic media management drawing on Oromia Writers Association leadership.\n5. 📱 **Digital Media Promotion**: Reach an engaged 125,000+ cultural audience via Hizbii Keenya.\n6. ⚙️ **Executive Social Dashboard**: Omnichannel broadcast studio and 158K+ audience intelligence hub.\n7. 📄 **Credentials & CV Export**: Print and download a comprehensive PDF resume.\n8. ✉️ **Direct Management Support**: 24/7 direct inquiry channels via WhatsApp, Telegram, and Contact form.`,
         actions: [
           { label: "📖 Order Books", url: "/books" },
           { label: "🎵 Book Band", url: "/music" },
@@ -198,27 +198,30 @@ export default function AIAssistant() {
     if (q.includes('ayyaantummaa') || q.includes('book') || q.includes('kitaaba') || q.includes('መጽሐፍ') || q.includes('dhaloota') || q.includes('order')) {
       if (currentLang === 'om') {
         return {
-          text: `📖 **Tajaajila Kitaabotaa & Bittaa:**\n1. **'Ayyaantummaa' (2026)**: Kitaaba aadaa fi eenyummaa Oromoo. Boqonnaa 1ffaa fuula 'Books' irratti dubbisuu fi WhatsApp irratti kallattiin bitachuun ni danda'ama.\n2. **'Dhaloota Mul'ataa' (Kitaaba 2ffaa)**: Kitaaba lammaffaa Kanenus. Dursitanii galmaa'uun yeroo maxxanfamu dursitanii argattu.`,
+          text: `📖 **Tajaajila Kitaabotaa & Bittaa:**\n1. **'Ayyaantummaa' (Maxxansa 2026)**: Kitaaba aadaa fi eenyummaa Oromoo. Boqonnaa 1ffaa fuula 'Books' irratti dubbisuu fi WhatsApp yookiin Telegram irratti kallattiin bitachuun ni danda'ama.\n2. **'Dhaloota Mul'ataa' (Kitaaba 2ffaa - Maxxanfame)**: Kitaaba lammaffaa dhaloota haaraa mul'ata qabu ijaaruuf qophaa'ee maxxanfame. WhatsApp yookiin Telegram irratti battalumatti ajajuu dandeessu.`,
           actions: [
             { label: "📖 Boqonnaa 1 Dubbisi", url: "/books" },
-            { label: "📲 WhatsApp irratti Biti", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20order%20Ayyaantummaa." }
+            { label: "📲 Ayyaantummaa Biti", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20order%20Ayyaantummaa." },
+            { label: "📲 Dhaloota Mul'ataa Biti", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20order%20Dhaloota%20Mul'ataa." }
           ]
         };
       }
       if (currentLang === 'am') {
         return {
-          text: `📖 **የመጽሐፍት አገልግሎት እና ትዕዛዝ፦**\n1. **'አያንቱማ' (2026)**፦ የኦሮሞን ባህላዊ ማንነት የሚዳስስ ድንቅ መጽሐፍ። ምዕራፍ 1ን በነጻ ማንበብ እና በWhatsApp በቀጥታ ማዘዝ ይቻላል።\n2. **'ደሎታ ሙልአታ' (ሁለተኛ መጽሐፍ)**፦ በቅርቡ የሚመረቅ ሁለተኛው መጽሐፍ። ቀድመው በመመዝገብ ቅጂዎን ማስያዝ ይችላሉ።`,
+          text: `📖 **የመጽሐፍት አገልግሎት እና ትዕዛዝ፦**\n1. **'አያንቱማ' (2026 እትም)**፦ የኦሮሞን ባህላዊ ማንነት የሚዳስስ ድንቅ መጽሐፍ። ምዕራፍ 1ን በነጻ ማንበብ እና በWhatsApp ወይም በTelegram በቀጥታ ማዘዝ ይቻላል።\n2. **'ደሎታ ሙልአታ' (ሁለተኛ መጽሐፍ - ታትሟል)**፦ ለአዲሱ ትውልድ ራዕይ እና አመራር የሚያስተምር የታተመ መጽሐፍ። በWhatsApp ወይም በTelegram በቀጥታ ማዘዝ ይችላሉ።`,
           actions: [
             { label: "📖 ምዕራፍ 1ን አንብብ", url: "/books" },
-            { label: "📲 በWhatsApp እዘዝ", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20order%20Ayyaantummaa." }
+            { label: "📲 አያንቱማን እዘዝ", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20order%20Ayyaantummaa." },
+            { label: "📲 ደሎታ ሙልአታን እዘዝ", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20order%20Dhaloota%20Mul'ataa." }
           ]
         };
       }
       return {
-        text: `📖 **Book Publishing & Direct Ordering Services:**\n1. **'Ayyaantummaa' (2026 Publication)**: Landmark literature on cultural philosophy. Preview Chapter 1 for free or order directly on WhatsApp.\n2. **'Dhaloota Mul'ataa' (Upcoming Book 2)**: Visionary generational guide. Register on the VIP waitlist for early-bird access.`,
+        text: `📖 **Book Publishing & Direct Ordering Services:**\n1. **'Ayyaantummaa' (2026 Publication)**: Landmark literature on cultural philosophy. Preview Chapter 1 for free or order directly on WhatsApp or Telegram.\n2. **'Dhaloota Mul'ataa' (Book 2 — Published)**: Visionary generational guide for future leaders. Order directly on WhatsApp or Telegram.`,
         actions: [
           { label: "📖 Read Chapter 1 Preview", url: "/books" },
-          { label: "📲 Order via WhatsApp", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20order%20Ayyaantummaa." }
+          { label: "📲 Order Ayyaantummaa", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20order%20Ayyaantummaa." },
+          { label: "📲 Order Dhaloota Mul'ataa", url: "https://wa.me/251000000000?text=Hello!%20I%20want%20to%20order%20Dhaloota%20Mul'ataa." }
         ]
       };
     }
